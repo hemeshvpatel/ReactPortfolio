@@ -1,25 +1,31 @@
-import logo from "./logo.svg";
-import "./App.css";
+import React, { useState, useEffect } from "react";
+import { portfolioData, stockData } from "./data";
 
-function App() {
+export default function App() {
+  // Declare a new state variable, which we'll call "count"
+  const [count, setCount] = useState(0);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          I am trying to learn to be better at React!!
-        </a>
-      </header>
+    <div style={{ display: "flex", flexDirection: "column" }}>
+      <p>You clicked {count} times</p>
+      <button style={{ width: "100px" }} onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+      <div style={{ display: "flex", flexDirection: "column", color: "blue" }}>
+        {stockData &&
+          stockData.map((item, key) => {
+            return (
+              <div key={key}>
+                <p>
+                  {item.company}: {item.ticker}
+                </p>
+                <p>
+                  {item.stockPrice}: {item.timeElapsed}
+                </p>
+              </div>
+            );
+          })}
+      </div>
     </div>
   );
 }
-
-export default App;
