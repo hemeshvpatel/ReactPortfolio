@@ -1,15 +1,15 @@
 import React from "react";
-import { roles } from "../data";
+import { technologies } from "../data";
 
-export default function Roles() {
-  //console.log("roles: ", roles);
+export default function Technologies() {
+  //console.log("technologies: ", technologies);
 
   return (
     <div style={{ display: "flex", alignItems: "center", margin: "25px" }}>
-      {(roles || []).map((role, key) => {
+      {(technologies || []).map((technology, key) => {
         return (
           <div style={{ margin: "5px" }} key={key}>
-            {role}
+            {technology}
           </div>
         );
       })}

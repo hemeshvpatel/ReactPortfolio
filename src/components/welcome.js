@@ -1,6 +1,7 @@
 import React from "react";
 import { userData } from "../data";
 import Roles from "./roles";
+import Technologies from "./technologies";
 
 export default function Welcome() {
   const { firstName } = userData;
@@ -23,6 +24,7 @@ export default function Welcome() {
         Hi, I'm {firstName}!
       </div>
       <Roles />
+      <Technologies />
     </div>
   );
 }
