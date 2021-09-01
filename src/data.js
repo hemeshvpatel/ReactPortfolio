@@ -6,7 +6,7 @@ export const roles = [
   "Back End Developer",
 ];
 
-export const techStack = ["React.js", "Node.js", "HTML", " CSS"];
+export const technologies = ["React.js", "Node.js", "HTML", " CSS"];
 
 export const about = [
   "Developer and React.js lover.",
