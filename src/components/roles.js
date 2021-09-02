@@ -7,6 +7,7 @@ export default function Roles() {
   return (
     <div style={{ display: "flex", alignItems: "center", margin: "25px" }}>
       {(roles || []).map((role, key) => {
+        //console.log("role: ", role)
         return (
           <div style={{ margin: "5px" }} key={key}>
             {role}
