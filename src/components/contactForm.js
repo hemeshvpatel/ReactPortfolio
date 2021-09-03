@@ -1,38 +1,49 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { Container, Card, Button, TextField } from "react-dom";
 
-export default function ContactFrom() {
+export default function ContactForm() {
+  const [success, setSuccess] = useState(false);
+
+  useEffect(() => {
+    if (window.location.search.includes("success=true")) {
+      setSuccess(true);
+    }
+  }, []);
+
   return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        margin: "25px",
-        flexDirection: "column",
-      }}
-    >
-      <form name="contact" method="POST" data-netlify="true">
-        <p>
+    // <div
+    //   style={{
+    //     display: "flex",
+    //     alignItems: "center",
+    //     margin: "25px",
+    //     flexDirection: "column",
+    //   }}
+    // >
+    <Container maxWidth="sm">
+      <h2>CONTACT</h2>
+      {success && <p style={{ color: "green" }}>Thanks for your message! </p>}
+      <Card>
+        <form
+          name="contact"
+          method="POST"
+          action="/contact/?success=true"
+          data-netlify="true"
+        >
           <input type="hidden" name="form-name" value="contact" />
-        </p>
-        <p>
-          <label>
-            Your name please: <input type="text" name="name" />
-          </label>
-        </p>
-        <p>
-          <label>
-            Drop a message: <textarea type="text" name="name" />
-          </label>
-        </p>
-        <p>
-          <label>
-            Your email (if you want): <input type="email" name="email" />
-          </label>
-        </p>
-        <p>
-          <button type="submit">Send</button>
-        </p>
-      </form>
-    </div>
+          <TextField id="standard-basic" label="name" name="name" /> <br />
+          <TextField id="standard-basic" label="email" name="email" /> <br />
+          <TextField
+            multiline
+            id="standard-multiline-static"
+            label="message"
+            name="message"
+          />
+          <br />
+          <div>
+            <Button type="submit">Send</Button>
+          </div>
+        </form>
+      </Card>
+    </Container>
   );
 }

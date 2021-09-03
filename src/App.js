@@ -3,7 +3,7 @@ import WorkExperience from "./components/workExperience";
 import About from "./components/about";
 import Welcome from "./components/welcome";
 import Footer from "./components/footer";
-import ContactFrom from "./components/contactForm";
+import ContactForm from "./components/contactForm";
 
 export default function App() {
   //Idea: to be able to re-arrange the layout from here
@@ -13,7 +13,7 @@ export default function App() {
       <Welcome />
       <About />
       <WorkExperience />
-      <ContactFrom />
+      <ContactForm />
       <Footer />
     </div>
   );
