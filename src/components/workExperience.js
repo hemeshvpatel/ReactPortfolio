@@ -9,7 +9,15 @@ export default function WorkExperience() {
       style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
     >
       {(workExperience || []).map((item, key) => {
-        const { company, location, position, startDate, endDate } = item;
+        const {
+          company,
+          location,
+          position,
+          startDate,
+          endDate,
+          summary,
+          bullets,
+        } = item;
         return (
           <div
             style={{
@@ -26,6 +34,15 @@ export default function WorkExperience() {
             </div>
             <div>
               {startDate} to {endDate}
+            </div>
+            <div style={{ margin: "10px", fontStyle: "italic", width: "60%" }}>
+              {summary}
+            </div>
+            <div style={{ width: "50%" }}>
+              {(bullets || []).map((bullet) => {
+                //console.log("each bullet: ", bullet)
+                return <div style={{ margin: "5px" }}>•{bullet}</div>;
+              })}
             </div>
           </div>
         );

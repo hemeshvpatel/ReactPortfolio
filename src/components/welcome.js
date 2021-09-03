@@ -4,12 +4,13 @@ import Roles from "./roles";
 import Technologies from "./technologies";
 
 export default function Welcome() {
-  //Good idea to desctructure data coming in, makes it easier to use throughout component
+  //Good idea to destructure data coming in, makes it easier to use throughout component
   const { firstName } = userData;
   const [hover, setHover] = useState(false);
   //check data before using:
   //console.log("userData: ", userData)
 
+  //styles are all inline, caveit being transition / animation effects. Please see hover.
   return (
     <div
       style={{
