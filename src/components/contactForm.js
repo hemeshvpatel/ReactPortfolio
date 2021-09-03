@@ -1,15 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Container, Card, Button, TextField } from "react-dom";
 
 export default function ContactForm() {
-  const [success, setSuccess] = useState(false);
-
-  useEffect(() => {
-    if (window.location.search.includes("success=true")) {
-      setSuccess(true);
-    }
-  }, []);
-
   return (
     <div
       style={{
