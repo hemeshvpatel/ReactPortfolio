@@ -1,5 +1,6 @@
 import React from "react";
 import { workExperience } from "../data";
+import Link from "./reusable/link";
 
 export default function WorkExperience() {
   //Some Ideas:
@@ -11,6 +12,7 @@ export default function WorkExperience() {
       {(workExperience || []).map((item, key) => {
         const {
           company,
+          companyUrl,
           location,
           position,
           startDate,
@@ -29,9 +31,16 @@ export default function WorkExperience() {
             key={key}
           >
             <div style={{ fontWeight: 700 }}>{position}</div>
-            <div>
-              {company} | {location}
+            <div
+              style={{
+                display: "flex",
+              }}
+            >
+              <Link company={company} companyUrl={companyUrl} />
+              {location}
             </div>
+            <div>{companyUrl}</div>
+            <div></div>
             <div>
               {startDate} to {endDate}
             </div>
