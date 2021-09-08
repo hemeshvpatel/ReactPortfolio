@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "@material-ui/core";
 
 export default function Footer() {
   //Add link logic to determine which icons should be displayed
@@ -19,6 +20,9 @@ export default function Footer() {
       <div style={{ margin: "5px" }}>
         Quicklink Icons Ex: Facebook LinkedIn Twitter Medium Github Email
       </div>
+      <Button variant="contained" color="primary">
+        Contact Me
+      </Button>
     </div>
   );
 }

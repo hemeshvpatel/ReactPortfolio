@@ -31,6 +31,7 @@ export const about = [
 export const workExperience = [
   {
     company: "AirBnB",
+    companyUrl: "https://www.airbnb.com/",
     location: "San Francisco, CA",
     position: "Senior Front-end Engineer",
     startDate: "1/1/2020",
@@ -48,6 +49,7 @@ export const workExperience = [
   },
   {
     company: "Uber",
+    companyUrl: "https://www.uber.com/",
     location: "San Francisco, CA",
     position: "Front-end Developer",
     startDate: "1/1/2019",
@@ -64,6 +66,7 @@ export const workExperience = [
   },
   {
     company: "Twitter",
+    companyUrl: "https://twitter.com/",
     location: "San Francisco, CA",
     position: "Software Engineer",
     startDate: "1/1/2018",
@@ -79,6 +82,7 @@ export const workExperience = [
   },
   {
     company: "Netflix",
+    companyUrl: "https://www.netflix.com/",
     location: "San Francisco, CA",
     position: "Associate Software Engineer",
     startDate: "1/1/2017",
@@ -94,6 +98,7 @@ export const workExperience = [
   },
   {
     company: "Facebook",
+    companyUrl: "https://www.facebook.com/",
     location: "San Francisco, CA",
     position: "Technical Support Engineer - Enterprise",
     startDate: "1/1/2016",
@@ -109,6 +114,7 @@ export const workExperience = [
   },
   {
     company: "Apple",
+    companyUrl: "https://www.apple.com/",
     location: "San Francisco, CA",
     position: "Technical Support Engineer",
     startDate: "1/1/2015",
