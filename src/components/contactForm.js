@@ -11,6 +11,7 @@ export default function ContactForm() {
         flexDirection: "column",
       }}
     >
+      <h1>Leave a message</h1>
       <form name="contact" method="post">
         <input type="hidden" name="form-name" value="contact" />
         <p>

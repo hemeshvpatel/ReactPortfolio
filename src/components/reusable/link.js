@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Link(props) {
   const { company, companyUrl, style } = props;
-  console.log("props: ", company, companyUrl);
+  //console.log("props: ", company, companyUrl);
 
   //Standard Link Styling:
   let linkStyle = {

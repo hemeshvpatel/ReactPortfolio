@@ -48,9 +48,9 @@ export default function WorkExperience() {
               {summary}
             </div>
             <div style={{ width: "50%" }}>
-              {(bullets || []).map((bullet) => {
+              {(bullets || []).map((bullet, key) => {
                 //console.log("each bullet: ", bullet)
-                return <div style={{ margin: "5px" }}>•{bullet}</div>;
+                return <div key={key} style={{ margin: "5px" }}>•{bullet}</div>;
               })}
             </div>
           </div>

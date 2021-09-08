@@ -4,6 +4,7 @@ import About from "./components/about";
 import Welcome from "./components/welcome";
 import Footer from "./components/footer";
 import ContactForm from "./components/contactForm";
+import Modal from "./components/reusable/modal";
 
 export default function App() {
   //Idea: to be able to re-arrange the layout from here
@@ -15,6 +16,7 @@ export default function App() {
       <WorkExperience />
       <ContactForm />
       <Footer />
+      <Modal />
     </div>
   );
 }

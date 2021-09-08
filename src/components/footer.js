@@ -1,9 +1,16 @@
-import React from "react";
+import React, {useState} from "react";
 import { Button } from "@material-ui/core";
+import Modal from "./reusable/modal"
 
 export default function Footer() {
   //Add link logic to determine which icons should be displayed
   //Add link component for names to link to portfolio sites.
+  const [isShowing, setIsShowing] = useState(false);
+
+  const toggle = () => {
+    setIsShowing(!isShowing);
+  };
+
   return (
     <div
       style={{
@@ -20,9 +27,10 @@ export default function Footer() {
       <div style={{ margin: "5px" }}>
         Quicklink Icons Ex: Facebook LinkedIn Twitter Medium Github Email
       </div>
-      <Button variant="contained" color="primary">
+      <Button onClick={toggle} variant="contained" color="primary">
         Contact Me
       </Button>
+      <Modal isShowing={isShowing} />
     </div>
   );
 }
