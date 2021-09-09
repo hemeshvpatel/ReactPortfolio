@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function Link(props) {
-  const { company, companyUrl, style } = props;
+  const { title, url, style } = props;
   //console.log("props: ", company, companyUrl);
 
   //Standard Link Styling:
@@ -18,8 +18,8 @@ export default function Link(props) {
 
   return (
     <div>
-      <a href={`${companyUrl}`} target="_blank" style={linkStyle}>
-        {company}
+      <a href={`${url}`} target="_blank" rel="noreferrer" style={linkStyle}>
+        {title}
       </a>
     </div>
   );
