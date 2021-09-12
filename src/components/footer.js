@@ -22,7 +22,7 @@ export default function Footer() {
       }}
     >
       <div style={{ fontWeight: 700, margin: "5px" }}>
-        Created with ❤️ + using React.js and the powers of Netlify
+        Created with ❤️ using React.js and the powers of Netlify
       </div>
       <div style={{ margin: "5px" }}>
         Quicklink Icons Ex: Facebook LinkedIn Twitter Medium Github Email
