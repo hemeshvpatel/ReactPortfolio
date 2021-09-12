@@ -1,41 +1,84 @@
 import React from "react";
+//handle select options
 
 export default function Form(props) {
-  const { name, email, message, submitText } = props;
-  //Should this be a modal so when you click email/contact icon, this pop ups?
+  const {
+    headerProps,
+    contactProps,
+    nameProps,
+    emailProps,
+    messageProps,
+    submitProps,
+  } = props;
+  let headerStyle = { margin: "20px", fontSize: "20px" };
+  if (headerProps && headerProps.style) {
+    headerStyle = { ...headerStyle, ...headerProps.style };
+  }
+  let fieldStyle = {
+    margin: "10px",
+  };
+  let labelStyle = {
+    display: "flex",
+    flexDirection: "column",
+    fontWeight: 700,
+    fontSize: "10px",
+  };
+  let inputStyle = {};
+  let textAreaStyle = {};
+  let submitButtonStyle = {};
+  if (submitProps && submitProps.buttonStyle) {
+    submitButtonStyle = { ...submitButtonStyle, ...submitProps.buttonStyle };
+  }
   return (
     <div
       style={{
         display: "flex",
-        alignItems: "center",
-        margin: "25px",
         flexDirection: "column",
-        border: "3px dashed red",
       }}
     >
-      <h1>Leave a message</h1>
+      {headerProps && <div style={headerStyle}>{headerProps.text}</div>}
       <form name="contact" method="post">
         <input type="hidden" name="form-name" value="contact" />
-        {name && (
-          <div>
-            <label htmlFor="name">Your Name...please</label> <br />
-            <input type="text" id="name" name="name" required />
+        {nameProps && (
+          <div style={fieldStyle}>
+            <label htmlFor="name" style={labelStyle}>
+              {nameProps.label}
+              <input type="text" id="name" name="name" required />
+            </label>
           </div>
         )}
-        {email && (
-          <div>
-            <label htmlFor="email">Email...only if you want</label> <br />
-            <input type="email" id="email" name="email" />
+        {emailProps && (
+          <div style={fieldStyle}>
+            <label htmlFor="email" style={labelStyle}>
+              {emailProps.label}
+              <input type="email" id="email" name="email" />
+            </label>
           </div>
         )}
-        {message && (
-          <div>
-            <label htmlFor="message">Message...much appreciated!</label> <br />
-            <textarea id="message" name="message" required></textarea>
+        {contactProps && (
+          <div style={fieldStyle}>
+            <label htmlFor="contactType" style={labelStyle}>
+              {contactProps.label}
+              <input type="text" id="contactType" name="contactType" />
+            </label>
           </div>
         )}
-        <div>
-          <input type="submit" value={submitText} />
+        {messageProps && (
+          <div style={fieldStyle}>
+            <label htmlFor="message" style={labelStyle}>
+              {messageProps.label}
+              <textarea id="message" name="message" required></textarea>
+            </label>
+          </div>
+        )}
+        <div style={{ display: "flex", flexDirection: "row" }}>
+          {submitProps && (
+            <input
+              type="submit"
+              value={submitProps.text || "Submit"}
+              style={submitButtonStyle}
+            />
+          )}
         </div>
       </form>
     </div>

@@ -1,6 +1,6 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { Button } from "@material-ui/core";
-import Modal from "./reusable/modal"
+import Modal from "./reusable/modal";
 
 export default function Footer() {
   //Add link logic to determine which icons should be displayed
@@ -22,7 +22,7 @@ export default function Footer() {
       }}
     >
       <div style={{ fontWeight: 700, margin: "5px" }}>
-        Created with ❤️ by Cody and Hemesh
+        Created with ❤️ + using React.js and the powers of Netlify
       </div>
       <div style={{ margin: "5px" }}>
         Quicklink Icons Ex: Facebook LinkedIn Twitter Medium Github Email
