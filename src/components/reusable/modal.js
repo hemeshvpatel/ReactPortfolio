@@ -29,11 +29,18 @@ export default function Modal(props) {
         >
           <Form
             formProps={{ style: { border: "3px dashed red" } }}
-            headerProps={{ text: "Leave a message", style: { color: "red" } }}
+            headerProps={{
+              text: "Leave a message",
+              style: { color: "blue" },
+            }}
+            //labelProps={{ style: { fontSize: "20px" } }}
             nameProps={{ label: "Your name please ..." }}
             emailProps={{ label: "Email ... only if you want" }}
             contactProps={{ label: "What type of fan are you?" }}
-            messageProps={{ label: "Message ... much appreciated!" }}
+            messageProps={{
+              label: "Message ... much appreciated!",
+              textAreaStyle: { backgroundColor: "red" },
+            }}
             submitProps={{
               text: "Submit Message",
               buttonStyle: {
