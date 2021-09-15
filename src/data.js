@@ -1,3 +1,7 @@
+//Resume Sites we like":
+
+//https://github.com/hashirshoaeb/home
+
 export const userData = {
   firstName: "Luke",
   lastName: "Skywalker",
@@ -17,6 +21,10 @@ export const technologies = [
   "HTML",
   "CSS",
   "Ruby",
+];
+
+export const brandStatements = [
+  "Passionate about changing the world with technology.",
 ];
 
 export const about = [

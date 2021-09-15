@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { userData } from "../data";
 import Roles from "./roles";
 import Technologies from "./technologies";
+import BrandStatements from "./brandStatement";
 
 export default function Welcome() {
   //Good idea to destructure data coming in, makes it easier to use throughout component
@@ -36,6 +37,7 @@ export default function Welcome() {
       >
         Hi, I'm {firstName}!
       </div>
+      <BrandStatements style={{ color: "orange" }} />
       <Roles />
       <Technologies />
     </div>

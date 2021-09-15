@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Form from "../form";
 import { Button } from "@material-ui/core";
+import * as GlobalFunctions from "../../globals/globalFunctions";
 
 export default function Modal(props) {
   const [isShowing, setIsShowing] = useState(false);
@@ -23,11 +24,6 @@ export default function Modal(props) {
     backgroundColor: "grey",
   };
 
-  //A function that gives the ability to override the default style with one passed in through props
-  const setNewStyle = (defaultStyle, newStyle = {}) => {
-    return (defaultStyle = { ...defaultStyle, ...newStyle });
-  };
-
   //A function to open and close the modal
   const toggle = () => {
     setIsShowing(!isShowing);
@@ -36,15 +32,6 @@ export default function Modal(props) {
   //console.log("isShowing: ", isShowing);
 
   //Resource for blurring background: https://blog.bitsrc.io/build-a-full-featured-modal-dialog-form-with-react-651dcef6c571
-
-  //Toggle Fxn
-
-  //return
-  //True: modal (onclick that toggles as false)
-  //False: button "Contact Me" (onclick that toggles true)
-
-  //close / open ButtonProps logic
-  //location
 
   return (
     <div>
@@ -56,7 +43,7 @@ export default function Modal(props) {
         {openButtonProps.text}
       </Button>
       {isShowing && (
-        <div style={setNewStyle(defaultStyle, style)}>
+        <div style={GlobalFunctions.setNewStyle(defaultStyle, style)}>
           {closeButtonProps && (
             <Button onClick={toggle} style={closeButtonProps.style}>
               {closeButtonProps.text}

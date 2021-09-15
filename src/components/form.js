@@ -1,4 +1,7 @@
 import React from "react";
+//import { setNewStyle } from "../globalFunctions";
+import * as GlobalFunctions from "../globals/globalFunctions";
+
 //handle select options
 //Ability to add labels within input field or above or both
 //Form ideas: https://colorlib.com/wp/free-html5-contact-form-templates/
@@ -40,11 +43,6 @@ export default function Form(props) {
   let textAreaStyle = {};
   let submitButtonStyle = {};
 
-  //A function that gives the ability to override the default style with one passed in through props
-  const setNewStyle = (defaultStyle, newStyle = {}) => {
-    return (defaultStyle = { ...defaultStyle, ...newStyle });
-  };
-
   return (
     <div
       style={{
@@ -53,17 +51,19 @@ export default function Form(props) {
       }}
     >
       {headerProps && (
-        <div style={setNewStyle(headerStyle, headerProps?.style)}>
+        <div
+          style={GlobalFunctions.setNewStyle(headerStyle, headerProps?.style)}
+        >
           {headerProps?.text}
         </div>
       )}
       <form name="contact" method="post">
         <input type="hidden" name="form-name" value="contact" />
         {nameProps && (
-          <div style={setNewStyle(nameStyle, nameProps?.style)}>
+          <div style={GlobalFunctions.setNewStyle(nameStyle, nameProps?.style)}>
             <label
               htmlFor="name"
-              style={setNewStyle(labelStyle, labelProps?.style)}
+              style={GlobalFunctions.setNewStyle(labelStyle, labelProps?.style)}
             >
               {nameProps?.label}
               <input
@@ -71,45 +71,69 @@ export default function Form(props) {
                 id="name"
                 name="name"
                 required
-                style={setNewStyle(inputStyle, inputProps?.style)}
+                style={GlobalFunctions.setNewStyle(
+                  inputStyle,
+                  inputProps?.style
+                )}
               />
             </label>
           </div>
         )}
         {emailProps && (
-          <div style={setNewStyle(emailStyle, emailProps?.style)}>
+          <div
+            style={GlobalFunctions.setNewStyle(emailStyle, emailProps?.style)}
+          >
             <label htmlFor="email" style={labelStyle}>
               {emailProps?.label}
               <input
                 type="email"
                 id="email"
                 name="email"
-                style={setNewStyle(inputStyle, inputProps?.style)}
+                style={GlobalFunctions.setNewStyle(
+                  inputStyle,
+                  inputProps?.style
+                )}
               />
             </label>
           </div>
         )}
         {contactProps && (
-          <div style={setNewStyle(contactStyle, contactProps?.style)}>
+          <div
+            style={GlobalFunctions.setNewStyle(
+              contactStyle,
+              contactProps?.style
+            )}
+          >
             <label htmlFor="contactType" style={labelStyle}>
               {contactProps?.label}
               <input
                 type="text"
                 id="contactType"
                 name="contactType"
-                style={setNewStyle(inputStyle, inputProps?.style)}
+                style={GlobalFunctions.setNewStyle(
+                  inputStyle,
+                  inputProps?.style
+                )}
               />
             </label>
           </div>
         )}
         {messageProps && (
-          <div style={setNewStyle(messageStyle, messageProps?.style)}>
+          <div
+            style={GlobalFunctions.setNewStyle(
+              messageStyle,
+              messageProps?.style
+            )}
+          >
             <label htmlFor="message" style={labelStyle}>
               {messageProps?.label}
               <textarea
                 id="message"
                 name="message"
-                style={setNewStyle(textAreaStyle, messageProps?.textAreaStyle)}
+                style={GlobalFunctions.setNewStyle(
+                  textAreaStyle,
+                  messageProps?.textAreaStyle
+                )}
                 required
               ></textarea>
             </label>
@@ -120,7 +144,10 @@ export default function Form(props) {
             <input
               type="submit"
               value={submitProps?.text || "Submit"}
-              style={setNewStyle(submitButtonStyle, submitProps?.buttonStyle)}
+              style={GlobalFunctions.setNewStyle(
+                submitButtonStyle,
+                submitProps?.buttonStyle
+              )}
             />
           )}
         </div>
