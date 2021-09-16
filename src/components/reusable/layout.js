@@ -5,6 +5,7 @@ import Welcome from "../welcome";
 import Footer from "../footer";
 import Projects from "../projects";
 import Modal from "./modal";
+import NavBar from "./navBar";
 import * as GlobalFunctions from "../../globals/globalFunctions";
 
 export default function Layout(props) {
@@ -28,6 +29,7 @@ export default function Layout(props) {
           gridTemplateColumns: "auto",
         }}
       >
+        <NavBar />
         <Welcome />
         <About />
         <WorkExperience />
