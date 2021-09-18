@@ -1,13 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { userData } from "../data";
-import Roles from "./roles";
-import Technologies from "./technologies";
-import BrandStatements from "./brandStatement";
+import Typist from "react-typist";
 
 export default function Welcome() {
   //Good idea to destructure data coming in, makes it easier to use throughout component
-  const { firstName } = userData;
-  const [hover, setHover] = useState(false);
+  const { firstName, location } = userData;
   //check data before using:
   //console.log("userData: ", userData)
 
@@ -18,28 +15,22 @@ export default function Welcome() {
         display: `flex`,
         flexDirection: `column`,
         alignItems: "center",
-        color: hover ? "red" : "",
         //border: "2px dashed red",
       }}
-      onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
     >
       <div
         style={{
           display: "flex",
           flexDirection: "column",
-
-          margin: "25px",
-          fontSize: "40px",
+          marginBottom: "10px",
+          fontSize: "75px",
           fontWeight: 700,
           //border: "2px dashed red",
         }}
       >
         Hi, I'm {firstName}!
       </div>
-      <BrandStatements style={{ color: "orange" }} />
-      <Roles />
-      <Technologies />
+      {/* <div style={{ fontSize: "25px" }}>{location}</div> */}
     </div>
   );
 }

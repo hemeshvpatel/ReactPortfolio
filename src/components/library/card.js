@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "./link";
+import TextLink from "./textLink";
 
 export default function Card(props) {
   const {
@@ -36,14 +36,18 @@ export default function Card(props) {
       {year && <div style={yearStyle}>{year}</div>}
       {description && <div style={descriptionStyle}>{description}</div>}
       {repositoryUrl && (
-        <Link
+        <TextLink
           title={"Repository Url"}
           url={repositoryUrl}
           style={repositoryUrlStyle}
         />
       )}
       {hostedUrl && (
-        <Link title={"Hosted Link"} url={hostedUrl} style={hostedUrlStyle} />
+        <TextLink
+          title={"Hosted TextLink"}
+          url={hostedUrl}
+          style={hostedUrlStyle}
+        />
       )}
       {technologies && <div style={technologiesStyle}>{technologies}</div>}
       {imageUrl && <div style={imageUrlStyle}>{imageUrl}</div>}

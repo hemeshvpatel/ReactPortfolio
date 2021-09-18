@@ -2,6 +2,11 @@
 
 //https://github.com/hashirshoaeb/home
 
+// Hemesh Portfolio: https://github.com/hemeshvpatel/myportfolio/tree/master/src
+
+//Change Browser Tab Title:
+// Go to public folder -> index.html -> title span of head sections
+
 export const userData = {
   firstName: "Luke",
   lastName: "Skywalker",
@@ -10,8 +15,8 @@ export const userData = {
 
 export const roles = [
   "Software Engineer",
-  "Front End Developer",
-  "Back End Developer",
+  "Front-end Developer",
+  "Back-end Developer",
 ];
 
 export const technologies = [

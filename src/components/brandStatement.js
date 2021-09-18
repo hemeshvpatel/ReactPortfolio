@@ -1,12 +1,20 @@
 import React from "react";
 import { brandStatements } from "../data";
 import * as GlobalFunctions from "../globals/globalFunctions";
+import Typist from "react-typist";
 
 export default function brandStatement(props) {
   const { style } = props;
   //console.log("brandStatement: ", brandStatement);
 
-  let defaultStyle = { display: "flex", alignItems: "center", margin: "25px" };
+  let defaultStyle = {
+    display: `flex`,
+    flexDirection: `column`,
+    alignItems: "center",
+    fontSize: "25px",
+    margin: "25px",
+    //border: "2px dashed red",
+  };
 
   //TODO: Use typing library effect?
   //https://github.com/jstejada/react-typist - library for typing effect
@@ -19,7 +27,7 @@ export default function brandStatement(props) {
         //console.log("brandStatement: ", brandStatement)
         return (
           <div style={{ margin: "5px" }} key={key}>
-            {brandStatement}
+            <Typist cursor={{ hideWhenDone: true }}>{brandStatement}</Typist>
           </div>
         );
       })}

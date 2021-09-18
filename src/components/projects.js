@@ -1,9 +1,9 @@
 import React from "react";
 import { projects } from "../data";
-import Card from "../components/reusable/card";
+import Card from "./library/card";
 
 export default function Projects() {
-  console.log("projects: ", projects);
+  //console.log("projects: ", projects);
 
   //gridTemplateColumns - determines how many rows / columns you have
 
@@ -15,9 +15,9 @@ export default function Projects() {
         margin: "25px",
       }}
     >
-      {(projects || []).map((project) => {
-        console.log("project: ", project);
-        return <Card project={project} />;
+      {(projects || []).map((project, key) => {
+        //console.log("project: ", project);
+        return <Card key={key} project={project} />;
       })}
     </div>
   );

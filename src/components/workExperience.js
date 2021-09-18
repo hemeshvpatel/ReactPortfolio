@@ -1,6 +1,6 @@
 import React from "react";
 import { workExperience } from "../data";
-import Link from "./reusable/link";
+import TextLink from "./library/textLink";
 
 export default function WorkExperience() {
   //Some Ideas:
@@ -36,7 +36,7 @@ export default function WorkExperience() {
                 display: "flex",
               }}
             >
-              <Link company={company} companyUrl={companyUrl} />
+              <TextLink company={company} companyUrl={companyUrl} />
               {location}
             </div>
             <div>{companyUrl}</div>
@@ -50,7 +50,11 @@ export default function WorkExperience() {
             <div style={{ width: "50%" }}>
               {(bullets || []).map((bullet, key) => {
                 //console.log("each bullet: ", bullet)
-                return <div key={key} style={{ margin: "5px" }}>•{bullet}</div>;
+                return (
+                  <div key={key} style={{ margin: "5px" }}>
+                    •{bullet}
+                  </div>
+                );
               })}
             </div>
           </div>
