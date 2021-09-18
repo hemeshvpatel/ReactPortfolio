@@ -1,14 +1,11 @@
 import React from "react";
 import WorkExperience from "../workExperience";
 import About from "../about";
-import Welcome from "../welcome";
+import Landing from "../landing";
 import Footer from "../footer";
 import Projects from "../projects";
-import Modal from "./modal";
-import MenuBar from "./menuBar";
-import Roles from "../roles";
-import Technologies from "../technologies";
-import BrandStatements from "../brandStatement";
+import Header from "../header";
+
 import * as GlobalFunctions from "../../globals/globalFunctions";
 
 export default function Layout(props) {
@@ -17,15 +14,17 @@ export default function Layout(props) {
   let defaultStyle = {
     backgroundColor: "black",
     color: "white",
-    padding: "0px 100px 0px 100px",
+    padding: "0px 250px 0px 250px",
   };
 
   //To change layout look at styling for display grid and change accordingly
   //CSS Grid Container Help: https://www.w3schools.com/css/css_grid_container.asp
 
+  //Should pages / sections be defined here? Each section should have button to go to next like a page flip or scroll to top of next section
+
   return (
     <div style={GlobalFunctions.setNewStyle(defaultStyle, style)}>
-      <MenuBar />
+      <Header />
       <div style={{}}>
         <div
           style={{
@@ -34,13 +33,10 @@ export default function Layout(props) {
             gridTemplateColumns: "auto",
           }}
         >
-          <Welcome />
-          <BrandStatements style={{ color: "red" }} />
+          <Landing />
           <About />
           <WorkExperience />
           <Projects />
-          <Roles />
-          <Technologies />
         </div>
         <div
           style={{
@@ -48,29 +44,9 @@ export default function Layout(props) {
             gridTemplateRows: "",
             gridTemplateColumns: "auto auto",
           }}
-        >
-          <div style={{ display: "flex" }}>
-            <Modal
-              openButtonProps={{
-                location: "topRight",
-                text: "Contact Me",
-                style: {
-                  color: "white",
-                  backgroundColor: "blue",
-                  fontWeight: 400,
-                },
-              }}
-              closeButtonProps={{
-                location: "topRight",
-                text: "X",
-                style: { backgroundColor: "red" },
-              }}
-              style={{ backgroundColor: "lightGrey" }}
-            />
-          </div>
-          <Footer />
-        </div>
+        ></div>
       </div>
+      <Footer />
     </div>
   );
 }

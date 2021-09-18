@@ -13,8 +13,8 @@ export default function NavBar() {
         display: "flex",
         justifyContent: "space-between",
         //position: "sticky",
-        top: "0px",
-        height: "50px",
+        //top: "0px",
+        //height: "50px",
         paddingTop: "20px",
       }}
     >

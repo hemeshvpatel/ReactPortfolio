@@ -14,10 +14,10 @@ export default function Technologies() {
         margin: "25px",
       }}
     >
-      I tend to like working with:
+      Technologies I enjoy working with:
       {(technologies || []).map((technology, key) => {
         return (
-          <div style={{ margin: "5px" }} key={key}>
+          <div style={{ margin: "0 5px 0 5px" }} key={key}>
             {technology}
           </div>
         );
@@ -26,7 +26,6 @@ export default function Technologies() {
         style={{
           display: "flex",
           alignItems: "center",
-          margin: "10px",
           fontSize: "25px",
         }}
       >

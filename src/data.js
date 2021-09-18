@@ -1,6 +1,7 @@
 //Resume Sites we like":
 
-//https://github.com/hashirshoaeb/home
+// https://github.com/hashirshoaeb/home
+// https://jacekjeznach.com/
 
 // Hemesh Portfolio: https://github.com/hemeshvpatel/myportfolio/tree/master/src
 
@@ -10,7 +11,7 @@
 export const userData = {
   firstName: "Luke",
   lastName: "Skywalker",
-  location: "Austin, TX",
+  location: "Tatooine",
 };
 
 export const roles = [
@@ -33,9 +34,9 @@ export const brandStatements = [
 ];
 
 export const about = [
-  "Developer and React.js lover.",
-  "Passionate about how things work and how technology can help solve problems.",
-  "My career has led me through roles in Finance, Operations, and most recently Web Development.",
+  "Software Engineer (React is my favorite). Passionate about how things work and how technology can help solve problems. My career has led me through roles in finance, operations, and most recently software engineering. I love getting to write code and work on projects as much as I can, leveling up my JavaScript and React skills through projects.",
+  "Currently, I work as a Full Stack Software Engineer at Unhedged, a financial data & research platform with powerful content creation and collaboration tools, built on top of institutional-quality data.",
+  "When I’m not coding, you can find me reading articles from my favorite blogs (Engadget, Lifehacker) and watching car reviews on YouTube. Currently reading Think Like a Monk by Jay Shetty.",
 ];
 
 //Can get data from: https://www.qwikresume.com/resume-samples/junior-software-developer/#previewResume

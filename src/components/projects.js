@@ -1,6 +1,6 @@
 import React from "react";
 import { projects } from "../data";
-import Card from "./library/card";
+import ProjectCard from "./library/projectCard";
 
 export default function Projects() {
   //console.log("projects: ", projects);
@@ -17,7 +17,7 @@ export default function Projects() {
     >
       {(projects || []).map((project, key) => {
         //console.log("project: ", project);
-        return <Card key={key} project={project} />;
+        return <ProjectCard key={key} project={project} />;
       })}
     </div>
   );

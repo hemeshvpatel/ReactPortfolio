@@ -27,7 +27,9 @@ export default function brandStatement(props) {
         //console.log("brandStatement: ", brandStatement)
         return (
           <div style={{ margin: "5px" }} key={key}>
-            <Typist cursor={{ hideWhenDone: true }}>{brandStatement}</Typist>
+            <Typist cursor={{ hideWhenDone: true, hideWhenDoneDelay: 500 }}>
+              {brandStatement}
+            </Typist>
           </div>
         );
       })}
