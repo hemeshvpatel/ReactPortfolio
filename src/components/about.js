@@ -8,22 +8,31 @@ export default function About() {
     <div
       style={{
         display: "flex",
-        flexDirection: "column",
+        flexWrap: "wrap",
         alignItems: "center",
+        justifyContent: "center",
       }}
     >
-      <div style={{ display: "flex" }}>
-        <div style={{ flexDirection: "column" }}>
-          {(about || []).map((item, key) => {
-            return (
-              <div style={{ margin: "25px", flex: "0 1 auto" }} key={key}>
-                {item}
-              </div>
-            );
-          })}
-          <Roles />
-          <Technologies />
-        </div>
+      <div style={{ flexDirection: "column", flex: 1 }}>
+        <div style={{ marginBottom: "25px", fontSize: "35px" }}>About me</div>
+        {(about || []).map((paragraph, key) => {
+          return (
+            <div
+              style={{
+                flex: "0 1 auto",
+                fontSize: "20px",
+                marginBottom: "20px",
+              }}
+              key={key}
+            >
+              {paragraph}
+            </div>
+          );
+        })}
+        <Roles />
+        <Technologies />
+      </div>
+      <div>
         <img
           src="/aboutPic.jpeg"
           alt="Profile Pic"
@@ -33,8 +42,6 @@ export default function About() {
           }}
         />
       </div>
-
-      <div style={{ display: "flex" }}></div>
     </div>
   );
 }
