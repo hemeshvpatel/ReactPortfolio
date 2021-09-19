@@ -1,5 +1,6 @@
 import React from "react";
 import ContactButton from "./contactButton";
+import SocialIcons from "./library/socialIcons";
 
 export default function Footer() {
   //Add link logic to determine which icons should be displayed
@@ -9,17 +10,23 @@ export default function Footer() {
     <div
       style={{
         display: "flex",
+        flex: "1 1 0",
         justifyContent: "space-between",
+        alignItems: "center",
         paddingBottom: "20px",
       }}
     >
-      <div style={{ fontWeight: 700 }}>
+      <div style={{ whiteSpace: "pre-wrap" }}>
         Created with ❤️ using React.js and the powers of Netlify
       </div>
-      <ContactButton />
-      <div style={{}}>
-        Quicklink Icons Ex: Facebook LinkedIn Twitter Medium Github Email
-      </div>
+      <ContactButton text="Contact Me" icon={true} />
+      <SocialIcons
+        github={"https://github.com/"}
+        linkedin={"https://linkedin.com"}
+        twitter={"https://twitter.com"}
+        medium={"https://medium.com"}
+        twitch={"https://twitch.com"}
+      />
     </div>
   );
 }

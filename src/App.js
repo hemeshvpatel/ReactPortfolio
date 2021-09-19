@@ -6,13 +6,5 @@ import Layout from "./components/library/layout";
 export default function App() {
   //Idea: to be able to re-arrange the layout from here
 
-  return (
-    // <Router>
-    //   <Switch>
-    //     <Route exact path="/">
-    <Layout />
-    //     </Route>
-    //   </Switch>
-    // </Router>
-  );
+  return <Layout />;
 }

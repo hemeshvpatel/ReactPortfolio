@@ -1,13 +1,17 @@
 import React from "react";
 import Modal from "./library/modal";
 
-export default function ContactButton() {
+//Font Awesome
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+
+export default function ContactButton(props) {
+  const { icon, text } = props;
   return (
     <div style={{ display: "flex" }}>
       <Modal
         openButtonProps={{
           location: "topRight",
-          text: "Contact Me",
+          text: text,
           style: {
             color: "white",
             backgroundColor: "blue",
@@ -19,7 +23,7 @@ export default function ContactButton() {
           text: "X",
           style: { backgroundColor: "red" },
         }}
-        style={{ backgroundColor: "lightGrey" }}
+        style={{ backgroundColor: "white" }}
       />
     </div>
   );

@@ -1,6 +1,8 @@
 import React from "react";
 import { brandStatements } from "../data";
 import * as GlobalFunctions from "../globals/globalFunctions";
+
+//Typist: https://github.com/jstejada/react-typist
 import Typist from "react-typist";
 
 export default function brandStatement(props) {
@@ -26,7 +28,7 @@ export default function brandStatement(props) {
       {(brandStatements || []).map((brandStatement, key) => {
         //console.log("brandStatement: ", brandStatement)
         return (
-          <div style={{ margin: "5px" }} key={key}>
+          <div style={{ margin: "5px", textAlign: "center" }} key={key}>
             <Typist cursor={{ hideWhenDone: true, hideWhenDoneDelay: 500 }}>
               {brandStatement}
             </Typist>

@@ -5,47 +5,34 @@ import Landing from "../landing";
 import Footer from "../footer";
 import Projects from "../projects";
 import Header from "../header";
+import Section from "./section";
 
-import * as GlobalFunctions from "../../globals/globalFunctions";
-
-export default function Layout(props) {
-  const { style } = props;
-
-  let defaultStyle = {
+export default function Layout() {
+  let globalStyle = {
     backgroundColor: "black",
     color: "white",
-    padding: "0px 250px 0px 250px",
+    margin: 0,
+    overflow: "hidden",
+    padding: "0px 200px 0px 200px",
+    fontFamily: "sans-serif",
   };
 
   //To change layout look at styling for display grid and change accordingly
   //CSS Grid Container Help: https://www.w3schools.com/css/css_grid_container.asp
 
-  //Should pages / sections be defined here? Each section should have button to go to next like a page flip or scroll to top of next section
+  //Section is like pages for the links at the top, this keeps everything contained
 
   return (
-    <div style={GlobalFunctions.setNewStyle(defaultStyle, style)}>
+    <div style={globalStyle}>
       <Header />
-      <div style={{}}>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateRows: "",
-            gridTemplateColumns: "auto",
-          }}
-        >
-          <Landing />
-          <About />
-          <WorkExperience />
-          <Projects />
-        </div>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateRows: "",
-            gridTemplateColumns: "auto auto",
-          }}
-        ></div>
-      </div>
+      <Section children={<Landing />} />
+      <Section id="About" title="About me" children={<About />} />
+      <Section
+        id="WorkExperience"
+        title="Work Experience"
+        children={<WorkExperience />}
+      />
+      <Section id="Projects" title="Projects" children={<Projects />} />
       <Footer />
     </div>
   );

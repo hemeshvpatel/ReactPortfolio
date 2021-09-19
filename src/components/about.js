@@ -26,7 +26,7 @@ export default function About() {
         </div>
         <img
           src="/aboutPic.jpeg"
-          alt="image"
+          alt="Profile Pic"
           style={{
             borderRadius: "50%",
             flex: "0 1 auto",
