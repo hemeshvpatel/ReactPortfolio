@@ -1,6 +1,7 @@
 import React from "react";
 import { userData } from "../data";
 import BrandStatements from "./brandStatement";
+import ResumeIcon from "./library/resumeIcon";
 import SocialIcons from "./library/socialIcons";
 
 export default function Welcome() {
@@ -32,13 +33,16 @@ export default function Welcome() {
         Hi, I'm {firstName}!
       </div>
       <BrandStatements style={{ color: "red", fontSize: "50px" }} />
-      <SocialIcons
-        github={"https://github.com/"}
-        linkedin={"https://linkedin.com"}
-        twitter={"https://twitter.com"}
-        medium={"https://medium.com"}
-        twitch={"https://twitch.com"}
-      />
+      <div style={{ display: "flex" }}>
+        <SocialIcons
+          github={"https://github.com/"}
+          linkedin={"https://linkedin.com"}
+          twitter={"https://twitter.com"}
+          medium={"https://medium.com"}
+          twitch={"https://twitch.com"}
+        />
+        <ResumeIcon to="https://drive.google.com/file/d/1Nkiadg3LWHWgXUEGA79bCVjpgzIiJRdW/view" />
+      </div>
     </div>
   );
 }

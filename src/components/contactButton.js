@@ -1,11 +1,8 @@
 import React from "react";
 import Modal from "./library/modal";
 
-//Font Awesome
-import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
-
 export default function ContactButton(props) {
-  const { icon, text } = props;
+  const { text } = props;
   return (
     <div style={{ display: "flex" }}>
       <Modal
