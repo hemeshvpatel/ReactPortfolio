@@ -4,36 +4,48 @@ import BrandStatements from "./brandStatement";
 import ResumeIcon from "./library/resumeIcon";
 import SocialIcons from "./library/socialIcons";
 
+import styled, { css, keyframes } from "styled-components";
+
+const LandingContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const rotate = keyframes`
+from {
+transform: rotate(0deg);
+}
+
+to {
+transform: rotate(360deg);
+}
+`;
+
+const Name = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  font-size: 75px;
+  font-weight: 500;
+  // animation: ${rotate} 2s linear infinite;
+`;
+
+const IconsContainer = styled.div`
+  display: flex;
+`;
+
 export default function Welcome() {
   //Good idea to destructure data coming in, makes it easier to use throughout component
   const { firstName } = userData;
   //check data before using:
   //console.log("userData: ", userData)
 
-  //styles are all inline, caveit being transition / animation effects. Please see hover.
   return (
-    <div
-      style={{
-        display: `flex`,
-        flexDirection: `column`,
-        alignItems: "center",
-        //border: "2px dashed red",
-      }}
-    >
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          marginBottom: "10px",
-          fontSize: "75px",
-          fontWeight: 500,
-          //border: "2px dashed red",
-        }}
-      >
-        Hi, I'm {firstName}!
-      </div>
-      <BrandStatements style={{ color: "red", fontSize: "50px" }} />
-      <div style={{ display: "flex" }}>
+    <LandingContainer>
+      <Name> Hi, I'm {firstName}!</Name>
+      <BrandStatements />
+      <IconsContainer>
         <SocialIcons
           github={"https://github.com/"}
           linkedin={"https://linkedin.com"}
@@ -42,7 +54,7 @@ export default function Welcome() {
           twitch={"https://twitch.com"}
         />
         <ResumeIcon to="https://drive.google.com/file/d/1Nkiadg3LWHWgXUEGA79bCVjpgzIiJRdW/view" />
-      </div>
-    </div>
+      </IconsContainer>
+    </LandingContainer>
   );
 }
