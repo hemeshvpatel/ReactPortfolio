@@ -14,7 +14,6 @@ const GlobalStyle = createGlobalStyle`
   body {
     background: #010000;
     margin: 0;
-    overflow: hidden;
     padding: 0px 200px 0px 200px;
     font-family: sans-serif;
     }

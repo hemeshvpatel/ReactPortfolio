@@ -3,8 +3,7 @@ import { userData } from "../data";
 import BrandStatements from "./brandStatement";
 import ResumeIcon from "./library/resumeIcon";
 import SocialIcons from "./library/socialIcons";
-
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 //Styles
 const Wrapper = styled.div`
@@ -14,11 +13,14 @@ const Wrapper = styled.div`
 `;
 
 const Name = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 10px;
-  font-size: 75px;
-  font-weight: 500;
+  ${({ theme }) => css`
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    font-size: 75px;
+    font-weight: 500;
+    color: ${theme.colors.primary};
+  `}
 `;
 
 const IconsContainer = styled.div`

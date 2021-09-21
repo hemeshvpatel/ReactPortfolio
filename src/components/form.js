@@ -1,17 +1,44 @@
 import React from "react";
 //import { setNewStyle } from "../globalFunctions";
 import * as GlobalFunctions from "../globals/globalFunctions";
+import styled, { css } from "styled-components";
 
 //handle select options
 //Ability to add labels within input field or above or both
 //Form ideas: https://colorlib.com/wp/free-html5-contact-form-templates/
 //Close modal button
 
+//Styles
+const Wrapper = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    flex-direction: column;
+    color: ${theme.colors.primary};
+  `}
+`;
+const Header = styled.div`
+  margin: 20px;
+  font-size: 20px;
+  color: "black";
+`;
+const Name = styled.div`
+  margin: 10px;
+`;
+const Email = styled.div`
+  margin: 10px;
+`;
+const Contact = styled.div`
+  margin: 10px;
+`;
+const Message = styled.div`
+  margin: 10px;
+`;
+
 export default function Form(props) {
   const {
     headerProps,
-    labelProps,
-    inputProps,
+    //labelProps,
+    //inputProps,
     contactProps,
     nameProps,
     emailProps,
@@ -19,112 +46,64 @@ export default function Form(props) {
     submitProps,
   } = props;
 
-  //Default Styles:
-  let headerStyle = { margin: "20px", fontSize: "20px" };
-  let nameStyle = {
-    margin: "10px",
-  };
-  let emailStyle = {
-    margin: "10px",
-  };
-  let contactStyle = {
-    margin: "10px",
-  };
-  let messageStyle = {
-    margin: "10px",
-  };
   let labelStyle = {
     display: "flex",
     flexDirection: "column",
     fontWeight: 700,
     fontSize: "10px",
+    color: "black",
   };
-  let inputStyle = {};
-  let textAreaStyle = {};
-  let submitButtonStyle = {};
+
+  let inputStyle = { background: "white" };
+  let textAreaStyle = { background: "white" };
+  let submitButtonStyle = {
+    color: "white",
+    backgroundColor: "blue",
+    fontWeight: 400,
+  };
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-      }}
-    >
-      {headerProps && (
-        <div
-          style={GlobalFunctions.setNewStyle(headerStyle, headerProps?.style)}
-        >
-          {headerProps?.text}
-        </div>
-      )}
+    <Wrapper>
+      {headerProps && <Header> {headerProps?.text}</Header>}
       <form name="contact" method="post">
         <input type="hidden" name="form-name" value="contact" />
         {nameProps && (
-          <div style={GlobalFunctions.setNewStyle(nameStyle, nameProps?.style)}>
-            <label
-              htmlFor="name"
-              style={GlobalFunctions.setNewStyle(labelStyle, labelProps?.style)}
-            >
+          <Name>
+            <label htmlFor="name" style={labelStyle}>
               {nameProps?.label}
               <input
                 type="text"
                 id="name"
                 name="name"
                 required
-                style={GlobalFunctions.setNewStyle(
-                  inputStyle,
-                  inputProps?.style
-                )}
+                style={inputStyle}
               />
             </label>
-          </div>
+          </Name>
         )}
         {emailProps && (
-          <div
-            style={GlobalFunctions.setNewStyle(emailStyle, emailProps?.style)}
-          >
+          <Email>
             <label htmlFor="email" style={labelStyle}>
               {emailProps?.label}
-              <input
-                type="email"
-                id="email"
-                name="email"
-                style={GlobalFunctions.setNewStyle(
-                  inputStyle,
-                  inputProps?.style
-                )}
-              />
+              <input type="email" id="email" name="email" style={inputStyle} />
             </label>
-          </div>
+          </Email>
         )}
         {contactProps && (
-          <div
-            style={GlobalFunctions.setNewStyle(
-              contactStyle,
-              contactProps?.style
-            )}
-          >
+          <Contact>
             <label htmlFor="contactType" style={labelStyle}>
               {contactProps?.label}
               <input
                 type="text"
                 id="contactType"
                 name="contactType"
-                style={GlobalFunctions.setNewStyle(
-                  inputStyle,
-                  inputProps?.style
-                )}
+                style={inputStyle}
               />
             </label>
-          </div>
+          </Contact>
         )}
         {messageProps && (
-          <div
-            style={GlobalFunctions.setNewStyle(
-              messageStyle,
-              messageProps?.style
-            )}
-          >
+          <Message>
             <label htmlFor="message" style={labelStyle}>
               {messageProps?.label}
               <textarea
@@ -137,7 +116,7 @@ export default function Form(props) {
                 required
               ></textarea>
             </label>
-          </div>
+          </Message>
         )}
         <div style={{ display: "flex", flexDirection: "row" }}>
           {submitProps && (
@@ -152,6 +131,6 @@ export default function Form(props) {
           )}
         </div>
       </form>
-    </div>
+    </Wrapper>
   );
 }

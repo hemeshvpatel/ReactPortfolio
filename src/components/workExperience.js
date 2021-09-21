@@ -1,14 +1,56 @@
 import React from "react";
 import { workExperience } from "../data";
 import TextLink from "./library/textLink";
+import styled, { css } from "styled-components";
+
+//Styles
+const Wrapper = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: ${theme.colors.primary};
+  `}
+`;
+
+const WorkExperienceContainer = styled.div`
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const Position = styled.div`
+  font-weight: 700;
+`;
+
+const Location = styled.div``;
+
+const Company = styled.div``;
+
+const CompanyUrl = styled.div``;
+
+const Dates = styled.div``;
+
+const Summary = styled.div`
+  margin: 10px;
+  font-style: italic;
+  width: 60%;
+`;
+
+const Bullets = styled.div`
+  width: 50%;
+`;
+
+const Bullet = styled.div`
+  margin: 5px;
+`;
 
 export default function WorkExperience() {
   //Some Ideas:
   //1) Turn this into a timeline with the ability to click and interact, ensure everything has links
   return (
-    <div
-      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
-    >
+    <Wrapper>
       {(workExperience || []).map((item, key) => {
         const {
           company,
@@ -21,45 +63,27 @@ export default function WorkExperience() {
           bullets,
         } = item;
         return (
-          <div
-            style={{
-              margin: "10px",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-            key={key}
-          >
-            <div style={{ fontWeight: 700 }}>{position}</div>
-            <div
-              style={{
-                display: "flex",
-              }}
-            >
+          <WorkExperienceContainer key={key}>
+            <Position>{position}</Position>
+            <Company>
               <TextLink company={company} companyUrl={companyUrl} />
-              {location}
-            </div>
-            <div>{companyUrl}</div>
-            <div></div>
-            <div>
+            </Company>
+            <Location> {location}</Location>
+            <CompanyUrl>{companyUrl}</CompanyUrl>
+            <Dates>
               {startDate} to {endDate}
-            </div>
-            <div style={{ margin: "10px", fontStyle: "italic", width: "60%" }}>
-              {summary}
-            </div>
-            <div style={{ width: "50%" }}>
+            </Dates>
+            <Summary>{summary}</Summary>
+            <Bullets>
+              {" "}
               {(bullets || []).map((bullet, key) => {
                 //console.log("each bullet: ", bullet)
-                return (
-                  <div key={key} style={{ margin: "5px" }}>
-                    •{bullet}
-                  </div>
-                );
+                return <Bullet>•{bullet}</Bullet>;
               })}
-            </div>
-          </div>
+            </Bullets>{" "}
+          </WorkExperienceContainer>
         );
       })}
-    </div>
+    </Wrapper>
   );
 }

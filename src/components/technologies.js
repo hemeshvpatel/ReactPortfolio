@@ -2,36 +2,42 @@ import React from "react";
 import { technologies } from "../data";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faReact, faJava } from "@fortawesome/free-brands-svg-icons";
+import styled, { css } from "styled-components";
+
+//Styles
+const Wrapper = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    align-items: center;
+    color: ${theme.colors.primary};
+  `}
+`;
+
+const TechnologiesContainer = styled.div`
+  margin: 0 5px 0 5px;
+`;
+
+const IconsContainer = styled.div`
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+`;
 
 export default function Technologies() {
   //console.log("technologies: ", technologies);
 
   return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        margin: "25px",
-      }}
-    >
+    <Wrapper>
       Technologies I enjoy working with:
       {(technologies || []).map((technology, key) => {
         return (
-          <div style={{ margin: "0 5px 0 5px" }} key={key}>
-            {technology}
-          </div>
+          <TechnologiesContainer key={key}>{technology}</TechnologiesContainer>
         );
       })}
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          fontSize: "25px",
-        }}
-      >
+      <IconsContainer>
         <FontAwesomeIcon icon={faReact} />
         <FontAwesomeIcon icon={faJava} />
-      </div>
-    </div>
+      </IconsContainer>
+    </Wrapper>
   );
 }

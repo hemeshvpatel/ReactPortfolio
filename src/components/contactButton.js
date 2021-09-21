@@ -1,10 +1,16 @@
 import React from "react";
 import Modal from "./library/modal";
+import styled from "styled-components";
+
+//Styles
+const Wrapper = styled.div`
+  display: flex;
+`;
 
 export default function ContactButton(props) {
   const { text } = props;
   return (
-    <div style={{ display: "flex" }}>
+    <Wrapper>
       <Modal
         openButtonProps={{
           location: "topRight",
@@ -22,6 +28,6 @@ export default function ContactButton(props) {
         }}
         style={{ backgroundColor: "white" }}
       />
-    </div>
+    </Wrapper>
   );
 }
