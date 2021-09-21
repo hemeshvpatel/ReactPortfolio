@@ -1,7 +1,9 @@
 import React from "react";
+import styled from "styled-components";
 
 //Font Awesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import {
   faGithub,
   faLinkedinIn,
@@ -10,102 +12,57 @@ import {
   faFacebook,
   faMediumM,
 } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+
+//Styles
+const Wrapper = styled.div`
+  display: flex;
+  font-size: 35px;
+`;
+
+const Link = styled.a`
+  text-decoration: none;
+  color: white;
+`;
 
 export default function SocialIcons(props) {
-  const { linkedin, medium, github, twitter, twitch, facebook, contact } =
-    props;
-  let linkColor = "white";
+  const { linkedin, medium, github, twitter, twitch, facebook } = props;
   let iconSpacing = "15px";
 
   return (
-    <div
-      style={{
-        display: "flex",
-        fontSize: "35px",
-      }}
-    >
+    <Wrapper>
       {github && (
-        <a
-          href={github}
-          target={"_blank"}
-          rel="noreferrer"
-          style={{
-            textDecoration: "none",
-            color: linkColor,
-          }}
-        >
+        <Link href={github} target={"_blank"} rel="noreferrer">
           <FontAwesomeIcon style={{ margin: iconSpacing }} icon={faGithub} />
-        </a>
+        </Link>
       )}
       {linkedin && (
-        <a
-          href={linkedin}
-          target={"_blank"}
-          rel="noreferrer"
-          style={{
-            textDecoration: "none",
-            color: linkColor,
-          }}
-        >
+        <Link href={linkedin} target={"_blank"} rel="noreferrer">
           <FontAwesomeIcon
             style={{ margin: iconSpacing }}
             icon={faLinkedinIn}
           />
-        </a>
+        </Link>
       )}
       {medium && (
-        <a
-          href={medium}
-          target={"_blank"}
-          rel="noreferrer"
-          style={{
-            textDecoration: "none",
-            color: linkColor,
-          }}
-        >
+        <Link href={medium} target={"_blank"} rel="noreferrer">
           <FontAwesomeIcon style={{ margin: iconSpacing }} icon={faMediumM} />
-        </a>
+        </Link>
       )}
       {twitter && (
-        <a
-          href={twitter}
-          target={"_blank"}
-          rel="noreferrer"
-          style={{
-            textDecoration: "none",
-            color: linkColor,
-          }}
-        >
+        <Link href={twitter} target={"_blank"} rel="noreferrer">
           <FontAwesomeIcon style={{ margin: iconSpacing }} icon={faTwitter} />
-        </a>
+        </Link>
       )}
       {twitch && (
-        <a
-          href={twitch}
-          target={"_blank"}
-          rel="noreferrer"
-          style={{
-            textDecoration: "none",
-            color: linkColor,
-          }}
-        >
+        <Link href={twitch} target={"_blank"} rel="noreferrer">
           <FontAwesomeIcon style={{ margin: iconSpacing }} icon={faTwitch} />
-        </a>
+        </Link>
       )}
       {facebook && (
-        <a
-          href={facebook}
-          target={"_blank"}
-          rel="noreferrer"
-          style={{
-            textDecoration: "none",
-            color: linkColor,
-          }}
-        >
+        <Link href={facebook} target={"_blank"} rel="noreferrer">
           <FontAwesomeIcon style={{ margin: iconSpacing }} icon={faFacebook} />
-        </a>
+        </Link>
       )}
-    </div>
+    </Wrapper>
   );
 }

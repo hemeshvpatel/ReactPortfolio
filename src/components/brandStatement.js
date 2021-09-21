@@ -1,13 +1,13 @@
 import React from "react";
 import { brandStatements } from "../data";
 import * as GlobalFunctions from "../globals/globalFunctions";
-
-//Typist: https://github.com/jstejada/react-typist
+import styled from "styled-components";
 import Typist from "react-typist";
 
-import styled, { css } from "styled-components";
+//Typist: https://github.com/jstejada/react-typist
 
-const BrandContainer = styled.div`
+//Styles
+const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,7 +26,7 @@ export default function BrandStatement(props) {
   //console.log("brandStatement: ", brandStatement);
 
   return (
-    <BrandContainer>
+    <Wrapper>
       {(brandStatements || []).map((brandStatement, key) => {
         //console.log("brandStatement: ", brandStatement)
         return (
@@ -37,6 +37,6 @@ export default function BrandStatement(props) {
           </StatementStyle>
         );
       })}
-    </BrandContainer>
+    </Wrapper>
   );
 }

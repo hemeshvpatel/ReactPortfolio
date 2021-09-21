@@ -4,22 +4,13 @@ import BrandStatements from "./brandStatement";
 import ResumeIcon from "./library/resumeIcon";
 import SocialIcons from "./library/socialIcons";
 
-import styled, { css, keyframes } from "styled-components";
+import styled from "styled-components";
 
-const LandingContainer = styled.div`
+//Styles
+const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-`;
-
-const rotate = keyframes`
-from {
-transform: rotate(0deg);
-}
-
-to {
-transform: rotate(360deg);
-}
 `;
 
 const Name = styled.div`
@@ -28,7 +19,6 @@ const Name = styled.div`
   margin-bottom: 10px;
   font-size: 75px;
   font-weight: 500;
-  // animation: ${rotate} 2s linear infinite;
 `;
 
 const IconsContainer = styled.div`
@@ -42,7 +32,7 @@ export default function Welcome() {
   //console.log("userData: ", userData)
 
   return (
-    <LandingContainer>
+    <Wrapper>
       <Name> Hi, I'm {firstName}!</Name>
       <BrandStatements />
       <IconsContainer>
@@ -55,6 +45,6 @@ export default function Welcome() {
         />
         <ResumeIcon to="https://drive.google.com/file/d/1Nkiadg3LWHWgXUEGA79bCVjpgzIiJRdW/view" />
       </IconsContainer>
-    </LandingContainer>
+    </Wrapper>
   );
 }
