@@ -7,7 +7,7 @@ import styled, { css } from "styled-components";
 const Wrapper = styled.div`
   ${({ theme }) => css`
     display: flex;
-    flex: 1 1 0;
+    flex: wrap;
     justify-content: space-between;
     align-items: center;
     padding-bottom: 20px;
@@ -22,13 +22,12 @@ const TextContainer = styled.div`
 export default function Footer() {
   //Add link logic to determine which icons should be displayed
   //Add link component for names to link to portfolio sites.
-
   return (
     <Wrapper>
       <TextContainer>
         Created with ❤️ using React.js and the powers of Netlify
       </TextContainer>
-      <ContactButton text="Contact Me" icon={true} />
+      <ContactButton text="Click to Contact Me" />
       <SocialIcons
         github={"https://github.com/"}
         linkedin={"https://linkedin.com"}

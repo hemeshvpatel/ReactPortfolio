@@ -13,13 +13,8 @@ const Wrapper = styled.div`
   ${({ theme }) => css`
     display: flex;
     flex-direction: column;
-    color: ${theme.colors.primary};
+    //color: ${theme.colors.primary};
   `}
-`;
-const Header = styled.div`
-  margin: 20px;
-  font-size: 20px;
-  color: "black";
 `;
 const Name = styled.div`
   margin: 10px;
@@ -34,7 +29,65 @@ const Message = styled.div`
   margin: 10px;
 `;
 
-export default function Form(props) {
+const Header = styled.div`
+  ${({ theme }) => css`
+    display: inline-block;
+    text-align: center;
+    margin-top: 10px;
+    color: black;
+    font-size: 25px;
+  `}
+`;
+
+const TopRightCloseButton = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  color: black;
+`;
+
+const CloseButton = styled.div`
+  background-color: transparent;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+`;
+
+const Body = styled.div`
+  ${({ theme }) => css`
+    flex: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+    text-align: center;
+    color: black;
+  `}
+`;
+
+const Footer = styled.div`
+  ${({ theme }) => css`
+    flex: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  `}
+`;
+
+const Button = styled.div`
+  ${({ theme }) => css`
+    width: 150px;
+    height: 45px;
+    margin: 10px;
+    border: none;
+    background-color: cornflowerblue;
+    color: white;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+  `}
+`;
+
+export default function ContactForm(props) {
   const {
     headerProps,
     //labelProps,
@@ -44,6 +97,7 @@ export default function Form(props) {
     emailProps,
     messageProps,
     submitProps,
+    onClose,
   } = props;
 
   let labelStyle = {
@@ -64,7 +118,14 @@ export default function Form(props) {
 
   return (
     <Wrapper>
-      {headerProps && <Header> {headerProps?.text}</Header>}
+      {headerProps && (
+        <Header>
+          <TopRightCloseButton>
+            <CloseButton onClick={onClose}>X</CloseButton>
+          </TopRightCloseButton>
+          {headerProps?.text}{" "}
+        </Header>
+      )}
       <form name="contact" method="post">
         <input type="hidden" name="form-name" value="contact" />
         {nameProps && (
@@ -118,7 +179,7 @@ export default function Form(props) {
             </label>
           </Message>
         )}
-        <div style={{ display: "flex", flexDirection: "row" }}>
+        <div style={{ display: "flex", justifyContent: "center" }}>
           {submitProps && (
             <input
               type="submit"

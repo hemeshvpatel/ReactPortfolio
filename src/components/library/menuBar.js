@@ -19,8 +19,8 @@ export default function NavBar() {
       <div
         style={{
           marginLeft: menuItemSpacing,
-          color: activeMenuItem === "About" ? "red" : "",
-          textDecoration: activeMenuItem === "About" ? "underline" : "",
+          color: activeMenuItem === "About" ? "red" : "white",
+          textDecoration: activeMenuItem === "About" ? "underline" : "white",
           cursor: "pointer",
         }}
         onMouseEnter={() => setActiveMenuItem("About")}
@@ -31,8 +31,9 @@ export default function NavBar() {
       <div
         style={{
           marginLeft: menuItemSpacing,
-          color: activeMenuItem === "Experience" ? "red" : "",
-          textDecoration: activeMenuItem === "Experience" ? "underline" : "",
+          color: activeMenuItem === "Experience" ? "red" : "white",
+          textDecoration:
+            activeMenuItem === "Experience" ? "underline" : "white",
           cursor: "pointer",
         }}
         onMouseEnter={() => setActiveMenuItem("Experience")}
@@ -43,8 +44,8 @@ export default function NavBar() {
       <div
         style={{
           marginLeft: menuItemSpacing,
-          color: activeMenuItem === "Projects" ? "red" : "",
-          textDecoration: activeMenuItem === "Projects" ? "underline" : "",
+          color: activeMenuItem === "Projects" ? "red" : "white",
+          textDecoration: activeMenuItem === "Projects" ? "underline" : "white",
           cursor: "pointer",
         }}
         onMouseEnter={() => setActiveMenuItem("Projects")}

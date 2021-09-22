@@ -78,7 +78,7 @@ export default function WorkExperience() {
               {" "}
               {(bullets || []).map((bullet, key) => {
                 //console.log("each bullet: ", bullet)
-                return <Bullet>•{bullet}</Bullet>;
+                return <Bullet key={key}>•{bullet}</Bullet>;
               })}
             </Bullets>{" "}
           </WorkExperienceContainer>
