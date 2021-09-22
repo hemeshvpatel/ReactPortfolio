@@ -1,4 +1,7 @@
 import React from "react";
+import styled from "styled-components";
+
+const Wrapper = styled.div``;
 
 export default function Link(props) {
   const { title, url, style } = props;
@@ -17,10 +20,10 @@ export default function Link(props) {
   }
 
   return (
-    <div>
+    <Wrapper>
       <a href={`${url}`} target="_blank" rel="noreferrer" style={linkStyle}>
         {title}
       </a>
-    </div>
+    </Wrapper>
   );
 }

@@ -1,4 +1,12 @@
 import React, { useState } from "react";
+import styled from "styled-components";
+
+const Wrapper = styled.div`
+  display: flex;
+  font-size: 25px;
+`;
+
+const Content = styled.div``;
 
 export default function NavBar() {
   //TODO - solution for hover effect on different divs
@@ -7,7 +15,7 @@ export default function NavBar() {
   let menuItemSpacing = "15px";
 
   return (
-    <div style={{ display: "flex", font: "20px" }}>
+    <Wrapper>
       <div
         style={{
           marginLeft: menuItemSpacing,
@@ -44,6 +52,6 @@ export default function NavBar() {
       >
         Projects
       </div>
-    </div>
+    </Wrapper>
   );
 }

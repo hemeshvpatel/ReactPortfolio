@@ -1,6 +1,18 @@
 import React from "react";
 import TextLink from "./textLink";
 
+import styled from "styled-components";
+
+const Wrapper = styled.div`
+  display: flex;
+  align-items: left;
+  margin: 25px;
+  flex-direction: column;
+  border: 3px dashed red;
+`;
+
+const TextWrapper = styled.div``;
+
 export default function Card(props) {
   const {
     title,
@@ -12,7 +24,7 @@ export default function Card(props) {
     imageUrl,
   } = props.project;
 
-  let titleStyle = { color: "red" };
+  let titleStyle = { color: "orange" };
   let yearStyle = { color: "purple" };
   let descriptionStyle = { color: "orange" };
   let repositoryUrlStyle = { color: "yellow" };
@@ -23,18 +35,12 @@ export default function Card(props) {
   //TODO: add image, format card
 
   return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "left",
-        margin: "25px",
-        flexDirection: "column",
-        border: "3px dashed red",
-      }}
-    >
-      {title && <div style={titleStyle}>{title}</div>}
-      {year && <div style={yearStyle}>{year}</div>}
-      {description && <div style={descriptionStyle}>{description}</div>}
+    <Wrapper>
+      {title && <TextWrapper style={titleStyle}>{title}</TextWrapper>}
+      {year && <TextWrapper style={yearStyle}>{year}</TextWrapper>}
+      {description && (
+        <TextWrapper style={descriptionStyle}>{description}</TextWrapper>
+      )}
       {repositoryUrl && (
         <TextLink
           title={"Repository Url"}
@@ -49,8 +55,10 @@ export default function Card(props) {
           style={hostedUrlStyle}
         />
       )}
-      {technologies && <div style={technologiesStyle}>{technologies}</div>}
-      {imageUrl && <div style={imageUrlStyle}>{imageUrl}</div>}
-    </div>
+      {technologies && (
+        <TextWrapper style={technologiesStyle}>{technologies}</TextWrapper>
+      )}
+      {imageUrl && <TextWrapper style={imageUrlStyle}>{imageUrl}</TextWrapper>}
+    </Wrapper>
   );
 }

@@ -3,11 +3,17 @@ import React from "react";
 //Font Awesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFile } from "@fortawesome/free-solid-svg-icons";
+import styled from "styled-components";
+
+const Wrapper = styled.div`
+  display: flex;
+  font-size: 35px;
+`;
 
 export default function ResumeIcon(props) {
   const { to } = props;
   return (
-    <div
+    <Wrapper
       style={{
         display: "flex",
         fontSize: "35px",
@@ -25,6 +31,6 @@ export default function ResumeIcon(props) {
       >
         <FontAwesomeIcon style={{ margin: "15px" }} icon={faFile} />
       </a>
-    </div>
+    </Wrapper>
   );
 }
