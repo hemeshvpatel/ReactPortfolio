@@ -24,10 +24,13 @@ const Name = styled.div`
 export default function Header() {
   const { firstName } = userData;
 
+    //Curious if we need to pass an object to MenuBar:
+  let menuBarProps = [{title: "About", id: 'about'},{title: "Experience", id: 'experience'},{title: "Projects", id: 'projects'}]
+
   return (
     <Wrapper>
       <Name>{`<${firstName} />`}</Name>
-      <MenuBar />
+      <MenuBar menuBarProps={menuBarProps} test={true}/>
     </Wrapper>
   );
 }
