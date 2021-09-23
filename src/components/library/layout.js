@@ -16,6 +16,11 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0px 200px 0px 200px;
     font-family: sans-serif;
+
+      //this will update styling after a curtain resolution on our page
+      @media screen and (max-width: 768px) { 
+        padding: 0px 50px 0px 50px
+      }
     }
 `;
 
