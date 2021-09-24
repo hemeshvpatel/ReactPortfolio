@@ -20,6 +20,7 @@ const ProfileContainer = styled.div`
 const Title = styled.div`
   margin-bottom: 25px;
   font-size: 35px;
+  color: white;
 `;
 
 const Sections = styled.div`

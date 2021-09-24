@@ -10,6 +10,10 @@ const Wrapper = styled.div`
     flex-direction: column;
     align-items: center;
     color: ${theme.colors.primary};
+
+    @media screen and (max-width: 768px) {
+      padding: 150px 0px 0px 0px;
+    }
   `}
 `;
 

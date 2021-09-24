@@ -34,27 +34,26 @@ const MenuItem = styled(LinkS)`
 
 export default function NavBar(props) {
   //TODO - solution for hover effect on different divs
-  // const { menuBarProps, test } = props;
+  const { menuBarProps } = props;
   // const [activeMenuItem, setActiveMenuItem] = useState("");
 
-  // console.log("props", menuBarProps);
+  console.log("props", menuBarProps);
+
   return (
     <Wrapper>
-      <MenuItemContainer>
-        <MenuItem to="about" smooth={true} duration={500} spy={true}>
-          About
-        </MenuItem>
-      </MenuItemContainer>
-      <MenuItemContainer>
-        <MenuItem to="experience" smooth={true} duration={500} spy={true}>
-          Experience
-        </MenuItem>
-      </MenuItemContainer>
-      <MenuItemContainer>
-        <MenuItem to="project" smooth={true} duration={500} spy={true}>
-          Projects
-        </MenuItem>
-      </MenuItemContainer>
+      {menuBarProps.map((menu, key) => (
+        <MenuItemContainer>
+          <MenuItem
+            key={key}
+            to={menu.id}
+            smooth={true}
+            duration={500}
+            spy={true}
+          >
+            {menu.title}{" "}
+          </MenuItem>
+        </MenuItemContainer>
+      ))}
     </Wrapper>
   );
 }

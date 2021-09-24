@@ -25,7 +25,7 @@ export default function Header() {
   let menuBarProps = [
     { title: "About", id: "about" },
     { title: "Experience", id: "experience" },
-    { title: "Projects", id: "projects" },
+    { title: "Projects", id: "project" },
   ];
 
   return (
