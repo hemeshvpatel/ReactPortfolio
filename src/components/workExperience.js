@@ -10,6 +10,10 @@ const Wrapper = styled.div`
     flex-direction: column;
     align-items: center;
     color: ${theme.colors.primary};
+
+    @media screen and (max-width: 768px) {
+      padding: 150px 0px 0px 0px;
+    }
   `}
 `;
 
@@ -50,7 +54,7 @@ export default function WorkExperience() {
   //Some Ideas:
   //1) Turn this into a timeline with the ability to click and interact, ensure everything has links
   return (
-    <Wrapper>
+    <Wrapper id="experience">
       {(workExperience || []).map((item, key) => {
         const {
           company,

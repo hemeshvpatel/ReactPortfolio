@@ -2,6 +2,7 @@ import React from "react";
 import MenuBar from "./library/menuBar";
 import { userData } from "../data";
 import styled, { css } from "styled-components";
+import { Link as LinkR } from "react-router-dom";
 
 //Styles
 const Wrapper = styled.div`
@@ -11,7 +12,7 @@ const Wrapper = styled.div`
   padding: 0.5rem calc((100vw-1000px) / 2);
 `;
 
-const Name = styled.div`
+const Name = styled(LinkR)`
   ${({ theme }) => css`
     font-size: 25px;
     color: ${theme.colors.secondary};
@@ -25,12 +26,12 @@ export default function Header() {
   let menuBarProps = [
     { title: "About", id: "about" },
     { title: "Experience", id: "experience" },
-    { title: "Projects", id: "projects" },
+    { title: "Projects", id: "project" },
   ];
 
   return (
     <Wrapper>
-      <Name>{`<${firstName} />`}</Name>
+      <Name to="/">{`<${firstName} />`}</Name>
       <MenuBar menuBarProps={menuBarProps} test={true} />
     </Wrapper>
   );

@@ -20,6 +20,7 @@ const ProfileContainer = styled.div`
 const Title = styled.div`
   margin-bottom: 25px;
   font-size: 35px;
+  color: white;
 `;
 
 const Sections = styled.div`
@@ -38,7 +39,7 @@ const ProfilePicture = styled.img`
 
 export default function About() {
   return (
-    <Wrapper>
+    <Wrapper id="about">
       <ProfileContainer>
         <Title>About me</Title>
         {(about || []).map((paragraph, key) => {

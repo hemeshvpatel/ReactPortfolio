@@ -6,7 +6,12 @@ import styled from "styled-components";
 //Styles
 const Wrapper = styled.div`
   display: flex;
-  grid-auto-columns: 2;
+  align-items: center;
+
+  @media screen and (max-width: 768px) {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
 `;
 
 export default function Projects() {

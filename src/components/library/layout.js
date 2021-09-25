@@ -39,13 +39,9 @@ export default function Layout() {
       <GlobalStyle />
       <Header />
       <Section children={<Landing />} />
-      <Section id="About" title="About me" children={<About />} />
-      <Section
-        id="WorkExperience"
-        title="Work Experience"
-        children={<WorkExperience />}
-      />
-      <Section id="Projects" title="Projects" children={<Projects />} />
+      <Section title="About me" children={<About />} />
+      <Section title="Work Experience" children={<WorkExperience />} />
+      <Section title="Projects" children={<Projects />} />
       <Footer />
     </ThemeProvider>
   );
