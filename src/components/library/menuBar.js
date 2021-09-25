@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import styled, { css } from "styled-components";
+import React from "react";
+import styled from "styled-components";
 import { Link as LinkS } from "react-scroll";
 
 const Wrapper = styled.div`
@@ -32,17 +32,15 @@ const MenuItem = styled(LinkS)`
   }
 `;
 
-export default function NavBar(props) {
+export default function MenuBar(props) {
   //TODO - solution for hover effect on different divs
   const { menuBarProps } = props;
-  // const [activeMenuItem, setActiveMenuItem] = useState("");
-
-  console.log("props", menuBarProps);
+  //console.log("props", menuBarProps);
 
   return (
     <Wrapper>
       {menuBarProps.map((menu, key) => (
-        <MenuItemContainer>
+        <MenuItemContainer key={key + 1}>
           <MenuItem
             key={key}
             to={menu.id}

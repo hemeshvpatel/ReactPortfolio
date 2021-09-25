@@ -14,8 +14,8 @@ const Wrapper = styled.div`
 
 const Name = styled(LinkR)`
   ${({ theme }) => css`
-    font-size: 25px;
     color: ${theme.colors.secondary};
+    font-size: 25px;
   `}
 `;
 

@@ -1,6 +1,5 @@
 import React from "react";
 //import { setNewStyle } from "../globalFunctions";
-import * as GlobalFunctions from "../globals/globalFunctions";
 import styled, { css } from "styled-components";
 
 //handle select options
@@ -64,18 +63,6 @@ const Input = styled.input`
 
 const TextArea = styled.textarea`
   font-size: 25px;
-`;
-
-const Body = styled.div`
-  ${({ theme }) => css`
-    flex: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    text-align: center;
-    color: black;
-  `}
 `;
 
 const Footer = styled.div`

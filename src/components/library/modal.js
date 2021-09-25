@@ -28,26 +28,25 @@ const Container = styled.div`
 `;
 
 export default function Modal({ show, children, onClose }) {
-  const outside = useRef();
-  // const handleClick = (e) => {
-  //   console.log("e: ", e);
-  //   console.log("outside: ", outside.current.contains(e.target));
+  const ref = useRef(null);
 
-  //   if (outside.current.contains(e.target)) {
-  //     return;
-  //   }
-  //   onClose();
-  // };
-  // useEffect(() => {
-  //   console.log("useEffect run");
-  //   const getClick = show && document.addEventListener("click", handleClick);
-  //   return () => getClick();
-  // }, []);
+  const handleClickOutside = (e) => {
+    if (ref.current && !ref.current.contains(e.target)) {
+      onClose && onClose();
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("click", handleClickOutside, true);
+    return () => {
+      document.removeEventListener("click", handleClickOutside, true);
+    };
+  });
 
   if (!show) return null;
   return ReactDom.createPortal(
-    <Overlay ref={outside}>
-      <Container>{children}</Container>
+    <Overlay>
+      <Container ref={ref}>{children}</Container>
     </Overlay>,
     document.getElementById("portal")
   );
