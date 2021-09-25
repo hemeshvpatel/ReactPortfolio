@@ -17,25 +17,23 @@ const Wrapper = styled.div`
   `}
 `;
 const Name = styled.div`
-  margin: 10px;
+  margin: 20px;
 `;
 const Email = styled.div`
-  margin: 10px;
-`;
-const Contact = styled.div`
-  margin: 10px;
+  margin: 20px;
 `;
 const Message = styled.div`
-  margin: 10px;
+  margin: 20px;
 `;
 
 const Header = styled.div`
   ${({ theme }) => css`
     display: inline-block;
     text-align: center;
-    margin-top: 10px;
     color: black;
-    font-size: 25px;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 20px;
   `}
 `;
 
@@ -52,13 +50,29 @@ const CloseButton = styled.div`
   cursor: pointer;
 `;
 
+const Label = styled.label`
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  font-size: 15;
+  color: black;
+`;
+
+const Input = styled.input`
+  font-size: 25px;
+`;
+
+const TextArea = styled.textarea`
+  font-size: 25px;
+`;
+
 const Body = styled.div`
   ${({ theme }) => css`
     flex: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.7rem;
+    font-size: 2rem;
     text-align: center;
     color: black;
   `}
@@ -73,13 +87,13 @@ const Footer = styled.div`
   `}
 `;
 
-const Button = styled.div`
+const Button = styled.input`
   ${({ theme }) => css`
     width: 150px;
     height: 45px;
-    margin: 10px;
+    margin: 20px;
     border: none;
-    background-color: cornflowerblue;
+    background-color: green;
     color: white;
     border-radius: 8px;
     font-size: 20px;
@@ -90,9 +104,6 @@ const Button = styled.div`
 export default function ContactForm(props) {
   const {
     headerProps,
-    //labelProps,
-    //inputProps,
-    contactProps,
     nameProps,
     emailProps,
     messageProps,
@@ -100,97 +111,43 @@ export default function ContactForm(props) {
     onClose,
   } = props;
 
-  let labelStyle = {
-    display: "flex",
-    flexDirection: "column",
-    fontWeight: 700,
-    fontSize: "10px",
-    color: "black",
-  };
-
-  let inputStyle = { background: "white" };
-  let textAreaStyle = { background: "white" };
-  let submitButtonStyle = {
-    color: "white",
-    backgroundColor: "blue",
-    fontWeight: 400,
-  };
-
   return (
     <Wrapper>
-      {headerProps && (
-        <Header>
-          <TopRightCloseButton>
-            <CloseButton onClick={onClose}>X</CloseButton>
-          </TopRightCloseButton>
-          {headerProps?.text}{" "}
-        </Header>
-      )}
+      <TopRightCloseButton>
+        <CloseButton onClick={onClose}>x</CloseButton>
+      </TopRightCloseButton>
+      {headerProps && <Header>{headerProps?.text} </Header>}
       <form name="contact" method="post">
         <input type="hidden" name="form-name" value="contact" />
         {nameProps && (
           <Name>
-            <label htmlFor="name" style={labelStyle}>
+            <Label htmlFor="name">
               {nameProps?.label}
-              <input
-                type="text"
-                id="name"
-                name="name"
-                required
-                style={inputStyle}
-              />
-            </label>
+              <Input type="text" id="name" name="name" required />
+            </Label>
           </Name>
         )}
         {emailProps && (
           <Email>
-            <label htmlFor="email" style={labelStyle}>
+            <Label htmlFor="email">
               {emailProps?.label}
-              <input type="email" id="email" name="email" style={inputStyle} />
-            </label>
+              <Input type="email" id="email" name="email" />
+            </Label>
           </Email>
-        )}
-        {contactProps && (
-          <Contact>
-            <label htmlFor="contactType" style={labelStyle}>
-              {contactProps?.label}
-              <input
-                type="text"
-                id="contactType"
-                name="contactType"
-                style={inputStyle}
-              />
-            </label>
-          </Contact>
         )}
         {messageProps && (
           <Message>
-            <label htmlFor="message" style={labelStyle}>
+            <Label htmlFor="message">
               {messageProps?.label}
-              <textarea
-                id="message"
-                name="message"
-                style={GlobalFunctions.setNewStyle(
-                  textAreaStyle,
-                  messageProps?.textAreaStyle
-                )}
-                required
-              ></textarea>
-            </label>
+              <TextArea id="message" name="message" required />
+            </Label>
           </Message>
         )}
-        <div style={{ display: "flex", justifyContent: "center" }}>
+        <Footer>
           {submitProps && (
-            <input
-              type="submit"
-              value={submitProps?.text || "Submit"}
-              style={GlobalFunctions.setNewStyle(
-                submitButtonStyle,
-                submitProps?.buttonStyle
-              )}
-            />
+            <Button type="submit" value={submitProps?.text || "Submit"} />
           )}
-        </div>
+        </Footer>
       </form>
     </Wrapper>
   );

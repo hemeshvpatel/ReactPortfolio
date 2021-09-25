@@ -13,6 +13,7 @@ const Wrapper = styled.div`
 
 const Name = styled.div`
   ${({ theme }) => css`
+    font-size: 25px;
     color: ${theme.colors.secondary};
   `}
 `;

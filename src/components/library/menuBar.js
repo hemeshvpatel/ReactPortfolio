@@ -9,7 +9,7 @@ const Wrapper = styled.div`
 `;
 
 const MenuItem = styled.div`
-  ${({ activeMenuItem }) => css`
+  ${({}) => css`
     cursor: pointer;
     color: white;
     align-items: center;

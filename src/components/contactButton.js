@@ -42,26 +42,17 @@ export default function ContactButton(props) {
             formProps={{ style: { border: "3px dashed red" } }}
             headerProps={{
               text: "Leave a message",
-              style: { color: "blue" },
             }}
             //labelProps={{ style: { fontSize: "20px" } }}
-            nameProps={{ label: "Your name please ..." }}
-            emailProps={{ label: "Email ... only if you want" }}
-            contactProps={{ label: "What type of fan are you?" }}
+            nameProps={{ label: "Name" }}
+            emailProps={{ label: "Email" }}
             messageProps={{
-              label: "Message ... much appreciated!",
-              textAreaStyle: {},
+              label: "Message",
             }}
             submitProps={{
-              text: "Submit Message",
-              buttonStyle: {
-                backgroundColor: "#4CAF50",
-                color: "white",
-                margin: "10px",
-              },
+              text: "Send Message",
             }}
             onClose={() => {
-              console.log("closing");
               setOpenModal(false);
             }}
           />

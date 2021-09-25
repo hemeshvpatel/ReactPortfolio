@@ -20,7 +20,6 @@ const TextContainer = styled.div`
 `;
 
 export default function Footer() {
-  //Add link logic to determine which icons should be displayed
   //Add link component for names to link to portfolio sites.
   return (
     <Wrapper>

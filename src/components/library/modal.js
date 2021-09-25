@@ -22,25 +22,26 @@ const Container = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #fff;
-    padding: 50px;
-    z-index: 1000;
+    padding: 25px;
+    z-index: 1001;
   `}
 `;
 
 export default function Modal({ show, children, onClose }) {
   const outside = useRef();
   // const handleClick = (e) => {
+  //   console.log("e: ", e);
+  //   console.log("outside: ", outside.current.contains(e.target));
+
   //   if (outside.current.contains(e.target)) {
   //     return;
   //   }
-  //   console.log("close");
   //   onClose();
   // };
   // useEffect(() => {
-  //   const getClick = document.addEventListener("click", handleClick);
-  //   return () => {
-  //     getClick();
-  //   };
+  //   console.log("useEffect run");
+  //   const getClick = show && document.addEventListener("click", handleClick);
+  //   return () => getClick();
   // }, []);
 
   if (!show) return null;

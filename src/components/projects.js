@@ -6,8 +6,7 @@ import styled from "styled-components";
 //Styles
 const Wrapper = styled.div`
   display: flex;
-  grid-template-columns: auto auto;
-  margin: 25px;
+  grid-auto-columns: 2;
 `;
 
 export default function Projects() {
