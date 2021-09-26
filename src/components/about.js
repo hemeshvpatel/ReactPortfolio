@@ -39,7 +39,7 @@ const ProfilePicture = styled.img`
 
 export default function About() {
   return (
-    <Wrapper id="about">
+    <Wrapper>
       <ProfileContainer>
         <Title>About me</Title>
         {(about || []).map((paragraph, key) => {

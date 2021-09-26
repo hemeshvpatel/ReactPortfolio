@@ -39,7 +39,14 @@ export default function Layout() {
       <GlobalStyle />
       <Header />
       <Section children={<Landing />} />
-      <Section title="About me" children={<About />} />
+
+      {/*  putting it inside a div is an option */}
+      <div id="about">
+        <Section title="About me" children={<About />} />
+      </div>
+
+
+
       <Section title="Work Experience" children={<WorkExperience />} />
       <Section title="Projects" children={<Projects />} />
       <Footer />
