@@ -54,7 +54,7 @@ export default function WorkExperience() {
   //Some Ideas:
   //1) Turn this into a timeline with the ability to click and interact, ensure everything has links
   return (
-    <Wrapper id="experience">
+    <Wrapper>
       {(workExperience || []).map((item, key) => {
         const {
           company,

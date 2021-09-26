@@ -12,7 +12,7 @@ const Wrapper = styled.div`
 `;
 
 export default function Section(props) {
-  const { children } = props;
+  const { children, id } = props;
 
-  return <Wrapper>{children}</Wrapper>;
+  return <Wrapper id={id}>{children}</Wrapper>;
 }
