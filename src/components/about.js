@@ -4,6 +4,14 @@ import Roles from "./roles";
 import Technologies from "./technologies";
 import styled, { css } from "styled-components";
 
+//Notes:
+/* 
+
+Technologies section -> just icons (also try to stack it where the icons come below the profile etc.) - may need to conver to using react-icons package
++ resume link (not with an icon) "Check out my resume here!"
+Move the "Roles I'm interested ... " top part of the footer
+*/
+
 //Styles
 const Wrapper = styled.div`
   display: flex;

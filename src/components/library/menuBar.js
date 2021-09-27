@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Link as LinkS } from "react-scroll";
+import { Link as LinkS } from "react-scroll"; // https://www.npmjs.com/package/react-scroll
 
 const Wrapper = styled.div`
   display: flex;

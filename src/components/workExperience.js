@@ -3,6 +3,23 @@ import { workExperience } from "../data";
 import TextLink from "./library/textLink";
 import styled, { css } from "styled-components";
 
+//Notes
+/*
+
+Idea is making some sort of timeline 
+
+Small Pic of Company
+Company Name
+Location
+Time
+
+Clickable expands into more details / Dropdown carrot:
+Description 
+
+*Mobile would be a stacked timeline or displayed as cards
+
+*/ 
+
 //Styles
 const Wrapper = styled.div`
   ${({ theme }) => css`
