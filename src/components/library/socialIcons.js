@@ -1,17 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-
-//Font Awesome
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import {
-  faGithub,
-  faLinkedinIn,
-  faTwitter,
-  faTwitch,
-  faFacebook,
-  faMediumM,
-} from "@fortawesome/free-brands-svg-icons";
+  FaGithub,
+  FaLinkedin,
+  FaTwitter,
+  FaTwitch,
+  FaFacebook,
+  FaMediumM,
+} from "react-icons/fa";
 
 //Styles
 const Wrapper = styled.div`
@@ -32,35 +28,32 @@ export default function SocialIcons(props) {
     <Wrapper>
       {github && (
         <Link href={github} target={"_blank"} rel="noreferrer">
-          <FontAwesomeIcon style={{ margin: iconSpacing }} icon={faGithub} />
+          <FaGithub style={{ margin: iconSpacing }} />
         </Link>
       )}
       {linkedin && (
         <Link href={linkedin} target={"_blank"} rel="noreferrer">
-          <FontAwesomeIcon
-            style={{ margin: iconSpacing }}
-            icon={faLinkedinIn}
-          />
+          <FaLinkedin style={{ margin: iconSpacing }} />
         </Link>
       )}
       {medium && (
         <Link href={medium} target={"_blank"} rel="noreferrer">
-          <FontAwesomeIcon style={{ margin: iconSpacing }} icon={faMediumM} />
+          <FaMediumM style={{ margin: iconSpacing }} />
         </Link>
       )}
       {twitter && (
         <Link href={twitter} target={"_blank"} rel="noreferrer">
-          <FontAwesomeIcon style={{ margin: iconSpacing }} icon={faTwitter} />
+          <FaTwitter style={{ margin: iconSpacing }} />
         </Link>
       )}
       {twitch && (
         <Link href={twitch} target={"_blank"} rel="noreferrer">
-          <FontAwesomeIcon style={{ margin: iconSpacing }} icon={faTwitch} />
+          <FaTwitch style={{ margin: iconSpacing }} />
         </Link>
       )}
       {facebook && (
         <Link href={facebook} target={"_blank"} rel="noreferrer">
-          <FontAwesomeIcon style={{ margin: iconSpacing }} icon={faFacebook} />
+          <FaFacebook style={{ margin: iconSpacing }} />
         </Link>
       )}
     </Wrapper>

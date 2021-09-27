@@ -2,6 +2,7 @@ import React from "react";
 import ContactButton from "./contactButton";
 import SocialIcons from "./library/socialIcons";
 import styled, { css } from "styled-components";
+import { FaHeart } from "react-icons/fa";
 
 //Styles
 const Wrapper = styled.div`
@@ -24,7 +25,8 @@ export default function Footer() {
   return (
     <Wrapper>
       <TextContainer>
-        Created with ❤️ using React.js and the powers of Netlify
+        Created with <FaHeart style={{ color: "red" }} /> using React.js and the
+        powers of Netlify
       </TextContainer>
       <ContactButton text="Click to Contact Me" />
       <SocialIcons
