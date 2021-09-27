@@ -35,7 +35,7 @@ export default function Card(props) {
   //TODO: add image, format card
 
   return (
-    <Wrapper id="project">
+    <Wrapper>
       {title && <TextWrapper style={titleStyle}>{title}</TextWrapper>}
       {year && <TextWrapper style={yearStyle}>{year}</TextWrapper>}
       {description && (
