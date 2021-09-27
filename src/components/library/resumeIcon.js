@@ -1,9 +1,6 @@
 import React from "react";
-
-//Font Awesome
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFile } from "@fortawesome/free-solid-svg-icons";
 import styled from "styled-components";
+import { FaRegFilePdf } from "react-icons/fa";
 
 const Wrapper = styled.div`
   display: flex;
@@ -29,7 +26,7 @@ export default function ResumeIcon(props) {
           color: "white",
         }}
       >
-        <FontAwesomeIcon style={{ margin: "15px" }} icon={faFile} />
+        <FaRegFilePdf style={{ margin: "15px" }} />
       </a>
     </Wrapper>
   );
