@@ -15,6 +15,7 @@ const Wrapper = styled.div`
 const Name = styled.div`
   ${({ theme }) => css`
     display: flex;
+    justify-content: center;
     flex-direction: column;
     margin-bottom: 10px;
     font-size: 75px;

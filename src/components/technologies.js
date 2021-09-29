@@ -1,8 +1,7 @@
 import React from "react";
-import { technologies } from "../data";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faReact, faJava } from "@fortawesome/free-brands-svg-icons";
 import styled, { css } from "styled-components";
+import { FaGithub, FaLinkedin, FaReact, FaJava } from "react-icons/fa";
+import { IoLogoJavascript } from "react-icons/io";
 
 //Styles
 const Wrapper = styled.div`
@@ -11,10 +10,6 @@ const Wrapper = styled.div`
     align-items: center;
     color: ${theme.colors.primary};
   `}
-`;
-
-const TechnologiesContainer = styled.div`
-  margin: 0 5px 0 5px;
 `;
 
 const IconsContainer = styled.div`
@@ -29,14 +24,12 @@ export default function Technologies() {
   return (
     <Wrapper>
       Technologies I enjoy working with:
-      {(technologies || []).map((technology, key) => {
-        return (
-          <TechnologiesContainer key={key}>{technology}</TechnologiesContainer>
-        );
-      })}
       <IconsContainer>
-        <FontAwesomeIcon icon={faReact} />
-        <FontAwesomeIcon icon={faJava} />
+        <FaGithub />
+        <FaLinkedin />
+        <FaReact />
+        <FaJava />
+        <IoLogoJavascript />
       </IconsContainer>
     </Wrapper>
   );
