@@ -12,14 +12,14 @@ import { createGlobalStyle, ThemeProvider } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   body {
+    box-sizing: border-box;
     background: #010000;
-    margin: 0;
-    padding: 0px 200px 0px 200px;
     font-family: sans-serif;
+    margin: 0 200px 0 200px;
 
       //this will update styling after a curtain resolution on our page
-      @media screen and (max-width: 768px) { 
-        padding: 0px 50px 0px 50px
+      @media screen and (max-width: 1000px) { 
+        margin: 0px 50px 0px 50px;
       }
     }
 `;
@@ -45,7 +45,7 @@ export default function Layout() {
         title="Work Experience"
         children={<WorkExperience />}
       />
-      <Section id="project" title="Projects" children={<Projects />} />
+      {/* <Section id="project" title="Projects" children={<Projects />} /> Commented for now, it's causing the responsiveness issues*/}
       <Footer />
     </ThemeProvider>
   );

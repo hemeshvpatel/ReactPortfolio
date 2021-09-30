@@ -4,11 +4,10 @@ import styled from "styled-components";
 const Wrapper = styled.div`
   min-height: 100vh;
   display: flex;
-  margin: auto;
-  flex: 0 1 auto;
   flex-direction: column;
+  margin-right: auto;
+  margin-left: auto;
   justify-content: center;
-  //padding: "25px",
 `;
 
 export default function Section(props) {
