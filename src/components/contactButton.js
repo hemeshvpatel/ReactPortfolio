@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Modal from "./library/modal";
 import ContactForm from "./contactForm";
 import styled, { css } from "styled-components";
+import { FaHeart, FaHandSpock } from "react-icons/fa";
 
 //Styles
 const Wrapper = styled.div`
@@ -12,7 +13,7 @@ const Wrapper = styled.div`
 const Button = styled.div`
   ${({ theme }) =>
     css`
-      background-color: blue;
+      //background-color: blue;
       color: ${theme.colors.primary};
       width: auto;
       border: none;
@@ -21,6 +22,10 @@ const Button = styled.div`
       cursor: pointer;
       align-content: center;
       font-weight: 600;
+
+      &:hover {
+        color: red;
+      }
     `}
 `;
 
@@ -35,7 +40,7 @@ export default function ContactButton(props) {
             setOpenModal(true);
           }}
         >
-          {text}
+          <FaHandSpock style={{ color: "red" }} /> {text}
         </Button>
         <Modal show={openModal} onClose={() => setOpenModal(false)}>
           <ContactForm

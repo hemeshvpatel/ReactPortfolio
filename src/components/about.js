@@ -23,11 +23,6 @@ const Wrapper = styled.div`
   justify-content: center;
 `;
 
-const ProfileContainer = styled.div`
-  /* flex-direction: column;
-  flex: 1; */
-`;
-
 const InfoRow = styled.div`
   display: grid;
   grid-auto-columns: auto 1fr;
@@ -85,16 +80,13 @@ export default function About() {
   return (
     <Wrapper>
       <InfoRow>
-        <ProfileContainer>
-          <ColumnOne>
-            <Title>About me</Title>
-            {(about || []).map((paragraph, key) => {
-              return <Sections key={key}>{paragraph}</Sections>;
-            })}
-            <Technologies />
-            {/*update this section -- causing the responsiveness issues*/}
-          </ColumnOne>
-        </ProfileContainer>
+        <ColumnOne>
+          <Title>About me</Title>
+          {(about || []).map((paragraph, key) => {
+            return <Sections key={key}>{paragraph}</Sections>;
+          })}
+          <Technologies />
+        </ColumnOne>
         <ColumnTwo>
           <ProfilePicture src="/aboutPic.jpeg" alt="Profile Pic" />
         </ColumnTwo>

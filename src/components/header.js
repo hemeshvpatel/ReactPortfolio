@@ -10,12 +10,12 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem calc((100vw-1000px) / 2);
+  font-size: 2vw;
 `;
 
 const Name = styled(LinkR)`
   ${({ theme }) => css`
     color: ${theme.colors.secondary};
-    font-size: 25px;
   `}
 `;
 

@@ -11,3 +11,7 @@ How to use this guide:
 *How to create server branches
 
 How to run locally:
+
+Usefull Videos:
+
+https://www.youtube.com/watch?v=iP_HqoCuRI0&ab_channel=BrianDesign

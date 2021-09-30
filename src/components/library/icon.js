@@ -15,9 +15,9 @@ const Link = styled.a`
   color: white;
 `;
 
-export default function Icon({ iconName }) {
-  console.log("iconName: ", iconName);
+export default function Icon({ family, iconName }) {
+  //console.log("iconName: ", iconName);
   const icon = React.createElement(DevIcons[iconName]);
-  console.log(icon);
+  //console.log(icon);
   return <Wrapper>{icon}</Wrapper>;
 }
