@@ -5,20 +5,18 @@ import { Link as LinkS } from "react-scroll"; // https://www.npmjs.com/package/r
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  font-size: 25px;
+  font-size: 2vw;
   justify-content: space-between;
 `;
 
-const MenuItemContainer = styled.li`
-  height: 80px;
-`;
+const MenuItemContainer = styled.li``;
 
 const MenuItem = styled(LinkS)`
   cursor: pointer;
   color: white;
   align-items: center;
   text-decoration: none;
-  padding: 0 0.5rem;
+  padding: 0.5rem calc((100vw-1000px) / 2);
   display: flex;
 
   //Hover effects here, Styled Component has its own hover. You can add any more styling inside &:hover

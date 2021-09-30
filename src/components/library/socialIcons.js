@@ -18,6 +18,10 @@ const Wrapper = styled.div`
 const Link = styled.a`
   text-decoration: none;
   color: white;
+
+  &:hover {
+    color: red;
+  }
 `;
 
 export default function SocialIcons(props) {

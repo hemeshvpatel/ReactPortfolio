@@ -4,6 +4,9 @@ import BrandStatements from "./brandStatement";
 import ResumeIcon from "./library/resumeIcon";
 import SocialIcons from "./library/socialIcons";
 import styled, { css } from "styled-components";
+import icon from "./library/icon";
+import Icon from "./library/icon";
+import { DiJsBadge } from "react-icons/di";
 
 //Styles
 const Wrapper = styled.div`
@@ -46,7 +49,11 @@ export default function Welcome() {
           medium={"https://medium.com"}
           twitch={"https://twitch.com"}
         />
-        <ResumeIcon to="https://drive.google.com/file/d/1Nkiadg3LWHWgXUEGA79bCVjpgzIiJRdW/view" />
+        <ResumeIcon
+          to="https://drive.google.com/file/d/1Nkiadg3LWHWgXUEGA79bCVjpgzIiJRdW/view"
+          label={"My Resume"}
+        />
+        <Icon family={"DevIcons"} iconName={"DiJsBadge"} color={"white"} />
       </IconsContainer>
     </Wrapper>
   );
