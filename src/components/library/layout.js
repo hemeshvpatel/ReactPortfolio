@@ -3,7 +3,7 @@ import WorkExperience from "../workExperience";
 import About from "../about";
 import Landing from "../landing";
 import Footer from "../footer";
-import Projects from "../projects";
+//import Projects from "../projects";
 import Header from "../header";
 import Section from "./section";
 import { createGlobalStyle, ThemeProvider } from "styled-components";

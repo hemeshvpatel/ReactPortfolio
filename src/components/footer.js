@@ -2,7 +2,7 @@ import React from "react";
 import ContactButton from "./contactButton";
 import SocialIcons from "./library/socialIcons";
 import styled, { css } from "styled-components";
-import { FaHeart, FaHandSpock } from "react-icons/fa";
+import { FaHeart } from "react-icons/fa";
 
 //Design
 // Top: I'm always interested in freelancing, specifically in front-end! [Hand] Click here to get in touch

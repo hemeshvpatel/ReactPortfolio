@@ -1,6 +1,5 @@
 import React from "react";
 import { about } from "../data";
-import Roles from "./roles";
 import Technologies from "./technologies";
 import styled, { css } from "styled-components";
 

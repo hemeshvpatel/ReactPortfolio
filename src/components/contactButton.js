@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Modal from "./library/modal";
 import ContactForm from "./contactForm";
 import styled, { css } from "styled-components";
-import { FaHeart, FaHandSpock } from "react-icons/fa";
+import { FaHandSpock } from "react-icons/fa";
 
 //Styles
 const Wrapper = styled.div`
