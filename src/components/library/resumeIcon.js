@@ -37,7 +37,7 @@ const Link = styled.a`
   }
 `;
 
-export default function ResumeIcon({ to, label }) {
+export default function ResumeIcon({ to, label, tooltip }) {
   const [active, setActive] = useState(false);
   return (
     <Wrapper>
@@ -50,7 +50,7 @@ export default function ResumeIcon({ to, label }) {
         onMouseLeave={() => setActive(false)}
       >
         <FaRegFilePdf />
-        <ToolTip active={active}>{label}</ToolTip>
+        {tooltip && <ToolTip active={active}>{label}</ToolTip>}
       </Link>
     </Wrapper>
   );

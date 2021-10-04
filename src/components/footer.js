@@ -65,6 +65,7 @@ export default function Footer() {
           twitter={"https://twitter.com"}
           medium={"https://medium.com"}
           twitch={"https://twitch.com"}
+          tooltip={false}
         />
       </Section2>
     </Wrapper>

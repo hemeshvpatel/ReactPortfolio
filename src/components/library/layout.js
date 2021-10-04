@@ -3,7 +3,7 @@ import WorkExperience from "../workExperience";
 import About from "../about";
 import Landing from "../landing";
 import Footer from "../footer";
-//import Projects from "../projects";
+import Projects from "../projects";
 import Header from "../header";
 import Section from "./section";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
@@ -45,7 +45,7 @@ export default function Layout() {
         title="Work Experience"
         children={<WorkExperience />}
       />
-      {/* <Section id="project" title="Projects" children={<Projects />} /> Commented for now, it's causing the responsiveness issues*/}
+      <Section id="project" title="Projects" children={<Projects />} />
       <Footer />
     </ThemeProvider>
   );
