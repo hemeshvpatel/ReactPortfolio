@@ -22,10 +22,20 @@ const Name = styled.div`
     font-weight: 500;
     color: ${theme.colors.primary};
   `}
+
+  @media screen and (max-width: 600px) {
+    font-size: 10vw;
+  }
 `;
 
 const IconsContainer = styled.div`
   display: flex;
+  justify-content: space-evenly;
+  font-size: 35px;
+
+  @media screen and (max-width: 600px) {
+    font-size: 25px;
+  }
 `;
 
 export default function Welcome() {

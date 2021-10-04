@@ -20,34 +20,28 @@ Repository Link: Repo Link
 Appears as a Carousel on full web with toggle for cards
 Mobile appears as cards stacked
 
-*/ 
+*/
 
 //Styles
 const Wrapper = styled.div`
-  display: flex;
-  align-items: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  justify-content: center;
 
-  @media screen and (max-width: 1200px) {
-    display: grid;
-    grid-template-columns: auto auto;
-  }
-
-  @media screen and (max-width: 500px) {
-    display: grid;
-    grid-template-columns: auto;
+  @media screen and (min-width: 600px) {
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 16rem));
   }
 `;
 
 export default function Projects() {
-  //console.log("projects: ", projects);
-
-  //gridTemplateColumns - determines how many rows / columns you have
-
   return (
     <Wrapper>
       {(projects || []).map((project, key) => {
-        //console.log("project: ", project);
-        return <ProjectCard key={key} project={project} />;
+        return <ProjectCard key={key} data={project} />;
       })}
     </Wrapper>
   );

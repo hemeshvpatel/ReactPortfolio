@@ -153,7 +153,7 @@ export const projects = [
     repositoryUrl: "https://github.com/hemeshvpatel/CSS-Color-Picker",
     hostedUrl: "https://hemesh-css-color-picker.netlify.app/",
     technologies: ["React.js", "Javascript", "Netlify"],
-    imageUrl: "/public/project.jpeg",
+    imageUrl: "./colors.jpg",
   },
   {
     title: "CSS Color Picker 2 ",
@@ -163,7 +163,7 @@ export const projects = [
     repositoryUrl: "https://github.com/hemeshvpatel/CSS-Color-Picker",
     hostedUrl: "https://hemesh-css-color-picker.netlify.app/",
     technologies: ["React.js", "Javascript", "Netlify"],
-    imageUrl: "",
+    imageUrl: "./colors.jpg",
   },
   {
     title: "CSS Color Picker 3 ",
@@ -173,7 +173,7 @@ export const projects = [
     repositoryUrl: "https://github.com/hemeshvpatel/CSS-Color-Picker",
     hostedUrl: "https://hemesh-css-color-picker.netlify.app/",
     technologies: ["React.js", "Javascript", "Netlify"],
-    imageUrl: "",
+    imageUrl: "./colors.jpg",
   },
   {
     title: "CSS Color Picker 4 ",
@@ -183,7 +183,7 @@ export const projects = [
     repositoryUrl: "https://github.com/hemeshvpatel/CSS-Color-Picker",
     hostedUrl: "https://hemesh-css-color-picker.netlify.app/",
     technologies: ["React.js", "Javascript", "Netlify"],
-    imageUrl: "",
+    imageUrl: "./colors.jpg",
   },
   {
     title: "CSS Color Picker 5 ",
@@ -193,7 +193,7 @@ export const projects = [
     repositoryUrl: "https://github.com/hemeshvpatel/CSS-Color-Picker",
     hostedUrl: "https://hemesh-css-color-picker.netlify.app/",
     technologies: ["React.js", "Javascript", "Netlify"],
-    imageUrl: "",
+    imageUrl: "./colors.jpg",
   },
   {
     title: "CSS Color Picker 6",
@@ -203,6 +203,6 @@ export const projects = [
     repositoryUrl: "https://github.com/hemeshvpatel/CSS-Color-Picker",
     hostedUrl: "https://hemesh-css-color-picker.netlify.app/",
     technologies: ["React.js", "Javascript", "Netlify"],
-    imageUrl: "",
+    imageUrl: "./colors.jpg",
   },
 ];

@@ -34,7 +34,7 @@ const Link = styled.a`
   text-decoration: none;
   color: white;
   margin: 25px;
-  font-size: 35px;
+  font-size: inherit;
 
   &:hover {
     color: red;
@@ -42,6 +42,10 @@ const Link = styled.a`
 
   &:hover ${ToolTip} {
     color: red;
+  }
+
+  @media screen and (max-width: 600px) {
+    margin: 0px;
   }
 `;
 
