@@ -1,6 +1,7 @@
-import React from "react";
-import styled from "styled-components";
+import React, { useState } from "react";
+import styled, { css } from "styled-components";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import TechnologiesIcons from "../technologiesIcons";
 
 const Wrapper = styled.div`
   color: white;
@@ -38,6 +39,7 @@ const Title = styled.div`
   font-size: 1.5rem;
   line-height: 1.5rem;
   margin-bottom: 0.5rem;
+  font-weight: bold;
 `;
 
 const Description = styled.div`
@@ -47,15 +49,27 @@ const Description = styled.div`
 const Technologies = styled.div`
   font-size: 1rem;
   margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
+`;
+
+//This must be defined above Link in order to work for the hover effect targeting ToolTip
+const ToolTip = styled.div`
+  ${({ active }) => css`
+    transition: color 0.5s;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+  `}
 `;
 
 const Buttons = styled.div`
+  border-top: 1px solid grey;
   display: flex;
+  margin-top: 1rem;
 `;
 
 const Button = styled.button`
   border: none;
-  border-top: 1px solid grey;
   background-color: transparent;
   font-family: inherit;
   font-size: 2rem;
@@ -63,10 +77,14 @@ const Button = styled.button`
   color: inherit;
   width: 100%;
   padding-top: 1rem;
-  margin-top: 1rem;
   cursor: pointer;
+  transition: color 0.5s;
 
   &:hover {
+    color: red;
+  }
+
+  &:hover ${ToolTip} {
     color: red;
   }
 `;
@@ -85,6 +103,8 @@ export default function Card({ data }) {
     imageUrl,
   } = data;
 
+  const [active, setActive] = useState(false);
+
   //Need to use process.env.PUBLIC_URL in order for react to access public folder
 
   return (
@@ -92,14 +112,22 @@ export default function Card({ data }) {
       <Image src={process.env.PUBLIC_URL + imageUrl} />
       <Body>
         <Title>{title}</Title>
+        <Technologies>
+          <TechnologiesIcons technologies={technologies} tooltip={true} />
+        </Technologies>
         <Description>{description}</Description>
-        <Technologies>{technologies}</Technologies>
         <Buttons>
           <Button onClick={() => window.open(repositoryUrl, "_blank").focus()}>
             <FaGithub />
+            <ToolTip active={active}>Github</ToolTip>
           </Button>
-          <Button onClick={() => window.open(hostedUrl, "_blank").focus()}>
+          <Button
+            onClick={() => window.open(hostedUrl, "_blank").focus()}
+            onMouseEnter={() => setActive(true)}
+            onMouseLeave={() => setActive(false)}
+          >
             <FaExternalLinkAlt />
+            <ToolTip active={active}>See Project</ToolTip>
           </Button>
         </Buttons>
       </Body>

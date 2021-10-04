@@ -22,8 +22,8 @@ export const roles = [
 
 export const technologies = [
   "Javascript",
-  "React.js",
-  "Node.js",
+  "ReactJS",
+  "Node",
   "HTML",
   "CSS",
   "Ruby",
@@ -34,7 +34,7 @@ export const brandStatements = [
 ];
 
 export const about = [
-  "Software Engineer (React is my favorite). Passionate about how things work and how technology can help solve problems. My career has led me through roles in finance, operations, and most recently software engineering. I love getting to write code and work on projects as much as I can, leveling up my JavaScript and React skills through projects.",
+  "Software Engineer (ReactJS is my favorite). Passionate about how things work and how technology can help solve problems. My career has led me through roles in finance, operations, and most recently software engineering. I love getting to write code and work on projects as much as I can, leveling up my JavaScript and ReactJS skills through projects.",
   "Currently, I work as a Full Stack Software Engineer at Unhedged, a financial data & research platform with powerful content creation and collaboration tools, built on top of institutional-quality data.",
   "When I’m not coding, you can find me reading articles from my favorite blogs (Engadget, Lifehacker) and watching car reviews on YouTube. Currently reading Think Like a Monk by Jay Shetty.",
 ];
@@ -149,60 +149,60 @@ export const projects = [
     title: "CSS Color Picker 1",
     year: "2020",
     description:
-      "A simple CSS Color Picker built with React to help me with palette options when styling.",
+      "A simple CSS Color Picker built with ReactJS to help me with palette options when styling.",
     repositoryUrl: "https://github.com/hemeshvpatel/CSS-Color-Picker",
     hostedUrl: "https://hemesh-css-color-picker.netlify.app/",
-    technologies: ["React.js", "Javascript", "Netlify"],
+    technologies: { ReactJS: true, Javascript: true, Netlify: true },
     imageUrl: "./colors.jpg",
   },
-  {
-    title: "CSS Color Picker 2 ",
-    year: "2022",
-    description:
-      "A simple CSS Color Picker built with React to help me with palette options when styling.",
-    repositoryUrl: "https://github.com/hemeshvpatel/CSS-Color-Picker",
-    hostedUrl: "https://hemesh-css-color-picker.netlify.app/",
-    technologies: ["React.js", "Javascript", "Netlify"],
-    imageUrl: "./colors.jpg",
-  },
-  {
-    title: "CSS Color Picker 3 ",
-    year: "2020",
-    description:
-      "A simple CSS Color Picker built with React to help me with palette options when styling.",
-    repositoryUrl: "https://github.com/hemeshvpatel/CSS-Color-Picker",
-    hostedUrl: "https://hemesh-css-color-picker.netlify.app/",
-    technologies: ["React.js", "Javascript", "Netlify"],
-    imageUrl: "./colors.jpg",
-  },
-  {
-    title: "CSS Color Picker 4 ",
-    year: "2019",
-    description:
-      "A simple CSS Color Picker built with React to help me with palette options when styling.",
-    repositoryUrl: "https://github.com/hemeshvpatel/CSS-Color-Picker",
-    hostedUrl: "https://hemesh-css-color-picker.netlify.app/",
-    technologies: ["React.js", "Javascript", "Netlify"],
-    imageUrl: "./colors.jpg",
-  },
-  {
-    title: "CSS Color Picker 5 ",
-    year: "2020",
-    description:
-      "A simple CSS Color Picker built with React to help me with palette options when styling.",
-    repositoryUrl: "https://github.com/hemeshvpatel/CSS-Color-Picker",
-    hostedUrl: "https://hemesh-css-color-picker.netlify.app/",
-    technologies: ["React.js", "Javascript", "Netlify"],
-    imageUrl: "./colors.jpg",
-  },
-  {
-    title: "CSS Color Picker 6",
-    year: "2021",
-    description:
-      "A simple CSS Color Picker built with React to help me with palette options when styling.",
-    repositoryUrl: "https://github.com/hemeshvpatel/CSS-Color-Picker",
-    hostedUrl: "https://hemesh-css-color-picker.netlify.app/",
-    technologies: ["React.js", "Javascript", "Netlify"],
-    imageUrl: "./colors.jpg",
-  },
+  // {
+  //   title: "CSS Color Picker 2 ",
+  //   year: "2022",
+  //   description:
+  //     "A simple CSS Color Picker built with ReactJS to help me with palette options when styling.",
+  //   repositoryUrl: "https://github.com/hemeshvpatel/CSS-Color-Picker",
+  //   hostedUrl: "https://hemesh-css-color-picker.netlify.app/",
+  //   technologies: ["ReactJS", "Javascript", "Netlify"],
+  //   imageUrl: "./colors.jpg",
+  // },
+  // {
+  //   title: "CSS Color Picker 3 ",
+  //   year: "2020",
+  //   description:
+  //     "A simple CSS Color Picker built with ReactJS to help me with palette options when styling.",
+  //   repositoryUrl: "https://github.com/hemeshvpatel/CSS-Color-Picker",
+  //   hostedUrl: "https://hemesh-css-color-picker.netlify.app/",
+  //   technologies: ["ReactJS", "Javascript", "Netlify"],
+  //   imageUrl: "./colors.jpg",
+  // },
+  // {
+  //   title: "CSS Color Picker 4 ",
+  //   year: "2019",
+  //   description:
+  //     "A simple CSS Color Picker built with ReactJS to help me with palette options when styling.",
+  //   repositoryUrl: "https://github.com/hemeshvpatel/CSS-Color-Picker",
+  //   hostedUrl: "https://hemesh-css-color-picker.netlify.app/",
+  //   technologies: ["ReactJS", "Javascript", "Netlify"],
+  //   imageUrl: "./colors.jpg",
+  // },
+  // {
+  //   title: "CSS Color Picker 5 ",
+  //   year: "2020",
+  //   description:
+  //     "A simple CSS Color Picker built with ReactJS to help me with palette options when styling.",
+  //   repositoryUrl: "https://github.com/hemeshvpatel/CSS-Color-Picker",
+  //   hostedUrl: "https://hemesh-css-color-picker.netlify.app/",
+  //   technologies: ["ReactJS", "Javascript", "Netlify"],
+  //   imageUrl: "./colors.jpg",
+  // },
+  // {
+  //   title: "CSS Color Picker 6",
+  //   year: "2021",
+  //   description:
+  //     "A simple CSS Color Picker built with ReactJS to help me with palette options when styling.",
+  //   repositoryUrl: "https://github.com/hemeshvpatel/CSS-Color-Picker",
+  //   hostedUrl: "https://hemesh-css-color-picker.netlify.app/",
+  //   technologies: ["ReactJS", "Javascript", "Netlify"],
+  //   imageUrl: "./colors.jpg",
+  // },
 ];
