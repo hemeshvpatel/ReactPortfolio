@@ -3,15 +3,24 @@ import TextLink from "./textLink";
 
 import styled from "styled-components";
 
+//Style Idea: (hover effect on the entire card)
+//Image
+//Description
+//"View more" button
+
 const Wrapper = styled.div`
   display: flex;
-  align-items: left;
-  margin: 25px;
+  margin: 10px;
   flex-direction: column;
-  border: 3px dashed red;
+  border: 3px solid red;
+  padding: 10px;
 `;
 
-const TextWrapper = styled.div``;
+const Image = styled.img`
+  width: 100px;
+`;
+
+const ImageWrapper = styled.div``;
 
 export default function Card(props) {
   const {
@@ -36,7 +45,12 @@ export default function Card(props) {
 
   return (
     <Wrapper>
-      {title && <TextWrapper style={titleStyle}>{title}</TextWrapper>}
+      {imageUrl && (
+        <ImageWrapper>
+          <Image src="/colorWheel.jpg" alt="Project Pic" />
+        </ImageWrapper>
+      )}
+      {/* {title && <TextWrapper style={titleStyle}>{title}</TextWrapper>}
       {year && <TextWrapper style={yearStyle}>{year}</TextWrapper>}
       {description && (
         <TextWrapper style={descriptionStyle}>{description}</TextWrapper>
@@ -57,8 +71,7 @@ export default function Card(props) {
       )}
       {technologies && (
         <TextWrapper style={technologiesStyle}>{technologies}</TextWrapper>
-      )}
-      {imageUrl && <TextWrapper style={imageUrlStyle}>{imageUrl}</TextWrapper>}
+      )} */}
     </Wrapper>
   );
 }

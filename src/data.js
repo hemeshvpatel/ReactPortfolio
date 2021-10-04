@@ -153,7 +153,7 @@ export const projects = [
     repositoryUrl: "https://github.com/hemeshvpatel/CSS-Color-Picker",
     hostedUrl: "https://hemesh-css-color-picker.netlify.app/",
     technologies: ["React.js", "Javascript", "Netlify"],
-    imageUrl: "",
+    imageUrl: "/public/project.jpeg",
   },
   {
     title: "CSS Color Picker 2 ",

@@ -46,7 +46,8 @@ const Link = styled.a`
 `;
 
 export default function SocialIcons(props) {
-  const { linkedin, medium, github, twitter, twitch, facebook } = props;
+  const { linkedin, medium, github, twitter, twitch, facebook, tooltip } =
+    props;
   const [active, setActive] = useState(false);
 
   return (
@@ -60,7 +61,7 @@ export default function SocialIcons(props) {
           onMouseLeave={() => setActive(false)}
         >
           <FaGithub />
-          <ToolTip active={active}>{"Github"}</ToolTip>
+          {tooltip && <ToolTip active={active}>{"Github"}</ToolTip>}
         </Link>
       )}
       {linkedin && (
@@ -72,31 +73,31 @@ export default function SocialIcons(props) {
           onMouseLeave={() => setActive(false)}
         >
           <FaLinkedin />
-          <ToolTip active={active}>{"LinkedIn"}</ToolTip>
+          {tooltip && <ToolTip active={active}>{"LinkedIn"}</ToolTip>}
         </Link>
       )}
       {medium && (
         <Link href={medium} target={"_blank"} rel="noreferrer">
           <FaMediumM />
-          <ToolTip active={active}>{"Medium"}</ToolTip>
+          {tooltip && <ToolTip active={active}>{"Medium"}</ToolTip>}
         </Link>
       )}
       {twitter && (
         <Link href={twitter} target={"_blank"} rel="noreferrer">
           <FaTwitter />
-          <ToolTip active={active}>{"Twitter"}</ToolTip>
+          {tooltip && <ToolTip active={active}>{"Twitter"}</ToolTip>}
         </Link>
       )}
       {twitch && (
         <Link href={twitch} target={"_blank"} rel="noreferrer">
           <FaTwitch />
-          <ToolTip active={active}>{"Twitch"}</ToolTip>
+          {tooltip && <ToolTip active={active}>{"Twitch"}</ToolTip>}
         </Link>
       )}
       {facebook && (
         <Link href={facebook} target={"_blank"} rel="noreferrer">
           <FaFacebook />
-          <ToolTip active={active}>{"Facebook"}</ToolTip>
+          {tooltip && <ToolTip active={active}>{"Facebook"}</ToolTip>}
         </Link>
       )}
     </Wrapper>

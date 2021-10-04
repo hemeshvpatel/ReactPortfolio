@@ -27,9 +27,14 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1200px) {
     display: grid;
     grid-template-columns: auto auto;
+  }
+
+  @media screen and (max-width: 500px) {
+    display: grid;
+    grid-template-columns: auto;
   }
 `;
 

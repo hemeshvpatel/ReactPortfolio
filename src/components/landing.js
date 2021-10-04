@@ -45,10 +45,12 @@ export default function Welcome() {
           twitter={"https://twitter.com"}
           medium={"https://medium.com"}
           twitch={"https://twitch.com"}
+          tooltip={true}
         />
         <ResumeIcon
           to="https://drive.google.com/file/d/1Nkiadg3LWHWgXUEGA79bCVjpgzIiJRdW/view"
           label={"Resume"}
+          tooltip={true}
         />
       </IconsContainer>
     </Wrapper>

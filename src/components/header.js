@@ -10,7 +10,12 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem calc((100vw-1000px) / 2);
-  font-size: 2vw;
+  font-size: 35px;
+  margin-top: 20px;
+
+  @media screen and (max-width: 750px) {
+    font-size: 15px;
+  }
 `;
 
 const Name = styled(LinkR)`
