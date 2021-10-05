@@ -4,12 +4,17 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import TechnologiesIcons from "../technologiesIcons";
 
 const Wrapper = styled.div`
-  color: white;
-  //box-shadow: 0 0 10px 5px red;
-  border: 4px solid red;
+  color: black;
   border-radius: 0.2rem;
   min-width: 28rem;
   display: flex;
+  background-color: white;
+
+  &:hover {
+    transform: scale(1.05);
+    //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+  }
 
   @media screen and (min-width: 600px) {
     flex-direction: column;
@@ -50,13 +55,14 @@ const Technologies = styled.div`
   font-size: 1rem;
   margin-top: 0.6rem;
   margin-bottom: 0.6rem;
+  color: black;
 `;
 
 //This must be defined above Link in order to work for the hover effect targeting ToolTip
 const ToolTip = styled.div`
   ${({ active }) => css`
     transition: color 0.5s;
-    color: white;
+    color: black;
     font-size: 15px;
     font-weight: 600;
   `}
@@ -95,7 +101,6 @@ const Button = styled.button`
 export default function Card({ data }) {
   const {
     title,
-    year,
     description,
     repositoryUrl,
     hostedUrl,

@@ -9,7 +9,7 @@ const Wrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    color: ${theme.colors.primary};
+    //color: ${theme.colors.primary};
     font-size: 25px;
   `}
 `;

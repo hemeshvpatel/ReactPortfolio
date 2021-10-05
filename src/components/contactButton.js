@@ -16,12 +16,13 @@ const Button = styled.div`
       //background-color: blue;
       color: ${theme.colors.primary};
       width: auto;
-      border: none;
+      border: 1px solid red;
       border-radius: 6px;
       padding: 10px;
       cursor: pointer;
-      align-content: center;
+      align-items: center;
       font-weight: 600;
+      margin: 20px;
 
       &:hover {
         color: red;
