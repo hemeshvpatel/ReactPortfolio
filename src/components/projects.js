@@ -28,7 +28,7 @@ const Wrapper = styled.div`
   padding: 0;
   box-sizing: border-box;
   display: grid;
-  gap: 1rem;
+  gap: 2rem;
   grid-template-columns: 1fr;
   justify-content: center;
 

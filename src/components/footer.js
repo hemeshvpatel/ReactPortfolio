@@ -22,8 +22,9 @@ const Section1 = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  margin-bottom: 150px;
   font-weight: 600;
+  flex-direction: column;
 
   @media screen and (max-width: 1000px) {
     flex-direction: column;
@@ -52,7 +53,7 @@ export default function Footer() {
         <TextContainer>
           I'm always interested in hearing about opportunities!
         </TextContainer>
-        <ContactButton text="Click to Contact Me" />
+        <ContactButton text="Say Hello" />
       </Section1>
       <Section2>
         <TextContainer>
