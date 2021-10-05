@@ -36,7 +36,7 @@ export default function Header() {
 
   return (
     <Wrapper>
-      <Name to="/">{`<${firstName} />`}</Name>
+      <Name to="/">{`<${firstName}/>`}</Name>
       <MenuBar menuBarProps={menuBarProps} test={true} />
     </Wrapper>
   );

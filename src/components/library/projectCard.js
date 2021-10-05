@@ -1,28 +1,98 @@
-import React from "react";
-import TextLink from "./textLink";
-
-import styled from "styled-components";
-
-//Style Idea: (hover effect on the entire card)
-//Image
-//Description
-//"View more" button
+import React, { useState } from "react";
+import styled, { css } from "styled-components";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import TechnologiesIcons from "../technologiesIcons";
 
 const Wrapper = styled.div`
+  color: white;
+  //box-shadow: 0 0 10px 5px red;
+  border: 4px solid red;
+  border-radius: 0.2rem;
+  min-width: 28rem;
   display: flex;
-  margin: 10px;
-  flex-direction: column;
-  border: 3px solid red;
-  padding: 10px;
+
+  @media screen and (min-width: 600px) {
+    flex-direction: column;
+    text-align: center;
+    min-width: 14rem;
+  }
 `;
 
 const Image = styled.img`
-  width: 100px;
+  width: 14rem;
+  height: 11rem;
+  object-fit: cover;
+  border-radius: 0.2rem;
+
+  @media screen and (min-width: 600px) {
+    width: 100%;
+    height: 12rem;
+  }
 `;
 
-const ImageWrapper = styled.div``;
+const Body = styled.div`
+  margin: 1rem;
+  flex-grow: 1;
+`;
 
-export default function Card(props) {
+const Title = styled.div`
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+`;
+
+const Description = styled.div`
+  line-height: 1.2rem;
+`;
+
+const Technologies = styled.div`
+  font-size: 1rem;
+  margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
+`;
+
+//This must be defined above Link in order to work for the hover effect targeting ToolTip
+const ToolTip = styled.div`
+  ${({ active }) => css`
+    transition: color 0.5s;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+  `}
+`;
+
+const Buttons = styled.div`
+  border-top: 1px solid grey;
+  display: flex;
+  margin-top: 1rem;
+`;
+
+const Button = styled.button`
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: 2rem;
+  font-weight: bold;
+  color: inherit;
+  width: 100%;
+  padding-top: 1rem;
+  cursor: pointer;
+  transition: color 0.5s;
+
+  &:hover {
+    color: red;
+  }
+
+  &:hover ${ToolTip} {
+    color: red;
+  }
+`;
+
+//Tutorial Links:
+//https://www.youtube.com/watch?v=3_gakM-y7hE
+
+export default function Card({ data }) {
   const {
     title,
     year,
@@ -31,47 +101,36 @@ export default function Card(props) {
     hostedUrl,
     technologies,
     imageUrl,
-  } = props.project;
+  } = data;
 
-  let titleStyle = { color: "orange" };
-  let yearStyle = { color: "purple" };
-  let descriptionStyle = { color: "orange" };
-  let repositoryUrlStyle = { color: "yellow" };
-  let hostedUrlStyle = { color: "blue" };
-  let technologiesStyle = { color: "teal" };
-  let imageUrlStyle = { color: "teal" };
+  const [active, setActive] = useState(false);
 
-  //TODO: add image, format card
+  //Need to use process.env.PUBLIC_URL in order for react to access public folder
 
   return (
     <Wrapper>
-      {imageUrl && (
-        <ImageWrapper>
-          <Image src="/colorWheel.jpg" alt="Project Pic" />
-        </ImageWrapper>
-      )}
-      {/* {title && <TextWrapper style={titleStyle}>{title}</TextWrapper>}
-      {year && <TextWrapper style={yearStyle}>{year}</TextWrapper>}
-      {description && (
-        <TextWrapper style={descriptionStyle}>{description}</TextWrapper>
-      )}
-      {repositoryUrl && (
-        <TextLink
-          title={"Repository Url"}
-          url={repositoryUrl}
-          style={repositoryUrlStyle}
-        />
-      )}
-      {hostedUrl && (
-        <TextLink
-          title={"Hosted TextLink"}
-          url={hostedUrl}
-          style={hostedUrlStyle}
-        />
-      )}
-      {technologies && (
-        <TextWrapper style={technologiesStyle}>{technologies}</TextWrapper>
-      )} */}
+      <Image src={process.env.PUBLIC_URL + imageUrl} />
+      <Body>
+        <Title>{title}</Title>
+        <Technologies>
+          <TechnologiesIcons technologies={technologies} tooltip={true} />
+        </Technologies>
+        <Description>{description}</Description>
+        <Buttons>
+          <Button onClick={() => window.open(repositoryUrl, "_blank").focus()}>
+            <FaGithub />
+            <ToolTip active={active}>Github</ToolTip>
+          </Button>
+          <Button
+            onClick={() => window.open(hostedUrl, "_blank").focus()}
+            onMouseEnter={() => setActive(true)}
+            onMouseLeave={() => setActive(false)}
+          >
+            <FaExternalLinkAlt />
+            <ToolTip active={active}>See Project</ToolTip>
+          </Button>
+        </Buttons>
+      </Body>
     </Wrapper>
   );
 }
