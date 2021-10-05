@@ -16,9 +16,11 @@ Time
 Clickable expands into more details / Dropdown carrot:
 Description 
 
+//https://brittanychiang.com/#jobs
+
 *Mobile would be a stacked timeline or displayed as cards
 
-*/ 
+*/
 
 //Styles
 const Wrapper = styled.div`

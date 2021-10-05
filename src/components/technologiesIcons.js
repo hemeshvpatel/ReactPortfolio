@@ -19,19 +19,19 @@ export default function TechnologiesIcons({ technologies }) {
     <Wrapper>
       {Object.keys(technologies).map((technology, key) => {
         if (technology === "Javascript") {
-          return <DiJavascript />;
+          return <DiJavascript key={key} />;
         }
         if (technology === "ReactJS") {
-          return <DiReact />;
+          return <DiReact key={key} />;
         }
         if (technology === "Java") {
-          return <DiJava />;
+          return <DiJava key={key} />;
         }
         if (technology === "Ruby") {
-          return <DiRuby />;
+          return <DiRuby key={key} />;
         }
         if (technology === "Netlify") {
-          return <SiNetlify />;
+          return <SiNetlify key={key} />;
         }
       })}
     </Wrapper>

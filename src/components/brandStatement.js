@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { brandStatements } from "../data";
 import styled, { css } from "styled-components";
 import Typist from "react-typist";
@@ -26,20 +26,46 @@ const StatementStyle = styled.div`
 `;
 
 export default function BrandStatement(props) {
-  //console.log("brandStatement: ", brandStatement);
+  //console.log("brandStatements: ", brandStatements);
+  const [count, setCount] = useState(0);
+  const [statement, setStatement] = useState(brandStatements[0]);
+  const statementRef = useRef();
+
+  // useEffect(() => {
+  //   console.log("updating", count);
+  //   setStatement((statement) => brandStatements[count]);
+  // }, [count]);
+  let i = 0;
 
   return (
     <Wrapper>
       {(brandStatements || []).map((brandStatement, key) => {
-        //console.log("brandStatement: ", brandStatement)
-        return (
-          <StatementStyle key={key}>
-            <Typist cursor={{ hideWhenDone: true, hideWhenDoneDelay: 500 }}>
-              {brandStatement}
-            </Typist>
-          </StatementStyle>
-        );
+        if (i === key) {
+          i++;
+          return (
+            <StatementStyle key={key}>
+              <Typist
+                key={key}
+                cursor={{ hideWhenDone: true, hideWhenDoneDelay: 500 }}
+              >
+                {brandStatement}
+              </Typist>
+            </StatementStyle>
+          );
+        }
       })}
+
+      {/* <StatementStyle>
+        <Typist
+          cursor={{ hideWhenDone: true, hideWhenDoneDelay: 500 }}
+          onTypingDone={() => {
+            console.log("count = ", count);
+            setCount(count + 1);
+          }}
+        >
+          {statement}
+        </Typist>
+      </StatementStyle> */}
     </Wrapper>
   );
 }

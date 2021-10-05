@@ -31,6 +31,9 @@ export const technologies = [
 
 export const brandStatements = [
   "Passionate about changing the world with technology.",
+  "I build things for the web",
+  "Software Engineer | Front-end Developer | Back-end Developer",
+  "Currently, I'm focused on building fin-tech products at Portfolio & Co.",
 ];
 
 export const about = [
@@ -155,54 +158,54 @@ export const projects = [
     technologies: { ReactJS: true, Javascript: true, Netlify: true },
     imageUrl: "./colors.jpg",
   },
-  // {
-  //   title: "CSS Color Picker 2 ",
-  //   year: "2022",
-  //   description:
-  //     "A simple CSS Color Picker built with ReactJS to help me with palette options when styling.",
-  //   repositoryUrl: "https://github.com/hemeshvpatel/CSS-Color-Picker",
-  //   hostedUrl: "https://hemesh-css-color-picker.netlify.app/",
-  //   technologies: ["ReactJS", "Javascript", "Netlify"],
-  //   imageUrl: "./colors.jpg",
-  // },
-  // {
-  //   title: "CSS Color Picker 3 ",
-  //   year: "2020",
-  //   description:
-  //     "A simple CSS Color Picker built with ReactJS to help me with palette options when styling.",
-  //   repositoryUrl: "https://github.com/hemeshvpatel/CSS-Color-Picker",
-  //   hostedUrl: "https://hemesh-css-color-picker.netlify.app/",
-  //   technologies: ["ReactJS", "Javascript", "Netlify"],
-  //   imageUrl: "./colors.jpg",
-  // },
-  // {
-  //   title: "CSS Color Picker 4 ",
-  //   year: "2019",
-  //   description:
-  //     "A simple CSS Color Picker built with ReactJS to help me with palette options when styling.",
-  //   repositoryUrl: "https://github.com/hemeshvpatel/CSS-Color-Picker",
-  //   hostedUrl: "https://hemesh-css-color-picker.netlify.app/",
-  //   technologies: ["ReactJS", "Javascript", "Netlify"],
-  //   imageUrl: "./colors.jpg",
-  // },
-  // {
-  //   title: "CSS Color Picker 5 ",
-  //   year: "2020",
-  //   description:
-  //     "A simple CSS Color Picker built with ReactJS to help me with palette options when styling.",
-  //   repositoryUrl: "https://github.com/hemeshvpatel/CSS-Color-Picker",
-  //   hostedUrl: "https://hemesh-css-color-picker.netlify.app/",
-  //   technologies: ["ReactJS", "Javascript", "Netlify"],
-  //   imageUrl: "./colors.jpg",
-  // },
-  // {
-  //   title: "CSS Color Picker 6",
-  //   year: "2021",
-  //   description:
-  //     "A simple CSS Color Picker built with ReactJS to help me with palette options when styling.",
-  //   repositoryUrl: "https://github.com/hemeshvpatel/CSS-Color-Picker",
-  //   hostedUrl: "https://hemesh-css-color-picker.netlify.app/",
-  //   technologies: ["ReactJS", "Javascript", "Netlify"],
-  //   imageUrl: "./colors.jpg",
-  // },
+  {
+    title: "CSS Color Picker 2 ",
+    year: "2022",
+    description:
+      "A simple CSS Color Picker built with ReactJS to help me with palette options when styling.",
+    repositoryUrl: "https://github.com/hemeshvpatel/CSS-Color-Picker",
+    hostedUrl: "https://hemesh-css-color-picker.netlify.app/",
+    technologies: { ReactJS: true, Javascript: true, Netlify: true },
+    imageUrl: "./colors.jpg",
+  },
+  {
+    title: "CSS Color Picker 3 ",
+    year: "2020",
+    description:
+      "A simple CSS Color Picker built with ReactJS to help me with palette options when styling.",
+    repositoryUrl: "https://github.com/hemeshvpatel/CSS-Color-Picker",
+    hostedUrl: "https://hemesh-css-color-picker.netlify.app/",
+    technologies: { ReactJS: true, Javascript: true, Netlify: true },
+    imageUrl: "./colors.jpg",
+  },
+  {
+    title: "CSS Color Picker 4 ",
+    year: "2019",
+    description:
+      "A simple CSS Color Picker built with ReactJS to help me with palette options when styling.",
+    repositoryUrl: "https://github.com/hemeshvpatel/CSS-Color-Picker",
+    hostedUrl: "https://hemesh-css-color-picker.netlify.app/",
+    technologies: { ReactJS: true, Javascript: true, Netlify: true },
+    imageUrl: "./colors.jpg",
+  },
+  {
+    title: "CSS Color Picker 5 ",
+    year: "2020",
+    description:
+      "A simple CSS Color Picker built with ReactJS to help me with palette options when styling.",
+    repositoryUrl: "https://github.com/hemeshvpatel/CSS-Color-Picker",
+    hostedUrl: "https://hemesh-css-color-picker.netlify.app/",
+    technologies: { ReactJS: true, Javascript: true, Netlify: true },
+    imageUrl: "./colors.jpg",
+  },
+  {
+    title: "CSS Color Picker 6",
+    year: "2021",
+    description:
+      "A simple CSS Color Picker built with ReactJS to help me with palette options when styling.",
+    repositoryUrl: "https://github.com/hemeshvpatel/CSS-Color-Picker",
+    hostedUrl: "https://hemesh-css-color-picker.netlify.app/",
+    technologies: { ReactJS: true, Javascript: true, Netlify: true },
+    imageUrl: "./colors.jpg",
+  },
 ];
