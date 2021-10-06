@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { workExperience } from "../data";
 import TextLink from "./library/textLink";
 import styled, { css } from "styled-components";
@@ -25,15 +25,50 @@ Description
 //Styles
 const Wrapper = styled.div`
   ${({ theme }) => css`
-    display: flex;
+    display: grid;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     color: ${theme.colors.primary};
+    margin-left: 10px;
+    margin-right: 10px;
 
-    @media screen and (max-width: 768px) {
+    /* @media screen and (max-width: 768px) {
       padding: 150px 0px 0px 0px;
-    }
+    } */
   `}
+`;
+
+const Row = styled.div`
+  display: grid;
+  grid-auto-columns: auto 1fr;
+  grid-template-areas: "col1 col2";
+`;
+
+const ColumnOne = styled.div`
+  margin-bottom: 15px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  grid-area: col1;
+  border-left: 1px solid red;
+`;
+
+const ColumnTwo = styled.div`
+  margin-bottom: 15px;
+  padding: 15px;
+  grid-area: col2;
+  display: flex;
+  flex-direction: column;
+  //border: 1px solid red;
+`;
+
+const Title = styled.div`
+  margin-bottom: 25px;
+  font-size: 35px;
+  line-height: 1.1;
+  font-weight: 600;
+  color: white;
 `;
 
 const WorkExperienceContainer = styled.div`
@@ -45,25 +80,28 @@ const WorkExperienceContainer = styled.div`
 
 const Position = styled.div`
   font-weight: 700;
+  display: flex;
+  white-space: pre-wrap;
 `;
 
 const Location = styled.div``;
 
-const Company = styled.div``;
+const Company = styled.div`
+  color: white;
+  padding: 15px;
+  cursor: pointer;
+`;
 
 const CompanyUrl = styled.div``;
 
 const Dates = styled.div``;
 
 const Summary = styled.div`
-  margin: 10px;
+  margin: 10px 0;
   font-style: italic;
-  width: 60%;
 `;
 
-const Bullets = styled.div`
-  width: 50%;
-`;
+const Bullets = styled.div``;
 
 const Bullet = styled.div`
   margin: 5px;
@@ -72,9 +110,52 @@ const Bullet = styled.div`
 export default function WorkExperience() {
   //Some Ideas:
   //1) Turn this into a timeline with the ability to click and interact, ensure everything has links
+
+  //Design
+
+  // submenu on the left
+  // display section on the right
+
+  const [experience, setExperience] = useState(workExperience[0] || "");
+
   return (
     <Wrapper>
-      {(workExperience || []).map((item, key) => {
+      <Title>Where I've Worked</Title>
+      <Row>
+        <ColumnOne>
+          {(workExperience || []).map((item) => {
+            return (
+              <Company
+                key={item.company}
+                onClick={() => {
+                  setExperience(item);
+                }}
+              >
+                {item.company}
+              </Company>
+            ); //update state
+          })}
+        </ColumnOne>
+        <ColumnTwo>
+          <Position>
+            {experience.position}
+            {" @ "}
+            <TextLink title={experience.company} url={experience.companyUrl} />
+          </Position>
+          <Dates>
+            {experience.startDate} to {experience.endDate}
+          </Dates>
+          <Summary>{experience.summary}</Summary>
+          <Bullets>
+            {" "}
+            {(experience.bullets || []).map((bullet, key) => {
+              //console.log("each bullet: ", bullet)
+              return <Bullet key={key}>•{bullet}</Bullet>;
+            })}
+          </Bullets>{" "}
+        </ColumnTwo>
+      </Row>
+      {/* {(workExperience || []).map((item, key) => {
         const {
           company,
           companyUrl,
@@ -106,7 +187,7 @@ export default function WorkExperience() {
             </Bullets>{" "}
           </WorkExperienceContainer>
         );
-      })}
+      })} */}
     </Wrapper>
   );
 }

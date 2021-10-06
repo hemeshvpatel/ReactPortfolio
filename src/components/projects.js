@@ -24,6 +24,13 @@ Mobile appears as cards stacked
 
 //Styles
 const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
+`;
+
+const ProjectsContainer = styled.div`
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -37,12 +44,23 @@ const Wrapper = styled.div`
   }
 `;
 
+const Title = styled.div`
+  margin-bottom: 25px;
+  font-size: 35px;
+  line-height: 1.1;
+  font-weight: 600;
+  color: white;
+`;
+
 export default function Projects() {
   return (
     <Wrapper>
-      {(projects || []).map((project, key) => {
-        return <ProjectCard key={key} data={project} />;
-      })}
+      <Title>Projects</Title>
+      <ProjectsContainer>
+        {(projects || []).map((project, key) => {
+          return <ProjectCard key={key} data={project} />;
+        })}
+      </ProjectsContainer>
     </Wrapper>
   );
 }
