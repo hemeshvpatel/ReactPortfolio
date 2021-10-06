@@ -41,7 +41,13 @@ const Section2 = styled.div`
   }
 `;
 
-const TextContainer = styled.div`
+const TextContainer1 = styled.div`
+  white-space: pre-wrap;
+  font-size: 25px;
+  text-align: center;
+`;
+
+const TextContainer2 = styled.div`
   white-space: pre-wrap;
 `;
 
@@ -50,16 +56,17 @@ export default function Footer() {
   return (
     <Wrapper>
       <Section1>
-        <TextContainer>
-          I'm always interested in hearing about opportunities!
-        </TextContainer>
+        <TextContainer1>
+          Have a question? Just want to say hi! Have an exciting opportunity to
+          talk about!? My inbox is always open!
+        </TextContainer1>
         <ContactButton text="Say Hello" />
       </Section1>
       <Section2>
-        <TextContainer>
+        <TextContainer2>
           Created with <FaHeart style={{ color: "red" }} /> using React.js and
           the powers of Netlify
-        </TextContainer>
+        </TextContainer2>
         <SocialIcons
           github={"https://github.com/"}
           linkedin={"https://linkedin.com"}
