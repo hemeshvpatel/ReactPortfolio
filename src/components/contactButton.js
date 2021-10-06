@@ -13,14 +13,12 @@ const Wrapper = styled.div`
 const Button = styled.div`
   ${({ theme }) =>
     css`
-      //background-color: blue;
       color: ${theme.colors.primary};
       width: auto;
       border: 1px solid red;
       border-radius: 6px;
       padding: 10px;
       cursor: pointer;
-      align-items: center;
       font-weight: 600;
       margin: 20px;
 
@@ -47,7 +45,7 @@ export default function ContactButton(props) {
           <ContactForm
             formProps={{ style: { border: "3px dashed red" } }}
             headerProps={{
-              text: "Leave a message",
+              text: "Get In Touch",
             }}
             //labelProps={{ style: { fontSize: "20px" } }}
             nameProps={{ label: "Name" }}
@@ -56,7 +54,7 @@ export default function ContactButton(props) {
               label: "Message",
             }}
             submitProps={{
-              text: "Send Message",
+              text: "Send",
             }}
             onClose={() => {
               setOpenModal(false);
