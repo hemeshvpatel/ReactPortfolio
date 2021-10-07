@@ -53,6 +53,7 @@ export const workExperience = [
     position: "Senior Front-end Engineer",
     startDate: "1/1/2020",
     endDate: "12/31/2020",
+    textDate: "January - December 2020",
     summary:
       "Senior Software Developer with 8 plus years of experience in the Engineering domain is seeking to apply and expand my knowledge and skills towards working in a collaborative environment to develop quality software solutions that address and solve business problems.",
     bullets: [
@@ -71,6 +72,7 @@ export const workExperience = [
     position: "Front-end Developer",
     startDate: "1/1/2019",
     endDate: "12/31/2019",
+    textDate: "January - December 2019",
     summary:
       "Senior with 7 plus years of experience in the Engineering domain is seeking to apply and expand my knowledge and skills towards working in a collaborative environment to develop quality software solutions that address and solve business problems.",
     bullets: [
@@ -88,6 +90,7 @@ export const workExperience = [
     position: "Software Engineer",
     startDate: "1/1/2018",
     endDate: "12/31/2018",
+    textDate: "January - December 2018",
     summary:
       "Software Developer with 5 plus years of experience in the Engineering domain is seeking to apply and expand my knowledge and skills towards working in a collaborative environment to develop quality software solutions that address and solve business problems.",
     bullets: [
@@ -104,6 +107,7 @@ export const workExperience = [
     position: "Associate Software Engineer",
     startDate: "1/1/2017",
     endDate: "12/31/2017",
+    textDate: "January - December 2017",
     summary:
       "Junior Software Developer with 3 plus years of experience in the Engineering domain is seeking to apply and expand my knowledge and skills towards working in a collaborative environment to develop quality software solutions that address and solve business problems.",
     bullets: [
@@ -120,6 +124,7 @@ export const workExperience = [
     position: "Technical Support Engineer - Enterprise",
     startDate: "1/1/2016",
     endDate: "12/31/2016",
+    textDate: "January - December 2016",
     summary:
       "Technical Support Engineer with 1 plus years of experience in the Engineering domain is seeking to apply and expand my knowledge and skills towards working in a collaborative environment to develop quality software solutions that address and solve business problems.",
     bullets: [
@@ -136,6 +141,7 @@ export const workExperience = [
     position: "Technical Support Engineer",
     startDate: "1/1/2015",
     endDate: "12/31/2015",
+    textDate: "January - December 2015",
     summary:
       "Technical Support Engineer seeking to apply and expand my knowledge and skills towards working in a collaborative environment to develop quality software solutions that address and solve business problems.",
     bullets: [
