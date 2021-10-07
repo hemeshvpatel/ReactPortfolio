@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { workExperience } from "../data";
 import TextLink from "./library/textLink";
 import styled, { css } from "styled-components";
+import { FaCaretRight } from "react-icons/fa";
+import { BsCaretRight } from "react-icons/bs";
 
 //Notes
 /*
@@ -51,7 +53,6 @@ const ColumnOne = styled.div`
   flex-direction: column;
   justify-content: space-between;
   grid-area: col1;
-  border-left: 1px solid red;
 `;
 
 const ColumnTwo = styled.div`
@@ -60,7 +61,8 @@ const ColumnTwo = styled.div`
   grid-area: col2;
   display: flex;
   flex-direction: column;
-  //border: 1px solid red;
+  min-height: 60vh;
+  line-height: 24px;
 `;
 
 const Title = styled.div`
@@ -71,53 +73,54 @@ const Title = styled.div`
   color: white;
 `;
 
-const WorkExperienceContainer = styled.div`
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
 const Position = styled.div`
   font-weight: 700;
   display: flex;
   white-space: pre-wrap;
 `;
 
-const Location = styled.div``;
-
 const Company = styled.div`
-  color: white;
-  padding: 15px;
+  color: ${({ active }) => (active ? "red" : "white")};
+  padding: 25px;
   cursor: pointer;
+  border-left: ${({ active }) => (active ? "4px solid red" : "1px solid")};
+
+  &:hover {
+    color: red;
+  }
 `;
 
-const CompanyUrl = styled.div``;
+const CompanyUrl = styled.div`
+  font-weight: 700;
+  display: flex;
+  color: red;
+`;
 
-const Dates = styled.div``;
+const Dates = styled.div`
+  line-height: 1.1;
+  font-size: 14px;
+`;
 
 const Summary = styled.div`
   margin: 10px 0;
   font-style: italic;
+  padding-top: 10px;
+  line-height: 1.1;
 `;
 
-const Bullets = styled.div``;
+const Bullets = styled.div`
+  margin-top: 10px;
+`;
 
 const Bullet = styled.div`
-  margin: 5px;
+  display: flex;
+  margin-bottom: 5px;
 `;
 
 export default function WorkExperience() {
   //Some Ideas:
   //1) Turn this into a timeline with the ability to click and interact, ensure everything has links
-
-  //Design
-
-  // submenu on the left
-  // display section on the right
-
   const [experience, setExperience] = useState(workExperience[0] || "");
-
   return (
     <Wrapper>
       <Title>Where I've Worked</Title>
@@ -130,6 +133,7 @@ export default function WorkExperience() {
                 onClick={() => {
                   setExperience(item);
                 }}
+                active={experience.company === item.company}
               >
                 {item.company}
               </Company>
@@ -139,55 +143,28 @@ export default function WorkExperience() {
         <ColumnTwo>
           <Position>
             {experience.position}
-            {" @ "}
-            <TextLink title={experience.company} url={experience.companyUrl} />
+            <CompanyUrl>
+              {" @ "}
+              <TextLink
+                title={experience.company}
+                url={experience.companyUrl}
+              />
+            </CompanyUrl>
           </Position>
-          <Dates>
-            {experience.startDate} to {experience.endDate}
-          </Dates>
+          <Dates>{experience.textDate}</Dates>
           <Summary>{experience.summary}</Summary>
           <Bullets>
-            {" "}
             {(experience.bullets || []).map((bullet, key) => {
-              //console.log("each bullet: ", bullet)
-              return <Bullet key={key}>•{bullet}</Bullet>;
+              return (
+                <Bullet key={key}>
+                  <BsCaretRight style={{ color: "red", marginTop: "5px" }} />
+                  {bullet}
+                </Bullet>
+              );
             })}
           </Bullets>{" "}
         </ColumnTwo>
       </Row>
-      {/* {(workExperience || []).map((item, key) => {
-        const {
-          company,
-          companyUrl,
-          location,
-          position,
-          startDate,
-          endDate,
-          summary,
-          bullets,
-        } = item;
-        return (
-          <WorkExperienceContainer key={key}>
-            <Position>{position}</Position>
-            <Company>
-              <TextLink company={company} companyUrl={companyUrl} />
-            </Company>
-            <Location> {location}</Location>
-            <CompanyUrl>{companyUrl}</CompanyUrl>
-            <Dates>
-              {startDate} to {endDate}
-            </Dates>
-            <Summary>{summary}</Summary>
-            <Bullets>
-              {" "}
-              {(bullets || []).map((bullet, key) => {
-                //console.log("each bullet: ", bullet)
-                return <Bullet key={key}>•{bullet}</Bullet>;
-              })}
-            </Bullets>{" "}
-          </WorkExperienceContainer>
-        );
-      })} */}
     </Wrapper>
   );
 }

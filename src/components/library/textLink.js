@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-  color: white;
-  text-decoration: underline;
+  //color: white;
+  //text-decoration: underline;
   cursor: pointer;
 `;
 
