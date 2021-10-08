@@ -7,6 +7,7 @@ import Projects from "../projects";
 import Header from "../header";
 import Section from "./section";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
+import Contact from "./contact";
 
 //Styles
 
@@ -46,6 +47,12 @@ export default function Layout() {
         children={<WorkExperience />}
       />
       <Section id="project" title="Projects" children={<Projects />} />
+      <Section
+        id="contact"
+        title="Contact"
+        children={<Contact />}
+        minHeight={"20vh"}
+      />
       <Footer />
     </ThemeProvider>
   );

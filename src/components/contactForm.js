@@ -80,8 +80,8 @@ const Button = styled.input`
     height: 45px;
     margin: 20px;
     border: none;
-    background-color: green;
-    color: white;
+    background-color: black;
+    color: red;
     border-radius: 8px;
     font-size: 20px;
     cursor: pointer;
