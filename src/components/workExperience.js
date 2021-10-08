@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { workExperience } from "../data";
 import TextLink from "./library/textLink";
 import styled, { css } from "styled-components";
-import { FaCaretRight } from "react-icons/fa";
 import { BsCaretRight } from "react-icons/bs";
 
 //Notes

@@ -45,7 +45,7 @@ const Link = styled.a`
   }
 
   @media screen and (max-width: 600px) {
-    margin: 0px;
+    margin: 10px;
   }
 `;
 

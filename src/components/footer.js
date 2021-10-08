@@ -12,6 +12,7 @@ import { FaHeart } from "react-icons/fa";
 const Wrapper = styled.div`
   ${({ theme }) => css`
     display: flex;
+    margin-top: 50px;
     margin-bottom: 20px;
     color: ${theme.colors.primary};
     flex-direction: column;
@@ -55,13 +56,13 @@ export default function Footer() {
   //Add link component for names to link to portfolio sites.
   return (
     <Wrapper>
-      <Section1>
+      {/* <Section1>
         <TextContainer1>
           Have a question? Just want to say hi! Have an exciting opportunity to
           talk about!? My inbox is always open!
         </TextContainer1>
         <ContactButton text="Say Hello" />
-      </Section1>
+      </Section1> */}
       <Section2>
         <TextContainer2>
           Created with <FaHeart style={{ color: "red" }} /> using React.js and

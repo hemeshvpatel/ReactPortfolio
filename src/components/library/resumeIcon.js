@@ -25,8 +25,7 @@ const Link = styled.a`
   transition: color 0.5s;
   text-decoration: none;
   color: white;
-  margin: 25px;
-  font-size: 35px;
+  font-size: 25px;
 
   &:hover {
     color: red;
@@ -37,7 +36,9 @@ const Link = styled.a`
   }
 `;
 
-export default function ResumeIcon({ to, label, tooltip }) {
+const Text = styled.div``;
+
+export default function ResumeIcon({ to, label, tooltip, icon, text }) {
   const [active, setActive] = useState(false);
   return (
     <Wrapper>
@@ -49,7 +50,8 @@ export default function ResumeIcon({ to, label, tooltip }) {
         onMouseEnter={() => setActive(true)}
         onMouseLeave={() => setActive(false)}
       >
-        <FaRegFilePdf />
+        {text && <Text>{label}</Text>}
+        {icon && <FaRegFilePdf />}
         {tooltip && <ToolTip active={active}>{label}</ToolTip>}
       </Link>
     </Wrapper>

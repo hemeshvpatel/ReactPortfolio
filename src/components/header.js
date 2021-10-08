@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem calc((100vw-1000px) / 2);
-  font-size: 35px;
+  font-size: 25px;
   margin-top: 20px;
 
   @media screen and (max-width: 750px) {
@@ -32,12 +32,17 @@ export default function Header() {
     { title: "About", id: "about" },
     { title: "Experience", id: "experience" },
     { title: "Projects", id: "project" },
+    { title: "Contact", id: "contact" },
+    {
+      title: "Resume",
+      to: "https://drive.google.com/file/d/1Nkiadg3LWHWgXUEGA79bCVjpgzIiJRdW/view",
+    },
   ];
 
   return (
     <Wrapper>
       <Name to="/">{`<${firstName}/>`}</Name>
-      <MenuBar menuBarProps={menuBarProps} test={true} />
+      <MenuBar menuBarProps={menuBarProps} test={true} resume={true} />
     </Wrapper>
   );
 }
