@@ -25,7 +25,7 @@ const Intro = styled.div`
   `}
 
   @media screen and (max-width: 600px) {
-    font-size: 10vw;
+    font-size: 20px;
   }
 `;
 
@@ -41,7 +41,7 @@ const Name = styled.div`
   `}
 
   @media screen and (max-width: 600px) {
-    font-size: 10vw;
+    font-size: 35px;
   }
 `;
 
@@ -51,7 +51,7 @@ const IconsContainer = styled.div`
   font-size: 35px;
 
   @media screen and (max-width: 600px) {
-    font-size: 10vw;
+    font-size: 20px;
   }
 `;
 

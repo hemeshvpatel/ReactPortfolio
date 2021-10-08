@@ -25,7 +25,7 @@ const Wrapper = styled.div`
 
 const Image = styled.img`
   width: 14rem;
-  height: 11rem;
+  height: 16rem;
   object-fit: cover;
   border-radius: 0.2rem;
 
@@ -41,10 +41,14 @@ const Body = styled.div`
 `;
 
 const Title = styled.div`
-  font-size: 1.5rem;
+  font-size: 1rem;
   line-height: 1.5rem;
   margin-bottom: 0.5rem;
   font-weight: bold;
+
+  @media screen and (min-width: 600px) {
+    font-size: 1.5rem;
+  }
 `;
 
 const Description = styled.div`
@@ -52,10 +56,14 @@ const Description = styled.div`
 `;
 
 const Technologies = styled.div`
-  font-size: 1rem;
+  font-size: 0.5rem;
   margin-top: 0.6rem;
   margin-bottom: 0.6rem;
   color: black;
+
+  @media screen and (min-width: 600px) {
+    font-size: 1rem;
+  }
 `;
 
 //This must be defined above Link in order to work for the hover effect targeting ToolTip
@@ -78,7 +86,7 @@ const Button = styled.button`
   border: none;
   background-color: transparent;
   font-family: inherit;
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: bold;
   color: inherit;
   width: 100%;
@@ -92,6 +100,10 @@ const Button = styled.button`
 
   &:hover ${ToolTip} {
     color: red;
+  }
+
+  @media screen and (min-width: 600px) {
+    font-size: 2rem;
   }
 `;
 
