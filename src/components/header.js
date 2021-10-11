@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import MenuBar from "./library/menuBar";
+import SideBar from "./library/sideBar";
 import { userData } from "../data";
 import styled, { css } from "styled-components";
 import { Link as LinkR } from "react-router-dom";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 //Styles
 const Wrapper = styled.div`
@@ -26,6 +28,9 @@ const Name = styled(LinkR)`
 
 export default function Header() {
   const { firstName } = userData;
+  const [show, setShow] = useState(false);
+
+  //mobile hook to detect screen width and whether to display hamburger vs reg menu
 
   //Curious if we need to pass an object to MenuBar:
   let menuBarProps = [
@@ -42,7 +47,12 @@ export default function Header() {
   return (
     <Wrapper>
       <Name to="/">{`<${firstName}/>`}</Name>
-      <MenuBar menuBarProps={menuBarProps} test={true} resume={true} />
+      <GiHamburgerMenu
+        style={{ color: "white" }}
+        onClick={() => setShow(!show)}
+      />
+      {/* <MenuBar menuBarProps={menuBarProps} /> */}
+      <SideBar sideBarProps={menuBarProps} show={show} onClose={() => setShow(false)}/>
     </Wrapper>
   );
 }
