@@ -97,6 +97,7 @@ export default function Welcome() {
       <BrandStatements />
       <IconsContainer>
         <SocialIcons
+          
           github={"https://github.com/"}
           linkedin={"https://linkedin.com"}
           twitter={"https://twitter.com"}
