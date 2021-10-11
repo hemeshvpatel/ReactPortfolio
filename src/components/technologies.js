@@ -15,7 +15,12 @@ const Wrapper = styled.div`
 const IconsContainer = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
   font-size: 25px;
+`;
+
+const Icon = styled.div`
+  margin: 25px;
 `;
 
 export default function Technologies() {
@@ -23,13 +28,25 @@ export default function Technologies() {
 
   return (
     <Wrapper>
-      Technologies I enjoy working with:
       <IconsContainer>
-        <FaGithub />
-        <FaLinkedin />
-        <FaReact />
-        <FaJava />
-        <IoLogoJavascript />
+        <Icon>
+          <FaGithub />
+        </Icon>
+        <Icon>
+          <FaLinkedin />
+        </Icon>
+
+        <Icon>
+          <FaReact />
+        </Icon>
+
+        <Icon>
+          <FaJava />
+        </Icon>
+
+        <Icon>
+          <IoLogoJavascript />
+        </Icon>
       </IconsContainer>
     </Wrapper>
   );
