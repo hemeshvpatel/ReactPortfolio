@@ -42,10 +42,6 @@ const Mobile = styled.div`
 export default function Header() {
   const { firstName } = userData;
   const [show, setShow] = useState(false);
-
-  //mobile hook to detect screen width and whether to display hamburger vs reg menu
-
-  //Curious if we need to pass an object to MenuBar:
   let menuBarProps = [
     { title: "About", id: "about" },
     { title: "Experience", id: "experience" },
