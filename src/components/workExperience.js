@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { workExperience } from "../data";
 import TextLink from "./library/textLink";
 import styled, { css } from "styled-components";
-import { BsCaretRight } from "react-icons/bs";
+import { GoTriangleRight } from "react-icons/go";
 
 //Notes
 /*
@@ -56,7 +56,7 @@ const ColumnOne = styled.div`
   padding: 15px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   grid-area: col1;
 
   @media screen and (max-width: 600px) {
@@ -157,7 +157,20 @@ const Bullets = styled.div`
 
 const Bullet = styled.div`
   display: flex;
-  margin-bottom: 5px;
+  flex-direction: row;
+  margin-bottom: 1rem;
+
+  @media screen and (max-width: 600px) {
+    font-size: 15px;
+  }
+`;
+
+const BulletIcon = styled.div`
+  display: flex;
+  color: red;
+  align-self: flex-start;
+  margin-top: 0.2rem;
+  margin-right: 2rem;
 
   @media screen and (max-width: 600px) {
     font-size: 15px;
@@ -204,7 +217,9 @@ export default function WorkExperience() {
             {(experience.bullets || []).map((bullet, key) => {
               return (
                 <Bullet key={key}>
-                  <BsCaretRight style={{ color: "red", marginTop: "5px" }} />
+                  <BulletIcon>
+                    <GoTriangleRight />
+                  </BulletIcon>
                   {bullet}
                 </Bullet>
               );
