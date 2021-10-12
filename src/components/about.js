@@ -41,6 +41,10 @@ const Title = styled.div`
   line-height: 1.1;
   font-weight: 600;
   color: white;
+
+  @media screen and (max-width: 600px) {
+    font-size: 25px;
+  }
 `;
 
 const Sections = styled.div`
@@ -50,14 +54,19 @@ const Sections = styled.div`
     line-height: 24px;
     color: ${theme.colors.primary};
 
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 600px) {
       max-width: 450px;
+      font-size: 15px;
     }
   `}
 `;
 
 const ProfilePicture = styled.img`
   border-radius: 50%50%;
+
+  @media screen and (max-width: 600px) {
+    width: 250px;
+  }
 `;
 
 const ColumnOne = styled.div`
@@ -84,7 +93,7 @@ export default function About() {
           {(about || []).map((paragraph, key) => {
             return <Sections key={key}>{paragraph}</Sections>;
           })}
-          <Technologies />
+          {/* <Technologies /> */}
         </ColumnOne>
         <ColumnTwo>
           <ProfilePicture src="/aboutPic.jpeg" alt="Profile Pic" />

@@ -41,7 +41,7 @@ const Name = styled.div`
   `}
 
   @media screen and (max-width: 600px) {
-    font-size: 35px;
+    font-size: 25px;
   }
 `;
 
@@ -97,7 +97,6 @@ export default function Welcome() {
       <BrandStatements />
       <IconsContainer>
         <SocialIcons
-          
           github={"https://github.com/"}
           linkedin={"https://linkedin.com"}
           twitter={"https://twitter.com"}

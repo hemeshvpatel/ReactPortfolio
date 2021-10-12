@@ -8,6 +8,7 @@ const Wrapper = styled.div`
     flex-direction: column;
     margin-right: auto;
     margin-left: auto;
+    margin-top: 100px;
     justify-content: center;
   `}
 `;

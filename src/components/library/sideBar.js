@@ -16,15 +16,18 @@ const Overlay = styled.div`
 `;
 
 const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 75%;
+  //display: flex;
+  //flex-direction: column;
+  width: 75vw;
   height: 100%;
   top: 0;
   right: 0;
-  background-color: #808080;
-  align-items: center;
-  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.7);
+  //align-items: center;
+  padding: 15px;
+  position: fixed;
+  //transition: transform 300ms;
+  //transform: translate3d(100vw, 0, 0);
 `;
 
 const MenuItem = styled(LinkS)`
@@ -34,7 +37,7 @@ const MenuItem = styled(LinkS)`
   text-decoration: none;
   padding: 0.5rem calc((100vw-1000px) / 2);
   display: flex;
-  margin-left: 2rem;
+  margin-left: 7rem;
   margin-top: 4rem;
   margin-bottom: 4rem;
 
@@ -56,7 +59,7 @@ const MenuItemResume = styled.a`
   text-decoration: none;
   padding: 0.5rem calc((100vw-1000px) / 2);
   display: flex;
-  margin-left: 2rem;
+  margin-left: 7rem;
 
   //Hover effects here, Styled Component has its own hover. You can add any more styling inside &:hover
   &:hover {
@@ -108,10 +111,12 @@ export default function SideBar({ sideBarProps, show, onClose }) {
           if (menu.title !== "Resume") {
             return (
               <MenuItem
-                key={key}            to={menu.id}
+                key={key}
+                to={menu.id}
                 smooth={true}
                 duration={500}
                 spy={true}
+                onClick={onClose}
               >
                 {menu.title}{" "}
               </MenuItem>
