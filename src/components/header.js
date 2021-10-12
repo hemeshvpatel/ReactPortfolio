@@ -12,11 +12,15 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem calc((100vw-1000px) / 2);
-  font-size: 25px;
+  font-size: 1.5rem;
   margin-top: 20px;
   z-index: 999;
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 800px) {
+    font-size: 1.25rem;
+  }
+
+  @media screen and (max-width: 700px) {
     font-size: 1rem;
   }
 `;
