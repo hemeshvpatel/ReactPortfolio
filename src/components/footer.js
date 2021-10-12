@@ -20,7 +20,7 @@ const Wrapper = styled.div`
     flex-direction: row;
 
     @media screen and (max-width: 600px) {
-      margin-bottom: 10px;
+      margin-bottom: 2rem;
       flex-direction: column;
     }
   `}
@@ -29,6 +29,9 @@ const Wrapper = styled.div`
 const TextContainer = styled.div`
   display: flex;
   white-space: pre-wrap;
+  @media screen and (max-width: 600px) {
+    margin-bottom: 1rem;
+  }
 `;
 
 export default function Footer() {
