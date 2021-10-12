@@ -33,9 +33,10 @@ const Wrapper = styled.div`
     margin-left: 10px;
     margin-right: 10px;
 
-    /* @media screen and (max-width: 768px) {
-      padding: 150px 0px 0px 0px;
-    } */
+    @media screen and (max-width: 600px) {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
   `}
 `;
 
@@ -43,6 +44,11 @@ const Row = styled.div`
   display: grid;
   grid-auto-columns: auto 1fr;
   grid-template-areas: "col1 col2";
+
+  @media screen and (max-width: 600px) {
+    grid-template-areas: "none";
+    //grid-template-columns: 1fr;
+  }
 `;
 
 const ColumnOne = styled.div`
@@ -52,6 +58,13 @@ const ColumnOne = styled.div`
   flex-direction: column;
   justify-content: space-between;
   grid-area: col1;
+
+  @media screen and (max-width: 600px) {
+    flex-direction: row;
+    grid-column: auto;
+    grid-row: auto;
+    overflow: scroll;
+  }
 `;
 
 const ColumnTwo = styled.div`
@@ -62,6 +75,13 @@ const ColumnTwo = styled.div`
   flex-direction: column;
   min-height: 60vh;
   line-height: 24px;
+
+  @media screen and (max-width: 600px) {
+    grid-column: auto;
+    grid-row: auto;
+    max-height: 80vh;
+    overflow: scroll;
+  }
 `;
 
 const Title = styled.div`
@@ -70,12 +90,21 @@ const Title = styled.div`
   line-height: 1.1;
   font-weight: 600;
   color: white;
+
+  @media screen and (max-width: 600px) {
+    font-size: 25px;
+  }
 `;
 
 const Position = styled.div`
   font-weight: 700;
   display: flex;
   white-space: pre-wrap;
+
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+    font-size: 15px;
+  }
 `;
 
 const Company = styled.div`
@@ -86,6 +115,12 @@ const Company = styled.div`
 
   &:hover {
     color: red;
+  }
+
+  @media screen and (max-width: 600px) {
+    font-size: 15px;
+    border-left: none;
+    border-bottom: ${({ active }) => (active ? "4px solid red" : "1px solid")};
   }
 `;
 
@@ -104,16 +139,29 @@ const Summary = styled.div`
   margin: 10px 0;
   font-style: italic;
   padding-top: 10px;
-  line-height: 1.1;
+  line-height: 1.2;
+
+  @media screen and (max-width: 600px) {
+    font-size: 15px;
+  }
 `;
 
 const Bullets = styled.div`
   margin-top: 10px;
+
+  @media screen and (max-width: 600px) {
+    font-size: 15spx;
+    line-height: 1.2;
+  }
 `;
 
 const Bullet = styled.div`
   display: flex;
   margin-bottom: 5px;
+
+  @media screen and (max-width: 600px) {
+    font-size: 15px;
+  }
 `;
 
 export default function WorkExperience() {

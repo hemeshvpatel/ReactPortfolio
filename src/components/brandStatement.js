@@ -15,6 +15,11 @@ const Wrapper = styled.div`
     margin: 25px;
     color: ${theme.colors.primary};
   `}
+
+  @media screen and (max-width: 600px) {
+    font-size: 15px;
+    margin: 5px;
+  }
 `;
 
 const StatementStyle = styled.div`
