@@ -135,6 +135,7 @@ export default function SideBar({ sideBarProps, show, onClose }) {
               </MenuItemResume>
             );
           }
+          return null;
         })}
       </Wrapper>
     </Overlay>,

@@ -2,11 +2,6 @@ import React from "react";
 import SocialIcons from "./library/socialIcons";
 import TextLink from "./library/textLink";
 import styled, { css } from "styled-components";
-import { FaHeart } from "react-icons/fa";
-
-//Design
-// Top: I'm always interested in freelancing, specifically in front-end! [Hand] Click here to get in touch
-// Bottom: Created .... Quick Icons
 
 //Styles
 const Wrapper = styled.div`
@@ -35,7 +30,6 @@ const TextContainer = styled.div`
 `;
 
 export default function Footer() {
-  //Add link component for names to link to portfolio sites.
   return (
     <Wrapper>
       <TextContainer>
