@@ -20,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
 
       //this will update styling after a curtain resolution on our page
       @media screen and (max-width: 1000px) { 
-        margin: 0px 50px 0px 50px;
+        margin: 0 2rem 0 2rem;
       }
     }
 `;

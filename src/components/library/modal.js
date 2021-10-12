@@ -22,7 +22,6 @@ const Container = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #fff;
-    padding: 25px;
     z-index: 1001;
   `}
 `;
