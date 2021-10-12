@@ -32,6 +32,7 @@ export default function TechnologiesIcons({ technologies }) {
         if (technology === "Netlify") {
           return <SiNetlify key={key} />;
         }
+        return null;
       })}
     </Wrapper>
   );

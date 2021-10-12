@@ -77,6 +77,7 @@ export default function MenuBar({ menuBarProps }) {
             </MenuItemResume>
           );
         }
+        return null;
       })}
     </Wrapper>
   );

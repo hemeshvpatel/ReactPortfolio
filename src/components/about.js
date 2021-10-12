@@ -1,17 +1,6 @@
 import React from "react";
 import { about } from "../data";
-import Technologies from "./technologies";
 import styled, { css } from "styled-components";
-
-//Notes:
-/* 
-
-Technologies section -> just icons (also try to stack it where the icons come below the profile etc.) - may need to conver to using react-icons package
-+ resume link (not with an icon) "Check out my resume here!"
-Move the "Roles I'm interested ... " top part of the footer
-*/
-
-// used https://css-tricks.com/snippets/css/complete-guide-grid/ for more information
 
 //Styles
 const Wrapper = styled.div`
@@ -94,7 +83,6 @@ export default function About() {
           {(about || []).map((paragraph, key) => {
             return <Sections key={key}>{paragraph}</Sections>;
           })}
-          {/* <Technologies /> */}
         </ColumnOne>
         <ColumnTwo>
           <ProfilePicture src="/aboutPic.jpeg" alt="Profile Pic" />
