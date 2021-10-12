@@ -11,6 +11,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 4rem;
 `;
 
 const Intro = styled.div`
@@ -60,9 +61,7 @@ const NextSection = styled(LinkS)`
   color: white;
   align-items: center;
   text-decoration: none;
-  //padding: 0.5rem calc((100vw-1000px) / 2);
   display: flex;
-  margin-left: 2rem;
   white-space: pre-wrap;
   font-size: 25px;
   position: absolute;
@@ -75,10 +74,6 @@ const NextSection = styled(LinkS)`
 
   &.active {
     border-bottom: 3px solid red;
-  }
-
-  @media screen and (max-width: 700px) {
-    display: none;
   }
 `;
 

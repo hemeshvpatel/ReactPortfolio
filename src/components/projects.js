@@ -28,6 +28,12 @@ const Wrapper = styled.div`
   flex-direction: column;
   margin-left: 10px;
   margin-right: 10px;
+  margin-bottom: 4rem;
+
+  @media screen and (min-width: 600px) {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 `;
 
 const ProjectsContainer = styled.div`
@@ -49,7 +55,11 @@ const Title = styled.div`
   font-size: 35px;
   line-height: 1.1;
   font-weight: 600;
-  color: white;
+  color: red;
+
+  @media screen and (max-width: 600px) {
+    font-size: 25px;
+  }
 `;
 
 export default function Projects() {

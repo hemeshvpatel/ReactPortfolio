@@ -19,6 +19,7 @@ const Wrapper = styled.div`
   width: 100%;
   margin-right: auto;
   margin-left: auto;
+  margin-bottom: 4rem;
   justify-content: center;
 `;
 
@@ -40,7 +41,7 @@ const Title = styled.div`
   font-size: 35px;
   line-height: 1.1;
   font-weight: 600;
-  color: white;
+  color: red;
 
   @media screen and (max-width: 600px) {
     font-size: 25px;

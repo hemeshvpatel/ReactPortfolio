@@ -19,13 +19,13 @@ const Wrapper = styled.div`
   //display: flex;
   //flex-direction: column;
   width: 75vw;
-  height: 100%;
-  top: 0;
+  height: 90vh;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: black;
   //align-items: center;
   padding: 15px;
   position: fixed;
+  border: 2px solid red;
   //transition: transform 300ms;
   //transform: translate3d(100vw, 0, 0);
 `;
@@ -83,6 +83,7 @@ const CloseButton = styled.div`
   border: none;
   font-size: 25px;
   cursor: pointer;
+  padding: 2rem;
 `;
 
 export default function SideBar({ sideBarProps, show, onClose }) {

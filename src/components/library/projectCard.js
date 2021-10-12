@@ -6,7 +6,7 @@ import TechnologiesIcons from "../technologiesIcons";
 const Wrapper = styled.div`
   color: black;
   border-radius: 0.2rem;
-  min-width: 28rem;
+  min-width: 20rem;
   display: flex;
   background-color: white;
 
@@ -24,8 +24,8 @@ const Wrapper = styled.div`
 `;
 
 const Image = styled.img`
-  width: 14rem;
-  height: 16rem;
+  width: 0rem;
+  height: 0rem;
   object-fit: cover;
   border-radius: 0.2rem;
 
@@ -77,7 +77,7 @@ const ToolTip = styled.div`
 `;
 
 const Buttons = styled.div`
-  border-top: 1px solid grey;
+  border-top: 1px solid red;
   display: flex;
   margin-top: 1rem;
 `;

@@ -14,9 +14,10 @@ const Wrapper = styled.div`
   padding: 0.5rem calc((100vw-1000px) / 2);
   font-size: 25px;
   margin-top: 20px;
+  z-index: 999;
 
-  @media screen and (max-width: 750px) {
-    font-size: 15px;
+  @media screen and (max-width: 600px) {
+    font-size: 1rem;
   }
 `;
 
@@ -24,6 +25,18 @@ const Name = styled(LinkR)`
   ${({ theme }) => css`
     color: ${theme.colors.secondary};
   `}
+`;
+
+const Desktop = styled.div`
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
+`;
+
+const Mobile = styled.div`
+  @media screen and (min-width: 600px) {
+    display: none;
+  }
 `;
 
 export default function Header() {
@@ -47,12 +60,20 @@ export default function Header() {
   return (
     <Wrapper>
       <Name to="/">{`<${firstName}/>`}</Name>
-      <GiHamburgerMenu
-        style={{ color: "white" }}
-        onClick={() => setShow(!show)}
+      <Desktop>
+        <MenuBar menuBarProps={menuBarProps} />
+      </Desktop>
+      <Mobile>
+        <GiHamburgerMenu
+          style={{ color: "white" }}
+          onClick={() => setShow(!show)}
+        />
+      </Mobile>
+      <SideBar
+        sideBarProps={menuBarProps}
+        show={show}
+        onClose={() => setShow(false)}
       />
-      {/* <MenuBar menuBarProps={menuBarProps} /> */}
-      <SideBar sideBarProps={menuBarProps} show={show} onClose={() => setShow(false)}/>
     </Wrapper>
   );
 }

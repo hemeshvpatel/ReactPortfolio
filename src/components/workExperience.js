@@ -32,6 +32,7 @@ const Wrapper = styled.div`
     color: ${theme.colors.primary};
     margin-left: 10px;
     margin-right: 10px;
+    margin-bottom: 4rem;
 
     @media screen and (max-width: 600px) {
       margin-left: 0px;
@@ -89,7 +90,7 @@ const Title = styled.div`
   font-size: 35px;
   line-height: 1.1;
   font-weight: 600;
-  color: white;
+  color: red;
 
   @media screen and (max-width: 600px) {
     font-size: 25px;

@@ -40,6 +40,7 @@ const TopRightCloseButton = styled.div`
   display: flex;
   justify-content: flex-end;
   color: black;
+  margin: 20px;
 `;
 
 const CloseButton = styled.div`
@@ -47,13 +48,14 @@ const CloseButton = styled.div`
   border: none;
   font-size: 25px;
   cursor: pointer;
+  color: red;
 `;
 
 const Label = styled.label`
   display: flex;
   flex-direction: column;
   font-weight: 700;
-  font-size: 15;
+  font-size: 1rem;
   color: black;
 `;
 
