@@ -1,7 +1,7 @@
 import React from "react";
 import { userData } from "../data";
-import BrandStatements from "./brandStatement";
-import SocialIcons from "./library/socialIcons";
+import BrandStatements from "./BrandStatement";
+import SocialIcons from "./library/SocialIcons";
 import styled, { css } from "styled-components";
 import { Link as LinkS } from "react-scroll"; // https://www.npmjs.com/package/react-scroll
 import { HiOutlineChevronDoubleDown } from "react-icons/hi";
@@ -99,12 +99,6 @@ export default function Welcome() {
           twitch={"https://twitch.com"}
           tooltip={true}
         />
-        {/* <ResumeIcon
-          to="https://drive.google.com/file/d/1Nkiadg3LWHWgXUEGA79bCVjpgzIiJRdW/view"
-          label={"Resume"}
-          tooltip={true}
-          icon={true}
-        /> */}
       </IconsContainer>
       <NextSection to={"about"} smooth={true} duration={500} spy={true}>
         <HiOutlineChevronDoubleDown />

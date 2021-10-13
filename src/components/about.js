@@ -5,11 +5,10 @@ import styled, { css } from "styled-components";
 //Styles
 const Wrapper = styled.div`
   display: grid;
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 4rem;
   justify-content: center;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 4rem;
 `;
 
 const InfoRow = styled.div`
@@ -26,7 +25,7 @@ const InfoRow = styled.div`
 `;
 
 const Title = styled.div`
-  margin-bottom: 25px;
+  margin-bottom: 1rem;
   font-size: 35px;
   line-height: 1.1;
   font-weight: 600;
@@ -60,15 +59,12 @@ const ProfilePicture = styled.img`
 `;
 
 const ColumnOne = styled.div`
-  max-width: 840px;
   margin-bottom: 15px;
-  padding: 0 15px;
   grid-area: col1;
 `;
 
 const ColumnTwo = styled.div`
   margin-bottom: 15px;
-  padding: 0 15px;
   grid-area: col2;
   display: flex;
   justify-content: center;
@@ -77,9 +73,9 @@ const ColumnTwo = styled.div`
 export default function About() {
   return (
     <Wrapper>
+      <Title>About me</Title>
       <InfoRow>
         <ColumnOne>
-          <Title>About me</Title>
           {(about || []).map((paragraph, key) => {
             return <Sections key={key}>{paragraph}</Sections>;
           })}

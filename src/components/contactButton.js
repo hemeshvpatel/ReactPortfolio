@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Modal from "./library/modal";
-import ContactForm from "./contactForm";
+import Modal from "./library/Modal";
+import ContactForm from "./ContactForm";
 import styled, { css } from "styled-components";
 import { FaHandSpock } from "react-icons/fa";
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { projects } from "../data";
-import ProjectCard from "./library/projectCard";
+import ProjectCard from "./library/ProjectCard";
 import styled from "styled-components";
 
 //Notes
@@ -29,11 +29,6 @@ const Wrapper = styled.div`
   margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 4rem;
-
-  @media screen and (min-width: 600px) {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
 `;
 
 const ProjectsContainer = styled.div`
@@ -43,7 +38,7 @@ const ProjectsContainer = styled.div`
   display: grid;
   gap: 2rem;
   grid-template-columns: 1fr;
-  justify-content: center;
+  justify-content: space-between;
 
   @media screen and (min-width: 600px) {
     grid-template-columns: repeat(auto-fit, minmax(14rem, 16rem));
@@ -51,7 +46,7 @@ const ProjectsContainer = styled.div`
 `;
 
 const Title = styled.div`
-  margin-bottom: 25px;
+  margin-bottom: 1rem;
   font-size: 35px;
   line-height: 1.1;
   font-weight: 600;

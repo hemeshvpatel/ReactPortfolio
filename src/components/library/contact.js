@@ -1,5 +1,5 @@
 import React from "react";
-import ContactButton from "../contactButton";
+import ContactButton from "../ContactButton";
 import styled, { css } from "styled-components";
 
 //Styles
