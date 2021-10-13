@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import MenuBar from "./library/menuBar";
-import SideBar from "./library/sideBar";
+import MenuBar from "./library/MenuBar";
+import SideBar from "./library/SideBar";
 import { userData } from "../data";
 import styled, { css } from "styled-components";
 import { Link as LinkR } from "react-router-dom";
@@ -53,7 +53,7 @@ export default function Header() {
     { title: "Contact", id: "contact" },
     {
       title: "Resume",
-      to: "https://drive.google.com/file/d/1Nkiadg3LWHWgXUEGA79bCVjpgzIiJRdW/view",
+      to: "https://resumegenius.com/resume-samples/web-developer-resume-example",
     },
   ];
 

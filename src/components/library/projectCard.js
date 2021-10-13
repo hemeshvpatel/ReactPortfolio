@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled, { css } from "styled-components";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
-import TechnologiesIcons from "../technologiesIcons";
+import TechnologiesIcons from "../TechnologiesIcons";
 
 const Wrapper = styled.div`
   color: black;
@@ -12,7 +12,6 @@ const Wrapper = styled.div`
 
   &:hover {
     transform: scale(1.05);
-    //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
   }
 

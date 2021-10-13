@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { workExperience } from "../data";
-import TextLink from "./library/textLink";
+import TextLink from "./library/TextLink";
 import styled, { css } from "styled-components";
 import { GoTriangleRight } from "react-icons/go";
 
@@ -33,11 +33,6 @@ const Wrapper = styled.div`
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 4rem;
-
-    @media screen and (max-width: 600px) {
-      margin-left: 0px;
-      margin-right: 0px;
-    }
   `}
 `;
 
@@ -64,7 +59,7 @@ const ColumnOne = styled.div`
     flex-direction: row;
     grid-column: auto;
     grid-row: auto;
-    overflow: scroll;
+    overflow: auto;
   }
 `;
 
@@ -81,12 +76,12 @@ const ColumnTwo = styled.div`
     grid-column: auto;
     grid-row: auto;
     max-height: 80vh;
-    overflow: scroll;
+    overflow: auto;
   }
 `;
 
 const Title = styled.div`
-  margin-bottom: 25px;
+  margin-bottom: 1rem;
   font-size: 35px;
   line-height: 1.1;
   font-weight: 600;

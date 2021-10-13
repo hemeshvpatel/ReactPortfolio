@@ -1,6 +1,6 @@
 import React from "react";
-import SocialIcons from "./library/socialIcons";
-import TextLink from "./library/textLink";
+import SocialIcons from "./library/SocialIcons";
+import TextLink from "./library/TextLink";
 import styled, { css } from "styled-components";
 
 //Styles

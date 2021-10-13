@@ -1,13 +1,13 @@
 import React from "react";
-import WorkExperience from "../workExperience";
-import About from "../about";
-import Landing from "../landing";
-import Footer from "../footer";
-import Projects from "../projects";
-import Header from "../header";
-import Section from "./section";
+import WorkExperience from "../WorkExperience";
+import About from "../About";
+import Landing from "../Landing";
+import Footer from "../Footer";
+import Projects from "../Projects";
+import Header from "../Header";
+import Section from "./Section";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
-import Contact from "./contact";
+import Contact from "./Contact";
 
 //Styles
 
@@ -25,8 +25,10 @@ const GlobalStyle = createGlobalStyle`
     }
 `;
 
+//primary = white     secondary = red     tertiary = black
+
 const theme = {
-  colors: { primary: "#ffffff", secondary: "#ff0000" },
+  colors: { primary: "#ffffff", secondary: "#ff0000", tertiary: "#000000" },
 };
 
 export default function Layout() {

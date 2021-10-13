@@ -1,11 +1,5 @@
 import React from "react";
-//import { setNewStyle } from "../globalFunctions";
 import styled, { css } from "styled-components";
-
-//handle select options
-//Ability to add labels within input field or above or both
-//Form ideas: https://colorlib.com/wp/free-html5-contact-form-templates/
-//Close modal button
 
 //Styles
 const Wrapper = styled.div`
