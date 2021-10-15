@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
   color: red;
-  //text-decoration: underline;
   cursor: pointer;
 `;
 

@@ -25,15 +25,17 @@ const InfoRow = styled.div`
 `;
 
 const Title = styled.div`
-  margin-bottom: 1rem;
-  font-size: 35px;
-  line-height: 1.1;
-  font-weight: 600;
-  color: red;
+  ${({ theme }) => css`
+    margin-bottom: 1rem;
+    font-size: 35px;
+    line-height: 1.1;
+    font-weight: 600;
+    color: ${theme.colors.secondary};
 
-  @media screen and (max-width: 600px) {
-    font-size: 25px;
-  }
+    @media screen and (max-width: 600px) {
+      font-size: 25px;
+    }
+  `}
 `;
 
 const Sections = styled.div`

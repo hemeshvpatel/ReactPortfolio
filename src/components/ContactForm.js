@@ -6,7 +6,7 @@ const Wrapper = styled.div`
   ${({ theme }) => css`
     display: flex;
     flex-direction: column;
-    //color: ${theme.colors.primary};
+    border: 2px solid ${theme.colors.secondary};
   `}
 `;
 const Name = styled.div`
@@ -23,7 +23,7 @@ const Header = styled.div`
   ${({ theme }) => css`
     display: inline-block;
     text-align: center;
-    color: black;
+    color: ${theme.colors.primary};
     font-size: 30px;
     font-weight: 700;
     margin: 20px;
@@ -31,26 +31,32 @@ const Header = styled.div`
 `;
 
 const TopRightCloseButton = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  color: black;
-  margin: 20px;
+  ${({ theme }) => css`
+    display: flex;
+    justify-content: flex-end;
+    color: ${theme.colors.tertiary};
+    margin: 20px;
+  `}
 `;
 
 const CloseButton = styled.div`
-  background-color: transparent;
-  border: none;
-  font-size: 25px;
-  cursor: pointer;
-  color: red;
+  ${({ theme }) => css`
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    color: ${theme.colors.secondary};
+  `}
 `;
 
 const Label = styled.label`
-  display: flex;
-  flex-direction: column;
-  font-weight: 700;
-  font-size: 1rem;
-  color: black;
+  ${({ theme }) => css`
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    font-size: 1rem;
+    color: ${theme.colors.secondary};
+  `}
 `;
 
 const Input = styled.input`
@@ -62,12 +68,10 @@ const TextArea = styled.textarea`
 `;
 
 const Footer = styled.div`
-  ${({ theme }) => css`
-    flex: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  `}
+  flex: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Button = styled.input`
@@ -76,11 +80,16 @@ const Button = styled.input`
     height: 45px;
     margin: 20px;
     border: none;
-    background-color: black;
-    color: red;
+    background-color: ${theme.colors.tertiary};
+    border: 2px solid ${theme.colors.secondary};
+    color: ${theme.colors.primary};
     border-radius: 8px;
     font-size: 20px;
     cursor: pointer;
+
+    &:hover {
+      color: ${theme.colors.secondary};
+    }
   `}
 `;
 

@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Link as LinkS } from "react-scroll"; // https://www.npmjs.com/package/react-scroll
 
 const Wrapper = styled.div`
@@ -9,43 +9,47 @@ const Wrapper = styled.div`
 `;
 
 const MenuItem = styled(LinkS)`
-  cursor: pointer;
-  color: white;
-  align-items: center;
-  text-decoration: none;
-  padding: 0.5rem calc((100vw-1000px) / 2);
-  display: flex;
-  margin-left: 2rem;
+  ${({ theme }) => css`
+    cursor: pointer;
+    color: ${theme.colors.primary};
+    align-items: center;
+    text-decoration: none;
+    padding: 0.5rem calc((100vw-1000px) / 2);
+    display: flex;
+    margin-left: 2rem;
 
-  //Hover effects here, Styled Component has its own hover. You can add any more styling inside &:hover
-  &:hover {
-    color: red;
-    text-decoration: underline;
-  }
+    //Hover effects here, Styled Component has its own hover. You can add any more styling inside &:hover
+    &:hover {
+      color: ${theme.colors.secondary};
+      text-decoration: underline;
+    }
 
-  &.active {
-    border-bottom: 3px solid red;
-  }
+    &.active {
+      border-bottom: 3px solid ${theme.colors.secondary};
+    }
+  `}
 `;
 
 const MenuItemResume = styled.a`
-  cursor: pointer;
-  color: white;
-  align-items: center;
-  text-decoration: none;
-  padding: 0.5rem calc((100vw-1000px) / 2);
-  display: flex;
-  margin-left: 2rem;
+  ${({ theme }) => css`
+    cursor: pointer;
+    color: ${theme.colors.primary};
+    align-items: center;
+    text-decoration: none;
+    padding: 0.5rem calc((100vw-1000px) / 2);
+    display: flex;
+    margin-left: 2rem;
 
-  //Hover effects here, Styled Component has its own hover. You can add any more styling inside &:hover
-  &:hover {
-    color: red;
-    text-decoration: underline;
-  }
+    //Hover effects here, Styled Component has its own hover. You can add any more styling inside &:hover
+    &:hover {
+      color: ${theme.colors.secondary};
+      text-decoration: underline;
+    }
 
-  &.active {
-    border-bottom: 3px solid red;
-  }
+    &.active {
+      border-bottom: 3px solid ${theme.colors.secondary};
+    }
+  `}
 `;
 
 export default function MenuBar({ menuBarProps }) {

@@ -16,9 +16,9 @@ const Wrapper = styled.div`
 
 //This must be defined above Link in order to work for the hover effect targeting ToolTip
 const ToolTip = styled.div`
-  ${({ active }) => css`
+  ${({ theme, active }) => css`
     transition: color 0.5s;
-    color: black;
+    color: ${theme.colors.tertiary};
     font-size: 15px;
     font-weight: 600;
     margin-top: 10px;
@@ -26,27 +26,29 @@ const ToolTip = styled.div`
 `;
 
 const Link = styled.a`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transition: color 0.5s;
-  text-decoration: none;
-  color: white;
-  margin: 25px;
-  font-size: inherit;
+  ${({ theme }) => css`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.5s;
+    text-decoration: none;
+    color: ${theme.colors.primary};
+    margin: 25px;
+    font-size: inherit;
 
-  &:hover {
-    color: red;
-  }
+    &:hover {
+      color: ${theme.colors.secondary};
+    }
 
-  &:hover ${ToolTip} {
-    color: red;
-  }
+    &:hover ${ToolTip} {
+      color: ${theme.colors.secondary};
+    }
 
-  @media screen and (max-width: 600px) {
-    margin: 10px;
-  }
+    @media screen and (max-width: 600px) {
+      margin: 10px;
+    }
+  `}
 `;
 
 export default function SocialIcons(props) {

@@ -4,22 +4,24 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import TechnologiesIcons from "../TechnologiesIcons";
 
 const Wrapper = styled.div`
-  color: black;
-  border-radius: 0.2rem;
-  min-width: 20rem;
-  display: flex;
-  background-color: white;
+  ${({ theme }) => css`
+    color: ${theme.colors.tertiary};
+    border-radius: 0.2rem;
+    min-width: 20rem;
+    display: flex;
+    background-color: ${theme.colors.primary};
 
-  &:hover {
-    transform: scale(1.05);
-    transition: 0.3s;
-  }
+    &:hover {
+      transform: scale(1.05);
+      transition: 0.3s;
+    }
 
-  @media screen and (min-width: 600px) {
-    flex-direction: column;
-    text-align: center;
-    min-width: 14rem;
-  }
+    @media screen and (min-width: 600px) {
+      flex-direction: column;
+      text-align: center;
+      min-width: 14rem;
+    }
+  `}
 `;
 
 const Image = styled.img`
@@ -67,9 +69,9 @@ const Technologies = styled.div`
 
 //This must be defined above Link in order to work for the hover effect targeting ToolTip
 const ToolTip = styled.div`
-  ${({ active }) => css`
+  ${({ theme, active }) => css`
     transition: color 0.5s;
-    color: black;
+    color: ${theme.colors.tertiary};
     font-size: 15px;
     font-weight: 600;
   `}
@@ -82,28 +84,30 @@ const Buttons = styled.div`
 `;
 
 const Button = styled.button`
-  border: none;
-  background-color: transparent;
-  font-family: inherit;
-  font-size: 1rem;
-  font-weight: bold;
-  color: inherit;
-  width: 100%;
-  padding-top: 1rem;
-  cursor: pointer;
-  transition: color 0.5s;
+  ${({ theme }) => css`
+    border: none;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: bold;
+    color: inherit;
+    width: 100%;
+    padding-top: 1rem;
+    cursor: pointer;
+    transition: color 0.5s;
 
-  &:hover {
-    color: red;
-  }
+    &:hover {
+      color: ${theme.colors.secondary};
+    }
 
-  &:hover ${ToolTip} {
-    color: red;
-  }
+    &:hover ${ToolTip} {
+      color: ${theme.colors.secondary};
+    }
 
-  @media screen and (min-width: 600px) {
-    font-size: 2rem;
-  }
+    @media screen and (min-width: 600px) {
+      font-size: 2rem;
+    }
+  `}
 `;
 
 //Tutorial Links:

@@ -8,9 +8,9 @@ const Wrapper = styled.div`
 
 //This must be defined above Link in order to work for the hover effect targeting ToolTip
 const ToolTip = styled.div`
-  ${({ active }) => css`
+  ${({ theme, active }) => css`
     transition: color 0.5s;
-    color: black;
+    color: ${theme.colors.tertiary};
     font-size: 15px;
     font-weight: 600;
     margin-top: 10px;
@@ -18,25 +18,25 @@ const ToolTip = styled.div`
 `;
 
 const Link = styled.a`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transition: color 0.5s;
-  text-decoration: none;
-  color: white;
-  font-size: 25px;
+  ${({ theme }) => css`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.5s;
+    text-decoration: none;
+    color: ${theme.colors.primary};
+    font-size: 25px;
 
-  &:hover {
-    color: red;
-  }
+    &:hover {
+      color: ${theme.colors.secondary};
+    }
 
-  &:hover ${ToolTip} {
-    color: red;
-  }
+    &:hover ${ToolTip} {
+      color: ${theme.colors.secondary};
+    }
+  `}
 `;
-
-const Text = styled.div``;
 
 export default function ResumeIcon({ to, label, tooltip, icon, text }) {
   const [active, setActive] = useState(false);

@@ -15,7 +15,7 @@ const Button = styled.div`
     css`
       color: ${theme.colors.primary};
       width: auto;
-      border: 1px solid red;
+      border: 1px solid ${theme.colors.secondary};
       border-radius: 6px;
       padding: 10px;
       cursor: pointer;
@@ -23,7 +23,7 @@ const Button = styled.div`
       margin: 20px;
 
       &:hover {
-        color: red;
+        color: ${theme.colors.secondary};
       }
     `}
 `;

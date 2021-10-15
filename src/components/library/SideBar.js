@@ -16,66 +16,69 @@ const Overlay = styled.div`
 `;
 
 const Wrapper = styled.div`
-  //display: flex;
-  //flex-direction: column;
-  width: 75vw;
-  height: 90vh;
-  right: 0;
-  background-color: black;
-  //align-items: center;
-  padding: 15px;
-  position: fixed;
-  border: 2px solid red;
-  //transition: transform 300ms;
-  //transform: translate3d(100vw, 0, 0);
+  ${({ theme }) => css`
+    width: 75vw;
+    height: 90vh;
+    right: 0;
+    background-color: ${theme.colors.tertiary};
+    padding: 15px;
+    position: fixed;
+    border: 2px solid ${theme.colors.secondary};
+  `}
 `;
 
 const MenuItem = styled(LinkS)`
-  cursor: pointer;
-  color: white;
-  align-items: center;
-  text-decoration: none;
-  padding: 0.5rem calc((100vw-1000px) / 2);
-  display: flex;
-  margin-left: 7rem;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+  ${({ theme }) => css`
+    cursor: pointer;
+    color: ${theme.colors.primary};
+    align-items: center;
+    text-decoration: none;
+    padding: 0.5rem calc((100vw-1000px) / 2);
+    display: flex;
+    margin-left: 7rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
 
-  //Hover effects here, Styled Component has its own hover. You can add any more styling inside &:hover
-  &:hover {
-    color: red;
-    text-decoration: underline;
-  }
+    //Hover effects here, Styled Component has its own hover. You can add any more styling inside &:hover
+    &:hover {
+      color: ${theme.colors.secondary};
+      text-decoration: underline;
+    }
 
-  &.active {
-    border-bottom: 3px solid red;
-  }
+    &.active {
+      border-bottom: 3px solid ${theme.colors.secondary};
+    }
+  `}
 `;
 
 const MenuItemResume = styled.a`
-  cursor: pointer;
-  color: white;
-  align-items: center;
-  text-decoration: none;
-  padding: 0.5rem calc((100vw-1000px) / 2);
-  display: flex;
-  margin-left: 7rem;
+  ${({ theme }) => css`
+    cursor: pointer;
+    color: ${theme.colors.primary};
+    align-items: center;
+    text-decoration: none;
+    padding: 0.5rem calc((100vw-1000px) / 2);
+    display: flex;
+    margin-left: 7rem;
 
-  //Hover effects here, Styled Component has its own hover. You can add any more styling inside &:hover
-  &:hover {
-    color: red;
-    text-decoration: underline;
-  }
+    //Hover effects here, Styled Component has its own hover. You can add any more styling inside &:hover
+    &:hover {
+      color: ${theme.colors.secondary};
+      text-decoration: underline;
+    }
 
-  &.active {
-    border-bottom: 3px solid red;
-  }
+    &.active {
+      border-bottom: 3px solid ${theme.colors.secondary};
+    }
+  `}
 `;
 
 const TopRightCloseButton = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  color: red;
+  ${({ theme }) => css`
+    display: flex;
+    justify-content: flex-end;
+    color: ${theme.colors.secondary};
+  `}
 `;
 
 const CloseButton = styled.div`

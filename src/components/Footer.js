@@ -29,7 +29,7 @@ const TextContainer = styled.div`
   }
 `;
 
-export default function Footer() {
+export default function Footer({}) {
   return (
     <Wrapper>
       <TextContainer>

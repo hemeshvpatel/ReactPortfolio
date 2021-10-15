@@ -57,24 +57,26 @@ const IconsContainer = styled.div`
 `;
 
 const NextSection = styled(LinkS)`
-  cursor: pointer;
-  color: white;
-  align-items: center;
-  text-decoration: none;
-  display: flex;
-  white-space: pre-wrap;
-  font-size: 25px;
-  position: absolute;
-  bottom: 20px;
+  ${({ theme }) => css`
+    cursor: pointer;
+    color: ${theme.colors.primary};
+    align-items: center;
+    text-decoration: none;
+    display: flex;
+    white-space: pre-wrap;
+    font-size: 25px;
+    position: absolute;
+    bottom: 20px;
 
-  //Hover effects here, Styled Component has its own hover. You can add any more styling inside &:hover
-  &:hover {
-    color: red;
-  }
+    //Hover effects here, Styled Component has its own hover. You can add any more styling inside &:hover
+    &:hover {
+      color: ${theme.colors.secondary};
+    }
 
-  &.active {
-    border-bottom: 3px solid red;
-  }
+    &.active {
+      border-bottom: 3px solid ${theme.colors.secondary};
+    }
+  `}
 `;
 
 export default function Welcome() {

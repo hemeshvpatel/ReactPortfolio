@@ -4,25 +4,6 @@ import TextLink from "./library/TextLink";
 import styled, { css } from "styled-components";
 import { GoTriangleRight } from "react-icons/go";
 
-//Notes
-/*
-
-Idea is making some sort of timeline 
-
-Small Pic of Company
-Company Name
-Location
-Time
-
-Clickable expands into more details / Dropdown carrot:
-Description 
-
-//https://brittanychiang.com/#jobs
-
-*Mobile would be a stacked timeline or displayed as cards
-
-*/
-
 //Styles
 const Wrapper = styled.div`
   ${({ theme }) => css`
@@ -81,15 +62,17 @@ const ColumnTwo = styled.div`
 `;
 
 const Title = styled.div`
-  margin-bottom: 1rem;
-  font-size: 35px;
-  line-height: 1.1;
-  font-weight: 600;
-  color: red;
+  ${({ theme }) => css`
+    margin-bottom: 1rem;
+    font-size: 35px;
+    line-height: 1.1;
+    font-weight: 600;
+    color: ${theme.colors.secondary};
 
-  @media screen and (max-width: 600px) {
-    font-size: 25px;
-  }
+    @media screen and (max-width: 600px) {
+      font-size: 25px;
+    }
+  `}
 `;
 
 const Position = styled.div`
@@ -104,26 +87,33 @@ const Position = styled.div`
 `;
 
 const Company = styled.div`
-  color: ${({ active }) => (active ? "red" : "white")};
-  padding: 25px;
-  cursor: pointer;
-  border-left: ${({ active }) => (active ? "4px solid red" : "1px solid")};
+  ${({ theme }) => css`
+    color: ${({ active }) =>
+      active ? theme.colors.secondary : theme.colors.primary};
+    padding: 25px;
+    cursor: pointer;
+    border-left: ${({ active }) =>
+      active ? `4px solid ${theme.colors.secondary}` : "1px solid"};
 
-  &:hover {
-    color: red;
-  }
+    &:hover {
+      color: ${theme.colors.secondary};
+    }
 
-  @media screen and (max-width: 600px) {
-    font-size: 15px;
-    border-left: none;
-    border-bottom: ${({ active }) => (active ? "4px solid red" : "1px solid")};
-  }
+    @media screen and (max-width: 600px) {
+      font-size: 15px;
+      border-left: none;
+      border-bottom: ${({ active }) =>
+        active ? `4px solid ${theme.colors.secondary}` : "1px solid"};
+    }
+  `}
 `;
 
 const CompanyUrl = styled.div`
-  font-weight: 700;
-  display: flex;
-  color: red;
+  ${({ theme }) => css`
+    font-weight: 700;
+    display: flex;
+    color: ${theme.colors.secondary};
+  `}
 `;
 
 const Dates = styled.div`
@@ -162,20 +152,20 @@ const Bullet = styled.div`
 `;
 
 const BulletIcon = styled.div`
-  display: flex;
-  color: red;
-  align-self: flex-start;
-  margin-top: 0.2rem;
-  margin-right: 2rem;
+  ${({ theme }) => css`
+    display: flex;
+    color: ${theme.colors.secondary};
+    align-self: flex-start;
+    margin-top: 0.2rem;
+    margin-right: 2rem;
 
-  @media screen and (max-width: 600px) {
-    font-size: 15px;
-  }
+    @media screen and (max-width: 600px) {
+      font-size: 15px;
+    }
+  `}
 `;
 
 export default function WorkExperience() {
-  //Some Ideas:
-  //1) Turn this into a timeline with the ability to click and interact, ensure everything has links
   const [experience, setExperience] = useState(workExperience[0] || "");
   return (
     <Wrapper>

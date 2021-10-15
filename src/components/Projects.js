@@ -1,26 +1,7 @@
 import React from "react";
 import { projects } from "../data";
 import ProjectCard from "./library/ProjectCard";
-import styled from "styled-components";
-
-//Notes
-/*
-
-Main pic would may be a short video of a feature
-Smaller pic might be main tech used
-Project Name
-Tech Stack
-(Clickable takes you to hosting link or if not hosted github)
-
-Dropdown carrot:
-Description 
-Live Link: Host link
-Repository Link: Repo Link
-
-Appears as a Carousel on full web with toggle for cards
-Mobile appears as cards stacked
-
-*/
+import styled, { css } from "styled-components";
 
 //Styles
 const Wrapper = styled.div`
@@ -46,15 +27,17 @@ const ProjectsContainer = styled.div`
 `;
 
 const Title = styled.div`
-  margin-bottom: 1rem;
-  font-size: 35px;
-  line-height: 1.1;
-  font-weight: 600;
-  color: red;
+  ${({ theme }) => css`
+    margin-bottom: 1rem;
+    font-size: 35px;
+    line-height: 1.1;
+    font-weight: 600;
+    color: ${theme.colors.secondary};
 
-  @media screen and (max-width: 600px) {
-    font-size: 25px;
-  }
+    @media screen and (max-width: 600px) {
+      font-size: 25px;
+    }
+  `}
 `;
 
 export default function Projects() {
