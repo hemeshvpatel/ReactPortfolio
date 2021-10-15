@@ -9,6 +9,7 @@ const Wrapper = styled.div`
     margin-right: auto;
     margin-left: auto;
     justify-content: center;
+    padding: 2rem;
   `}
 `;
 

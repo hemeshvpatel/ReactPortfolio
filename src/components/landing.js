@@ -82,7 +82,6 @@ export default function Welcome() {
   const { firstName, lastName } = userData;
   //check data before using:
   //console.log("userData: ", userData)
-
   return (
     <Wrapper>
       <Intro> Hi, my name is ... </Intro>

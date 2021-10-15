@@ -29,14 +29,11 @@ const GlobalStyle = createGlobalStyle`
 
 const theme = {
   colors: { primary: "#ffffff", secondary: "#ff0000", tertiary: "#000000" },
+  fontSizes: { title: "25px", body: "15px" },
 };
 
 export default function Layout() {
-  //To change layout look at styling for display grid and change accordingly
-  //CSS Grid Container Help: https://www.w3schools.com/css/css_grid_container.asp
-
-  //Section is like pages for the links at the top, this keeps everything contained
-
+  //Layout contains the Header, Sections, and Footer of website with theme being passed to all children.
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />

@@ -33,7 +33,7 @@ const TextContainer1 = styled.div`
 `;
 
 export default function Contact() {
-  //Add link component for names to link to portfolio sites.
+  //Simple container for contact section with text and button
   return (
     <Wrapper>
       <Section1>
