@@ -20,11 +20,12 @@ const Wrapper = styled.div`
     width: 75vw;
     height: 90vh;
     right: 0;
-    background-color: ${theme.colors.tertiary};
+    background-color: rgb(69 26 26);
     padding: 15px;
     position: fixed;
-    border: 2px solid ${theme.colors.secondary};
   `}
+
+  transition: all ease 1s;
 `;
 
 const MenuItem = styled(LinkS)`
@@ -35,9 +36,11 @@ const MenuItem = styled(LinkS)`
     text-decoration: none;
     padding: 0.5rem calc((100vw-1000px) / 2);
     display: flex;
-    margin-left: 7rem;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
+    padding-left: 7rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 
     //Hover effects here, Styled Component has its own hover. You can add any more styling inside &:hover
     &:hover {
@@ -46,7 +49,7 @@ const MenuItem = styled(LinkS)`
     }
 
     &.active {
-      border-bottom: 3px solid ${theme.colors.secondary};
+      background-color: #985353;
     }
   `}
 `;
@@ -60,6 +63,7 @@ const MenuItemResume = styled.a`
     padding: 0.5rem calc((100vw-1000px) / 2);
     display: flex;
     margin-left: 7rem;
+    padding-top: 2rem;
 
     //Hover effects here, Styled Component has its own hover. You can add any more styling inside &:hover
     &:hover {
@@ -68,7 +72,7 @@ const MenuItemResume = styled.a`
     }
 
     &.active {
-      border-bottom: 3px solid ${theme.colors.secondary};
+      background-color: #985353;
     }
   `}
 `;
@@ -142,6 +146,6 @@ export default function SideBar({ sideBarProps, show, onClose }) {
         })}
       </Wrapper>
     </Overlay>,
-    document.getElementById("portal")
+    document.getElementById("root")
   );
 }
