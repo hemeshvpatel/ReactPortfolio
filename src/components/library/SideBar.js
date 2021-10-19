@@ -16,16 +16,19 @@ const Overlay = styled.div`
 `;
 
 const Wrapper = styled.div`
-  ${({ theme }) => css`
+  ${({ theme, show }) => css`
+    //background-color: rgb(69 26 26);
+    background-color: ${({ show }) => (show ? "red" : "blue")};
+    padding: 2rem;
+    position: absolute;
+    transform: ${({ show }) => (show ? "translateX(0)" : "translateX(-100%)")};
     width: 75vw;
     height: 90vh;
+    top: 0;
     right: 0;
-    background-color: rgb(69 26 26);
-    padding: 15px;
-    position: fixed;
+    transition: transform 0.7s ease-in-out;
+    //transition: all ease 5s;
   `}
-
-  transition: all ease 1s;
 `;
 
 const MenuItem = styled(LinkS)`
@@ -111,7 +114,7 @@ export default function SideBar({ sideBarProps, show, onClose }) {
   if (!show) return null;
   return ReactDom.createPortal(
     <Overlay>
-      <Wrapper ref={ref}>
+      <Wrapper ref={ref} show={show}>
         <TopRightCloseButton>
           <CloseButton onClick={onClose}>x</CloseButton>
         </TopRightCloseButton>

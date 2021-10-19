@@ -169,7 +169,7 @@ export default function WorkExperience() {
   const [experience, setExperience] = useState(workExperience[0] || "");
   return (
     <Wrapper>
-      <Title>Where I've Worked</Title>
+      <Title>Work Experience</Title>
       <Row>
         <ColumnOne>
           {(workExperience || []).map((item) => {
