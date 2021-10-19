@@ -7,7 +7,7 @@ const Wrapper = styled.div`
   ${({ theme }) => css`
     color: ${theme.colors.tertiary};
     border-radius: 0.2rem;
-    min-width: 20rem;
+    //min-width: 20rem;
     display: flex;
     background-color: ${theme.colors.primary};
 
