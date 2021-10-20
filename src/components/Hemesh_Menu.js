@@ -3,54 +3,20 @@ import styled, { css } from "styled-components";
 import { Link as LinkS } from "react-scroll"; // https://www.npmjs.com/package/react-scroll
 import ReactDom from "react-dom";
 
-const Overlay = styled.div`
-  ${({ theme }) => css`
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 1000;
-  `}
-`;
-
 export const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: center;
   background: ${({ theme }) => theme.colors.tertiary};
-  border: 2px dashed red;
-  transform: ${({ show }) => (show ? "translateX(0)" : "translateX(-100%)")};
-  height: 100vh;
-  text-align: left;
+  border: 2px solid red;
+  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
+  width: 50%;
+  height: 60vh;
   padding: 2rem;
   position: absolute;
-  top: 0;
+  top: 125px;
   right: 0;
   transition: transform 0.3s ease-in-out;
-  //z-index: 1001;
-
-  @media (max-width: ${({ theme }) => theme.mobile}) {
-    width: 100%;
-  }
-  a {
-    font-size: 2rem;
-    text-transform: uppercase;
-    padding: 2rem 0;
-    font-weight: bold;
-    letter-spacing: 0.5rem;
-    color: ${({ theme }) => theme.primaryDark};
-    text-decoration: none;
-    transition: color 0.3s linear;
-    @media (max-width: ${({ theme }) => theme.mobile}) {
-      font-size: 1.5rem;
-      text-align: center;
-    }
-    &:hover {
-      color: ${({ theme }) => theme.primaryHover};
-    }
-  }
 `;
 
 const MenuItem = styled(LinkS)`
@@ -59,11 +25,9 @@ const MenuItem = styled(LinkS)`
     color: ${theme.colors.primary};
     align-items: center;
     text-decoration: none;
-    padding: 0.5rem calc((100vw-1000px) / 2);
+    padding: 2rem;
     display: flex;
-    padding-left: 7rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    transition: color 0.3s linear;
 
     //Hover effects here, Styled Component has its own hover. You can add any more styling inside &:hover
     &:hover {
@@ -72,7 +36,7 @@ const MenuItem = styled(LinkS)`
     }
 
     &.active {
-      background-color: #985353;
+      border: 1px solid ${theme.colors.secondary};
     }
   `}
 `;
@@ -83,9 +47,9 @@ const MenuItemResume = styled.a`
     color: ${theme.colors.primary};
     align-items: center;
     text-decoration: none;
-    padding: 0.5rem calc((100vw-1000px) / 2);
+    padding: 2rem;
     display: flex;
-    padding-top: 2rem;
+    transition: color 0.3s linear;
 
     //Hover effects here, Styled Component has its own hover. You can add any more styling inside &:hover
     &:hover {
@@ -94,63 +58,43 @@ const MenuItemResume = styled.a`
     }
 
     &.active {
-      background-color: #985353;
+      border: 1px solid ${theme.colors.secondary};
     }
   `}
 `;
 
-export default function Menu({ sideBarProps, show, setShow }) {
-  const ref = useRef(null);
-
-  const handleClickOutside = (e) => {
-    if (ref.current && !ref.current.contains(e.target)) {
-      setShow && setShow(false);
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener("click", handleClickOutside, true);
-    return () => {
-      document.removeEventListener("click", handleClickOutside, true);
-    };
-  });
-
-  if (!show) return null;
-  //return ReactDom.createPortal(
+export default function Menu({ menuBarProps, open, setOpen }) {
   return (
-    <Overlay>
-      <StyledMenu ref={ref} show={show}>
-        {sideBarProps.map((menu, key) => {
-          if (menu.title !== "Resume") {
-            return (
-              <MenuItem
-                key={key}
-                to={menu.id}
-                smooth={true}
-                duration={500}
-                spy={true}
-                onClick={() => setShow(false)}
-              >
-                {menu.title}{" "}
-              </MenuItem>
-            );
-          }
-          if (menu.title === "Resume") {
-            return (
-              <MenuItemResume
-                key={key}
-                href={menu.to}
-                target={"_blank"}
-                rel="noreferrer"
-              >
-                {menu.title}
-              </MenuItemResume>
-            );
-          }
-          return null;
-        })}
-      </StyledMenu>
-    </Overlay>
-    //document.getElementById("root")
+    <StyledMenu open={open}>
+      {(menuBarProps || []).map((menu, key) => {
+        if (menu.title !== "Resume") {
+          return (
+            <MenuItem
+              key={key}
+              to={menu.id}
+              smooth={true}
+              duration={500}
+              spy={true}
+              onClick={() => setOpen(false)}
+            >
+              {menu.title}{" "}
+            </MenuItem>
+          );
+        }
+        if (menu.title === "Resume") {
+          return (
+            <MenuItemResume
+              key={key}
+              href={menu.to}
+              target={"_blank"}
+              rel="noreferrer"
+            >
+              {menu.title}
+            </MenuItemResume>
+          );
+        }
+        return null;
+      })}
+    </StyledMenu>
   );
 }

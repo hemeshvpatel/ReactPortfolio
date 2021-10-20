@@ -33,8 +33,8 @@ export const brandStatement =
   "I'm a software engineer passionate about building meaningful digital experiences. Currently, I'm focused on building fin-tech products at Portfolio & Co.";
 
 export const about = [
-  "Software Engineer (ReactJS is my favorite). Passionate about how things work and how technology can help solve problems. My career has led me through roles in finance, operations, and most recently software engineering. I love getting to write code and work on projects as much as I can, leveling up my JavaScript and ReactJS skills through projects.",
-  "Currently, I work as a Full Stack Software Engineer at Unhedged, a financial data & research platform with powerful content creation and collaboration tools, built on top of institutional-quality data.",
+  "Passionate about how things work and how technology can help solve problems. My career has led me through roles in finance, operations, and most recently software engineering. I love getting to write code and work on projects as much as I can, leveling up my JavaScript and ReactJS skills through projects.",
+  "Currently, I work as a Full Stack Software Engineer at Portfolio & Co., a financial data & research platform with powerful content creation and collaboration tools, built on top of institutional-quality data.",
   "When I’m not coding, you can find me reading articles from my favorite blogs (Engadget, Lifehacker) and watching car reviews on YouTube. Currently reading Think Like a Monk by Jay Shetty.",
 ];
 
