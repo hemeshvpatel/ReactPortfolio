@@ -27,7 +27,6 @@ const Wrapper = styled.div`
     top: 0;
     right: 0;
     transition: transform 0.7s ease-in-out;
-    //transition: all ease 5s;
   `}
 `;
 

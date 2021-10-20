@@ -7,11 +7,10 @@ export const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: ${({ theme }) => theme.colors.tertiary};
-  border: 2px solid red;
+  background: rgb(69 26 26);
   transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
-  width: 50%;
-  height: 60vh;
+  width: 70vw;
+  height: 70vh;
   padding: 2rem;
   position: absolute;
   top: 125px;
@@ -58,7 +57,7 @@ const MenuItemResume = styled.a`
     }
 
     &.active {
-      border: 1px solid ${theme.colors.secondary};
+      background-color: #985353;
     }
   `}
 `;
