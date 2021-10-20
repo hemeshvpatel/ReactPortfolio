@@ -1,13 +1,11 @@
 import React, { useRef, useState, useEffect } from "react";
 import MenuBar from "./library/MenuBar";
-import SideBar from "./library/SideBar";
 import { debounce } from "../globals/utilities/helpers";
 import { userData } from "../data";
 import styled, { css } from "styled-components";
 import { Link as LinkR } from "react-router-dom";
-import { GiHamburgerMenu } from "react-icons/gi";
-import Burger from "./Hemesh_Burger";
-import Menu from "./Hemesh_Menu";
+import Burger from "./library/MobileBurger";
+import Menu from "./library/MobileMenu";
 import { useOnClickOutside } from "../globals/hooks";
 
 //Styles
