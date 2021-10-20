@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import MenuBar from "./library/MenuBar";
-import SideBar from "./library/SideBar";
 import { debounce } from "../globals/utilities/helpers";
 import { userData } from "../data";
 import styled, { css } from "styled-components";
 import { Link as LinkR } from "react-router-dom";
-import { GiHamburgerMenu } from "react-icons/gi";
-import Burger from "./Hemesh_Burger";
-import Menu from "./Hemesh_Menu";
+import Burger from "./library/MobileBurger";
+import Menu from "./library/MobileMenu";
+import { useOnClickOutside } from "../globals/hooks";
 
 //Styles
 const Wrapper = styled.div`
@@ -26,14 +25,6 @@ const Wrapper = styled.div`
     z-index: 999;
     transition: top 0.6s;
     background-color: ${theme.colors.tertiary};
-
-    @media screen and (max-width: 800px) {
-      font-size: 1.25rem;
-    }
-
-    @media screen and (max-width: 700px) {
-      font-size: 1rem;
-    }
   `}
 `;
 
@@ -44,20 +35,21 @@ const Name = styled(LinkR)`
 `;
 
 const Desktop = styled.div`
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 725px) {
     display: none;
   }
 `;
 
 const Mobile = styled.div`
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 725px) {
     display: none;
   }
 `;
 
 export default function Header() {
+  const node = useRef();
   const { firstName } = userData;
-  const [show, setShow] = useState(false);
+  const [open, setOpen] = useState(false);
   let menuBarProps = [
     { title: "About", id: "about" },
     { title: "Experience", id: "experience" },
@@ -89,6 +81,8 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [prevScrollPos, visible, handleScroll]);
 
+  useOnClickOutside(node, () => setOpen(false));
+
   return (
     <Wrapper visible={visible}>
       <Name to="/">{`<${firstName}/>`}</Name>
@@ -96,19 +90,10 @@ export default function Header() {
       <Desktop>
         <MenuBar menuBarProps={menuBarProps} />
       </Desktop>
-      <Mobile>
-        <Burger show={show} setShow={setShow} />
-        {/* <GiHamburgerMenu
-          style={{ color: "white" }}
-          onClick={() => setShow(!show)}
-        /> */}
+      <Mobile ref={node}>
+        <Burger open={open} setOpen={setOpen} />
+        <Menu menuBarProps={menuBarProps} open={open} setOpen={setOpen} />
       </Mobile>
-      <Menu sideBarProps={menuBarProps} show={show} setShow={setShow} />
-      {/* <SideBar
-        sideBarProps={menuBarProps}
-        show={show}
-        onClose={() => setShow(false)}
-      /> */}
     </Wrapper>
   );
 }
