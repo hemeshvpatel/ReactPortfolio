@@ -6,6 +6,8 @@ import { userData } from "../data";
 import styled, { css } from "styled-components";
 import { Link as LinkR } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
+import Burger from "./Hemesh_Burger";
+import Menu from "./Hemesh_Menu";
 
 //Styles
 const Wrapper = styled.div`
@@ -72,12 +74,6 @@ export default function Header() {
 
   const handleScroll = debounce(() => {
     const currentScrollPos = window.scrollY;
-    console.log("current: ", currentScrollPos);
-    console.log("prev: ", prevScrollPos);
-    console.log(
-      (prevScrollPos > currentScrollPos && currentScrollPos > 70) ||
-        currentScrollPos < 10
-    );
     setVisible(
       (prevScrollPos > currentScrollPos &&
         prevScrollPos - currentScrollPos > 70) ||
@@ -93,24 +89,26 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [prevScrollPos, visible, handleScroll]);
 
-  console.log("visible: ", visible);
   return (
     <Wrapper visible={visible}>
       <Name to="/">{`<${firstName}/>`}</Name>
+      <Menu />
       <Desktop>
         <MenuBar menuBarProps={menuBarProps} />
       </Desktop>
       <Mobile>
-        <GiHamburgerMenu
+        <Burger show={show} setShow={setShow} />
+        {/* <GiHamburgerMenu
           style={{ color: "white" }}
           onClick={() => setShow(!show)}
-        />
+        /> */}
       </Mobile>
-      <SideBar
+      <Menu sideBarProps={menuBarProps} show={show} setShow={setShow} />
+      {/* <SideBar
         sideBarProps={menuBarProps}
         show={show}
         onClose={() => setShow(false)}
-      />
+      /> */}
     </Wrapper>
   );
 }
