@@ -149,6 +149,8 @@ export const workExperience = [
   },
 ];
 
+//For technologies section: Javascript, NodeJS, ReactJS, Ruby, Python, Java, Typescript, AWS, Netlify, Heroku
+
 export const projects = [
   {
     title: "CSS Color Picker 1",
@@ -167,7 +169,7 @@ export const projects = [
       "A simple CSS Color Picker built with ReactJS to help me with palette options when styling.",
     repositoryUrl: "https://github.com/hemeshvpatel/CSS-Color-Picker",
     hostedUrl: "https://hemesh-css-color-picker.netlify.app/",
-    technologies: { ReactJS: true, Javascript: true, Netlify: true },
+    technologies: { ReactJS: true, Javascript: true, Heroku: true },
     imageUrl: "./colors.jpg",
   },
   {
@@ -177,7 +179,7 @@ export const projects = [
       "A simple CSS Color Picker built with ReactJS to help me with palette options when styling.",
     repositoryUrl: "https://github.com/hemeshvpatel/CSS-Color-Picker",
     hostedUrl: "https://hemesh-css-color-picker.netlify.app/",
-    technologies: { ReactJS: true, Javascript: true, Netlify: true },
+    technologies: { ReactJS: true, Javascript: true, AWS: true },
     imageUrl: "./colors.jpg",
   },
   {
@@ -187,7 +189,7 @@ export const projects = [
       "A simple CSS Color Picker built with ReactJS to help me with palette options when styling.",
     repositoryUrl: "https://github.com/hemeshvpatel/CSS-Color-Picker",
     hostedUrl: "https://hemesh-css-color-picker.netlify.app/",
-    technologies: { ReactJS: true, Javascript: true, Netlify: true },
+    technologies: { ReactJS: true, NodeJS: true, Netlify: true },
     imageUrl: "./colors.jpg",
   },
   {
@@ -197,7 +199,7 @@ export const projects = [
       "A simple CSS Color Picker built with ReactJS to help me with palette options when styling.",
     repositoryUrl: "https://github.com/hemeshvpatel/CSS-Color-Picker",
     hostedUrl: "https://hemesh-css-color-picker.netlify.app/",
-    technologies: { ReactJS: true, Javascript: true, Netlify: true },
+    technologies: { Python: true, Javascript: true, AWS: true },
     imageUrl: "./colors.jpg",
   },
   {
@@ -207,7 +209,7 @@ export const projects = [
       "A simple CSS Color Picker built with ReactJS to help me with palette options when styling.",
     repositoryUrl: "https://github.com/hemeshvpatel/CSS-Color-Picker",
     hostedUrl: "https://hemesh-css-color-picker.netlify.app/",
-    technologies: { ReactJS: true, Javascript: true, Netlify: true },
+    technologies: { Java: true, Javascript: true, Heroku: true },
     imageUrl: "./colors.jpg",
   },
 ];

@@ -21,7 +21,7 @@ const Wrapper = styled.div`
     align-items: center;
     justify-content: space-between;
     padding: 2rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
     z-index: 999;
     transition: top 0.6s;
     background-color: ${theme.colors.tertiary};
@@ -35,13 +35,13 @@ const Name = styled(LinkR)`
 `;
 
 const Desktop = styled.div`
-  @media screen and (max-width: 725px) {
+  @media screen and (max-width: 1000px) {
     display: none;
   }
 `;
 
 const Mobile = styled.div`
-  @media screen and (min-width: 725px) {
+  @media screen and (min-width: 1000px) {
     display: none;
   }
 `;

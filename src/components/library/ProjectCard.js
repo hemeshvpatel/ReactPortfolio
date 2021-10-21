@@ -113,7 +113,7 @@ const Button = styled.button`
 //Tutorial Links:
 //https://www.youtube.com/watch?v=3_gakM-y7hE
 
-export default function Card({ data }) {
+export default function ProjectCard({ data }) {
   const {
     title,
     description,
