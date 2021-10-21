@@ -19,8 +19,8 @@ export const StyledBurger = styled.button`
   }
 
   div {
-    width: 1.75rem;
-    height: 0.25rem;
+    width: 2rem;
+    height: .25rem;
     background: ${({ open }) =>
       open ? theme.colors.secondary : theme.colors.primary};
     border-radius: 10px;

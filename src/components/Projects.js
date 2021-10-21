@@ -7,8 +7,6 @@ import styled, { css } from "styled-components";
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  /* margin-left: 10px;
-  margin-right: 10px; */
   margin-bottom: 4rem;
 `;
 
