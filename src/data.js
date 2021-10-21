@@ -22,20 +22,19 @@ export const roles = [
 
 export const technologies = [
   "Javascript",
-  "React.js",
-  "Node.js",
+  "ReactJS",
+  "Node",
   "HTML",
   "CSS",
   "Ruby",
 ];
 
-export const brandStatements = [
-  "Passionate about changing the world with technology.",
-];
+export const brandStatement =
+  "I'm a software engineer passionate about building meaningful digital experiences. Currently, I'm focused on building fin-tech products at Portfolio & Co.";
 
 export const about = [
-  "Software Engineer (React is my favorite). Passionate about how things work and how technology can help solve problems. My career has led me through roles in finance, operations, and most recently software engineering. I love getting to write code and work on projects as much as I can, leveling up my JavaScript and React skills through projects.",
-  "Currently, I work as a Full Stack Software Engineer at Unhedged, a financial data & research platform with powerful content creation and collaboration tools, built on top of institutional-quality data.",
+  "Passionate about how things work and how technology can help solve problems. My career has led me through roles in finance, operations, and most recently software engineering. I love getting to write code and work on projects as much as I can, leveling up my JavaScript and ReactJS skills through projects.",
+  "Currently, I work as a Full Stack Software Engineer at Portfolio & Co., a financial data & research platform with powerful content creation and collaboration tools, built on top of institutional-quality data.",
   "When I’m not coding, you can find me reading articles from my favorite blogs (Engadget, Lifehacker) and watching car reviews on YouTube. Currently reading Think Like a Monk by Jay Shetty.",
 ];
 
@@ -50,6 +49,7 @@ export const workExperience = [
     position: "Senior Front-end Engineer",
     startDate: "1/1/2020",
     endDate: "12/31/2020",
+    textDate: "January - December 2020",
     summary:
       "Senior Software Developer with 8 plus years of experience in the Engineering domain is seeking to apply and expand my knowledge and skills towards working in a collaborative environment to develop quality software solutions that address and solve business problems.",
     bullets: [
@@ -68,6 +68,7 @@ export const workExperience = [
     position: "Front-end Developer",
     startDate: "1/1/2019",
     endDate: "12/31/2019",
+    textDate: "January - December 2019",
     summary:
       "Senior with 7 plus years of experience in the Engineering domain is seeking to apply and expand my knowledge and skills towards working in a collaborative environment to develop quality software solutions that address and solve business problems.",
     bullets: [
@@ -85,6 +86,7 @@ export const workExperience = [
     position: "Software Engineer",
     startDate: "1/1/2018",
     endDate: "12/31/2018",
+    textDate: "January - December 2018",
     summary:
       "Software Developer with 5 plus years of experience in the Engineering domain is seeking to apply and expand my knowledge and skills towards working in a collaborative environment to develop quality software solutions that address and solve business problems.",
     bullets: [
@@ -101,6 +103,7 @@ export const workExperience = [
     position: "Associate Software Engineer",
     startDate: "1/1/2017",
     endDate: "12/31/2017",
+    textDate: "January - December 2017",
     summary:
       "Junior Software Developer with 3 plus years of experience in the Engineering domain is seeking to apply and expand my knowledge and skills towards working in a collaborative environment to develop quality software solutions that address and solve business problems.",
     bullets: [
@@ -117,6 +120,7 @@ export const workExperience = [
     position: "Technical Support Engineer - Enterprise",
     startDate: "1/1/2016",
     endDate: "12/31/2016",
+    textDate: "January - December 2016",
     summary:
       "Technical Support Engineer with 1 plus years of experience in the Engineering domain is seeking to apply and expand my knowledge and skills towards working in a collaborative environment to develop quality software solutions that address and solve business problems.",
     bullets: [
@@ -133,6 +137,7 @@ export const workExperience = [
     position: "Technical Support Engineer",
     startDate: "1/1/2015",
     endDate: "12/31/2015",
+    textDate: "January - December 2015",
     summary:
       "Technical Support Engineer seeking to apply and expand my knowledge and skills towards working in a collaborative environment to develop quality software solutions that address and solve business problems.",
     bullets: [
@@ -144,65 +149,67 @@ export const workExperience = [
   },
 ];
 
+//For technologies section: Javascript, NodeJS, ReactJS, Ruby, Python, Java, Typescript, AWS, Netlify, Heroku
+
 export const projects = [
   {
     title: "CSS Color Picker 1",
     year: "2020",
     description:
-      "A simple CSS Color Picker built with React to help me with palette options when styling.",
+      "A simple CSS Color Picker built with ReactJS to help me with palette options when styling.",
     repositoryUrl: "https://github.com/hemeshvpatel/CSS-Color-Picker",
     hostedUrl: "https://hemesh-css-color-picker.netlify.app/",
-    technologies: ["React.js", "Javascript", "Netlify"],
-    imageUrl: "",
+    technologies: { ReactJS: true, Javascript: true, Netlify: true },
+    imageUrl: "./colors.jpg",
   },
   {
     title: "CSS Color Picker 2 ",
     year: "2022",
     description:
-      "A simple CSS Color Picker built with React to help me with palette options when styling.",
+      "A simple CSS Color Picker built with ReactJS to help me with palette options when styling.",
     repositoryUrl: "https://github.com/hemeshvpatel/CSS-Color-Picker",
     hostedUrl: "https://hemesh-css-color-picker.netlify.app/",
-    technologies: ["React.js", "Javascript", "Netlify"],
-    imageUrl: "",
+    technologies: { ReactJS: true, Javascript: true, Heroku: true },
+    imageUrl: "./colors.jpg",
   },
   {
     title: "CSS Color Picker 3 ",
     year: "2020",
     description:
-      "A simple CSS Color Picker built with React to help me with palette options when styling.",
+      "A simple CSS Color Picker built with ReactJS to help me with palette options when styling.",
     repositoryUrl: "https://github.com/hemeshvpatel/CSS-Color-Picker",
     hostedUrl: "https://hemesh-css-color-picker.netlify.app/",
-    technologies: ["React.js", "Javascript", "Netlify"],
-    imageUrl: "",
+    technologies: { ReactJS: true, Javascript: true, AWS: true },
+    imageUrl: "./colors.jpg",
   },
   {
     title: "CSS Color Picker 4 ",
     year: "2019",
     description:
-      "A simple CSS Color Picker built with React to help me with palette options when styling.",
+      "A simple CSS Color Picker built with ReactJS to help me with palette options when styling.",
     repositoryUrl: "https://github.com/hemeshvpatel/CSS-Color-Picker",
     hostedUrl: "https://hemesh-css-color-picker.netlify.app/",
-    technologies: ["React.js", "Javascript", "Netlify"],
-    imageUrl: "",
+    technologies: { ReactJS: true, NodeJS: true, Netlify: true },
+    imageUrl: "./colors.jpg",
   },
   {
     title: "CSS Color Picker 5 ",
     year: "2020",
     description:
-      "A simple CSS Color Picker built with React to help me with palette options when styling.",
+      "A simple CSS Color Picker built with ReactJS to help me with palette options when styling.",
     repositoryUrl: "https://github.com/hemeshvpatel/CSS-Color-Picker",
     hostedUrl: "https://hemesh-css-color-picker.netlify.app/",
-    technologies: ["React.js", "Javascript", "Netlify"],
-    imageUrl: "",
+    technologies: { Python: true, Javascript: true, AWS: true },
+    imageUrl: "./colors.jpg",
   },
   {
     title: "CSS Color Picker 6",
     year: "2021",
     description:
-      "A simple CSS Color Picker built with React to help me with palette options when styling.",
+      "A simple CSS Color Picker built with ReactJS to help me with palette options when styling.",
     repositoryUrl: "https://github.com/hemeshvpatel/CSS-Color-Picker",
     hostedUrl: "https://hemesh-css-color-picker.netlify.app/",
-    technologies: ["React.js", "Javascript", "Netlify"],
-    imageUrl: "",
+    technologies: { Java: true, Javascript: true, Heroku: true },
+    imageUrl: "./colors.jpg",
   },
 ];
