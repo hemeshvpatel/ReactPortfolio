@@ -57,7 +57,7 @@ export default function Header() {
     { title: "Contact", id: "contact" },
     {
       title: "Resume",
-      to: "https://resumegenius.com/resume-samples/web-developer-resume-example",
+      to: "https://drive.google.com/file/d/1vLT9BK6yvxH36Bw_gpYeBk5wirhRj7A6/view?usp=sharing",
     },
   ];
 
