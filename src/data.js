@@ -1,24 +1,13 @@
-//Resume Sites we like":
-
-// https://github.com/hashirshoaeb/home
-// https://jacekjeznach.com/
-
-// Hemesh Portfolio: https://github.com/hemeshvpatel/myportfolio/tree/master/src
-
 //Change Browser Tab Title:
 // Go to public folder -> index.html -> title span of head sections
 
 export const userData = {
-  firstName: "Luke",
-  lastName: "Skywalker",
-  location: "Tatooine",
+  firstName: "Hemesh",
+  lastName: "Patel",
+  location: "Austin, TX",
 };
 
-export const roles = [
-  "Software Engineer",
-  "Front-end Developer",
-  "Back-end Developer",
-];
+export const roles = ["Software Engineer", "Front-end Developer"];
 
 export const technologies = [
   "Javascript",
@@ -30,121 +19,84 @@ export const technologies = [
 ];
 
 export const brandStatement =
-  "I'm a software engineer passionate about building meaningful digital experiences. Currently, I'm focused on building fin-tech products at Portfolio & Co.";
+  "I'm a software engineer passionate about building meaningful digital experiences. Currently, I'm focused on building fin-tech products at Unhedged.";
 
 export const about = [
   "Passionate about how things work and how technology can help solve problems. My career has led me through roles in finance, operations, and most recently software engineering. I love getting to write code and work on projects as much as I can, leveling up my JavaScript and ReactJS skills through projects.",
-  "Currently, I work as a Full Stack Software Engineer at Portfolio & Co., a financial data & research platform with powerful content creation and collaboration tools, built on top of institutional-quality data.",
-  "When I’m not coding, you can find me reading articles from my favorite blogs (Engadget, Lifehacker) and watching car reviews on YouTube. Currently reading Think Like a Monk by Jay Shetty.",
+  "Currently, I work as a Full Stack Software Engineer at Unhedged, a financial data & research platform with powerful content creation and collaboration tools, built on top of institutional-quality data.",
+  "When I’m not coding, you can find me reading articles from my favorite blogs (Engadget, Lifehacker) and watching car reviews on YouTube. Currently reading The Expanse series.",
 ];
-
-//Can get data from: https://www.qwikresume.com/resume-samples/junior-software-developer/#previewResume
 
 //Order from most recent to oldest
 export const workExperience = [
   {
-    company: "AirBnB",
-    companyUrl: "https://www.airbnb.com/",
-    location: "San Francisco, CA",
-    position: "Senior Front-end Engineer",
-    startDate: "1/1/2020",
-    endDate: "12/31/2020",
-    textDate: "January - December 2020",
+    company: "Unhedged",
+    companyUrl: "https://www.unhedged.com/",
+    location: "Remote",
+    position: "Full Stack Developer",
+    startDate: "12/1/2020",
+    endDate: "Present",
+    textDate: "December 2020 - Present",
     summary:
-      "Senior Software Developer with 8 plus years of experience in the Engineering domain is seeking to apply and expand my knowledge and skills towards working in a collaborative environment to develop quality software solutions that address and solve business problems.",
+      "Built React class and functional components (Ex: widgets, admin menus, forms) with Redux and Hooks , improving performance, functionality, and navigation across site",
     bullets: [
-      "Working closely with the QA and Product Management teams as well as other developers to ensure quality and punctual software development.",
-      "Participating in daily scrum meetings, sprint planning, unit testing and bug fixes.",
-      "Developing and maintaining a reporting system for support users, managers and executives to keep track of support calls both on a moment to moment basis and over time using PHP, MySQL, HTML, and CSS.",
-      "Assisting the Senior Developer with the design, development, deployment, and maintenance of all menu maintenance portal code using PHP, MySQL, HTML, CSS, and Javascript.",
-      "The menu maintenance portal is a web-based system that allows users to manage all of the settings for each of their restaurants in one place.",
-      "Troubleshooting server communication and any potential Cron, SMTP or POP3 issues.",
+      "Collaborated with users, engineers, product management, and designers to translate business needs and build components in an Agile environment of 10 engineers in 2 week sprints",
+      "Increased automated unit test coverage across core components on the platform from 5% to 25% by writing Cypress JS functional tests",
+      "Worked with Node.js, mongoose, and MongoDB to integrate and test for optimal data flow from dynamic front-end components",
+      "Refactored dashboards and new user tutorial overlay to improve code readability and efficiency resulting in reduced front-end hours for upcoming roadmapped features",
     ],
   },
   {
-    company: "Uber",
-    companyUrl: "https://www.uber.com/",
-    location: "San Francisco, CA",
-    position: "Front-end Developer",
-    startDate: "1/1/2019",
-    endDate: "12/31/2019",
-    textDate: "January - December 2019",
-    summary:
-      "Senior with 7 plus years of experience in the Engineering domain is seeking to apply and expand my knowledge and skills towards working in a collaborative environment to develop quality software solutions that address and solve business problems.",
-    bullets: [
-      "In charge of all content deployment for digital menu boards and management training systems.",
-      "Participating in daily scrum meetings, sprint planning, unit testing and bug fixes.",
-      "Developing and maintaining a reporting system for support users, managers and executives to keep track of support calls both on a moment to moment basis and over time using PHP, MySQL, HTML, and CSS.",
-      "Assisting the Senior Developer with the design, development, deployment, and maintenance of all menu maintenance portal code using PHP, MySQL, HTML, CSS, and Javascript.",
-      "The menu maintenance portal is a web-based system that allows users to manage all of the settings for each of their restaurants in one place.",
-    ],
-  },
-  {
-    company: "Twitter",
-    companyUrl: "https://twitter.com/",
-    location: "San Francisco, CA",
-    position: "Software Engineer",
-    startDate: "1/1/2018",
-    endDate: "12/31/2018",
-    textDate: "January - December 2018",
-    summary:
-      "Software Developer with 5 plus years of experience in the Engineering domain is seeking to apply and expand my knowledge and skills towards working in a collaborative environment to develop quality software solutions that address and solve business problems.",
-    bullets: [
-      "Participating in daily scrum meetings, sprint planning, unit testing and bug fixes.",
-      "Developing and maintaining a reporting system for support users, managers and executives to keep track of support calls both on a moment to moment basis and over time using PHP, MySQL, HTML, and CSS.",
-      "Assisting the Senior Developer with the design, development, deployment, and maintenance of all menu maintenance portal code using PHP, MySQL, HTML, CSS, and Javascript.",
-      "The menu maintenance portal is a web-based system that allows users to manage all of the settings for each of their restaurants in one place.",
-    ],
-  },
-  {
-    company: "Netflix",
-    companyUrl: "https://www.netflix.com/",
-    location: "San Francisco, CA",
-    position: "Associate Software Engineer",
-    startDate: "1/1/2017",
-    endDate: "12/31/2017",
-    textDate: "January - December 2017",
-    summary:
-      "Junior Software Developer with 3 plus years of experience in the Engineering domain is seeking to apply and expand my knowledge and skills towards working in a collaborative environment to develop quality software solutions that address and solve business problems.",
-    bullets: [
-      "Participating in daily scrum meetings, sprint planning, unit testing and bug fixes.",
-      "Developing and maintaining a reporting system for support users, managers and executives to keep track of support calls both on a moment to moment basis and over time using PHP, MySQL, HTML, and CSS.",
-      "Assisting the Senior Developer with the design, development, deployment, and maintenance of all menu maintenance portal code using PHP, MySQL, HTML, CSS, and Javascript.",
-      "The menu maintenance portal is a web-based system that allows users to manage all of the settings for each of their restaurants in one place.",
-    ],
-  },
-  {
-    company: "Facebook",
-    companyUrl: "https://www.facebook.com/",
-    location: "San Francisco, CA",
-    position: "Technical Support Engineer - Enterprise",
-    startDate: "1/1/2016",
-    endDate: "12/31/2016",
-    textDate: "January - December 2016",
-    summary:
-      "Technical Support Engineer with 1 plus years of experience in the Engineering domain is seeking to apply and expand my knowledge and skills towards working in a collaborative environment to develop quality software solutions that address and solve business problems.",
-    bullets: [
-      "Developing and maintaining a reporting system for support users, managers and executives to keep track of support calls both on a moment to moment basis and over time using PHP, MySQL, HTML, and CSS.",
-      "Participating in daily scrum meetings, sprint planning, unit testing and bug fixes.",
-      "Assisting the Senior Developer with the design, development, deployment, and maintenance of all menu maintenance portal code using PHP, MySQL, HTML, CSS, and Javascript.",
-      "The menu maintenance portal is a web-based system that allows users to manage all of the settings for each of their restaurants in one place.",
-    ],
-  },
-  {
-    company: "Apple",
-    companyUrl: "https://www.apple.com/",
-    location: "San Francisco, CA",
+    company: "Plivo",
+    companyUrl: "https://www.plivo.com/",
+    location: "Remote",
     position: "Technical Support Engineer",
-    startDate: "1/1/2015",
-    endDate: "12/31/2015",
-    textDate: "January - December 2015",
+    startDate: "3/1/2020",
+    endDate: "1/01/2021",
+    textDate: "March - January 2021",
     summary:
-      "Technical Support Engineer seeking to apply and expand my knowledge and skills towards working in a collaborative environment to develop quality software solutions that address and solve business problems.",
+      "Maintained end to end knowledge of Plivo’s Voice API, Messaging API, SIP Trunking (ZenTrunk), Plivo High Level Objects (PHLO), Client SDKs (Browser, iOS, Android), and Server SDKs (PHP, Node, Ruby, Java, .NET, Python, Go)",
     bullets: [
-      "The menu maintenance portal is a web-based system that allows users to manage all of the settings for each of their restaurants in one place.",
-      "Participating in daily scrum meetings, sprint planning, unit testing and bug fixes.",
-      "Developing and maintaining a reporting system for support users, managers and executives to keep track of support calls both on a moment to moment basis and over time using PHP, MySQL, HTML, and CSS.",
-      "Assisting the Senior Developer with the design, development, deployment, and maintenance of all menu maintenance portal code using PHP, MySQL, HTML, CSS, and Javascript.",
+      "Utilized Postman, Mocky.io, and Webhook.site for testing API requests and XML execution",
+      "Led discussions with Engineering team to form solutions for production defects by reviewing logs, debugging client integrations, and providing in-depth technical analysis of issues using JIRA and Confluence",
+      "Monitored and debugged issues through Kibana logs and ran SQL queries in Postgres for SMS and Voice statistics",
+    ],
+  },
+  {
+    company: "Murphy Adams Restaurant Group",
+    companyUrl: "https://www.mamafus.com/",
+    location: "Austin, TX",
+    position: "Director of Logistics",
+    startDate: "6/1/2018",
+    endDate: "12/31/2018",
+    textDate: "June - December 2018",
+    summary:
+      "Designed and built zone based delivery model to increase utilization of fleet vehicles and reduce costs across all brands",
+    bullets: [
+      "Managed API integration of new delivery management platform leading to greater efficiency, increased utilization of fleet vehicles, and automatic overflow dispatch through 3rd parties like Favor or Doordash",
+      "Managed end-to-end delivery operations, including drivers, vehicles, logistics, and maintenance, for a fleet of 50+ vehicles across 7 Texas cities and all current restaurant brands (Mama Fu's, Austin's Pizza)",
+      "Created and led 8-person Brand Support Team to manage customer support and escalations across multiple platforms like Facebook, Yelp, Google Reviews, GrubHub, while maintaining 24 hour response time SLA",
+      "Led adoption of new outsourced model to scale order-taking and catering call center operations including SLA agreement, KPI alignment, and on boarding at vendor site in Mexico",
+      "Managed all company contracts, pricing, and SLAs across all third party delivery apps such as Uber Eats, Grubhub, Doordash, Favor, Postmates, etc",
+    ],
+  },
+  {
+    company: "Instacart",
+    companyUrl: "https://www.instacart.com/",
+    location: "Austin, TX",
+    position: "Area Manager",
+    startDate: "7/1/2017",
+    endDate: "6/31/2018",
+    textDate: "July 2017 - June 2018",
+    summary:
+      "Quickly moved from managing 1 location and 30 In-store shoppers to 6 locations and 200+ In-store shoppers within 2 months. Responsibilities also included remote markets like Oklahoma and New Mexico",
+    bullets: [
+      "Created custom scalable training modules to improve Shift lead and shopper performance and enable growth",
+      "Led new market launches by establishing and maintaining retail partner relationships to drive efficiency in operation",
+      "Developed and tracked KPIs using SQL and Tableau while setting standards for service quality and efficiency",
+      "Drove market research to understand optimal wage required to attract and retain talent in a gig economy while remaining profitable",
+      "Created scalable hiring operations for recruiting, interviewing, on-boarding, training, that led to increased retention within Austin Market. Program Success in Austin led to broader adoption across company",
+      "Collaborated with Operations Managers and General Managers on special projects for continued operating efficiency and growth including analysis of store metrics to provide insight on how to optimize goals for speed, quality, order issues, and refunds",
     ],
   },
 ];
@@ -153,63 +105,82 @@ export const workExperience = [
 
 export const projects = [
   {
-    title: "CSS Color Picker 1",
-    year: "2020",
+    title: "React Portfolio",
     description:
-      "A simple CSS Color Picker built with ReactJS to help me with palette options when styling.",
+      "A resposive portfolio built with React and STyled Components (with a Star Wars theme)",
     repositoryUrl: "https://github.com/hemeshvpatel/CSS-Color-Picker",
     hostedUrl: "https://hemesh-css-color-picker.netlify.app/",
     technologies: { ReactJS: true, Javascript: true, Netlify: true },
-    imageUrl: "./colors.jpg",
+    imageUrl: "./starwars.jpeg",
   },
   {
-    title: "CSS Color Picker 2 ",
-    year: "2022",
+    title: "CSS Color Picker",
     description:
-      "A simple CSS Color Picker built with ReactJS to help me with palette options when styling.",
+      "A simple CSS Color Picker built with ReactJS to help me with palette options when styling",
     repositoryUrl: "https://github.com/hemeshvpatel/CSS-Color-Picker",
     hostedUrl: "https://hemesh-css-color-picker.netlify.app/",
-    technologies: { ReactJS: true, Javascript: true, Heroku: true },
-    imageUrl: "./colors.jpg",
+    technologies: { ReactJS: true, Javascript: true, Netlify: true },
+    imageUrl: "./csscolorpicker.png",
   },
   {
-    title: "CSS Color Picker 3 ",
-    year: "2020",
+    title: "Travel Website V2",
     description:
-      "A simple CSS Color Picker built with ReactJS to help me with palette options when styling.",
-    repositoryUrl: "https://github.com/hemeshvpatel/CSS-Color-Picker",
-    hostedUrl: "https://hemesh-css-color-picker.netlify.app/",
-    technologies: { ReactJS: true, Javascript: true, AWS: true },
-    imageUrl: "./colors.jpg",
+      "A fully responsive Travel website (version 2) built with React, Gatsby, and GraphQL",
+    repositoryUrl: "https://github.com/hemeshvpatel/travel-website-v2",
+    hostedUrl: "https://travel-website-v2.netlify.app/",
+    technologies: { ReactJS: true, Javascript: true, Netlify: true },
+    imageUrl: "./travelwebsite.png",
   },
   {
-    title: "CSS Color Picker 4 ",
-    year: "2019",
-    description:
-      "A simple CSS Color Picker built with ReactJS to help me with palette options when styling.",
-    repositoryUrl: "https://github.com/hemeshvpatel/CSS-Color-Picker",
-    hostedUrl: "https://hemesh-css-color-picker.netlify.app/",
-    technologies: { ReactJS: true, NodeJS: true, Netlify: true },
-    imageUrl: "./colors.jpg",
+    title: "Travel Website V1",
+    description: "A fully responsive Travel website built with React.",
+    repositoryUrl: "https://github.com/hemeshvpatel/travel-website-v1",
+    hostedUrl: "https://travel-website-172f7.web.app/",
+    technologies: { ReactJS: true, Javascript: true, Netlify: true },
+    imageUrl: "./travelwebsite.png",
   },
   {
-    title: "CSS Color Picker 5 ",
-    year: "2020",
-    description:
-      "A simple CSS Color Picker built with ReactJS to help me with palette options when styling.",
-    repositoryUrl: "https://github.com/hemeshvpatel/CSS-Color-Picker",
-    hostedUrl: "https://hemesh-css-color-picker.netlify.app/",
-    technologies: { Python: true, Javascript: true, AWS: true },
-    imageUrl: "./colors.jpg",
+    title: "Firegram",
+    description: "Instagram-like photo gallery app with React & Firebase",
+    repositoryUrl: "https://github.com/hemeshvpatel/firegram",
+    hostedUrl: "https://firegram-bd7b3.web.app/",
+    technologies: { ReactJS: true, Javascript: true },
+    imageUrl: "./firegram.png",
   },
   {
-    title: "CSS Color Picker 6",
-    year: "2021",
+    title: "Covid 19 Tracker",
     description:
-      "A simple CSS Color Picker built with ReactJS to help me with palette options when styling.",
-    repositoryUrl: "https://github.com/hemeshvpatel/CSS-Color-Picker",
-    hostedUrl: "https://hemesh-css-color-picker.netlify.app/",
-    technologies: { Java: true, Javascript: true, Heroku: true },
-    imageUrl: "./colors.jpg",
+      "Covid-19 Tracker that pulls live data from disease.sh. Built with React, chart-js, and hosted using firebase",
+    repositoryUrl: "https://github.com/hemeshvpatel/covid-19-tracker",
+    hostedUrl: "https://covid-19-tracker-55325.web.app/",
+    technologies: { ReactJS: true, Javascript: true },
+    imageUrl: "./covid19tracker.png",
+  },
+  {
+    title: "Twitter Clone",
+    description: "Twitter Clone built with ReactJS and Firebase (datebase)",
+    repositoryUrl: "https://github.com/hemeshvpatel/twitter-clone",
+    hostedUrl: "https://twitter-clone-a690d.web.app/",
+    technologies: { ReactJS: true, Javascript: true },
+    imageUrl: "./twitter.png",
+  },
+  {
+    title: "Amazon Clone",
+    description:
+      "Amazon Frontend Clone using ReactJS + ReactRouter + Firebase (authentication)",
+    repositoryUrl: "https://github.com/hemeshvpatel/amazon-clone",
+    hostedUrl: "https://clone-be1ec.firebaseapp.com/",
+    technologies: { ReactJS: true, Javascript: true },
+    imageUrl: "./amazon.jpeg",
+  },
+  {
+    title: "Grocery Store",
+    description:
+      "Built grocery store delivery app with product categories, shopping cart, checkout, order history, and user accounts",
+    repositoryUrl:
+      "https://github.com/hemeshvpatel/Grocery-Delivery-App-Frontend",
+    hostedUrl: "https://grocery-delivery-frontend.herokuapp.com/",
+    technologies: { ReactJS: true, Javascript: true },
+    imageUrl: "./grocerystore.png",
   },
 ];

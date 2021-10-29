@@ -93,11 +93,11 @@ export default function Welcome() {
       <BrandStatements />
       <IconsContainer>
         <SocialIcons
-          github={"https://github.com/"}
-          linkedin={"https://linkedin.com"}
-          twitter={"https://twitter.com"}
-          medium={"https://medium.com"}
-          twitch={"https://twitch.com"}
+          github={"https://github.com/hemeshvpatel/"}
+          linkedin={"https://www.linkedin.com/in/hemeshvpatel/"}
+          twitter={"https://twitter.com/Hemesh_V_Patel"}
+          //medium={"https://medium.com"}
+          //twitch={"https://twitch.com"}
           tooltip={true}
         />
       </IconsContainer>

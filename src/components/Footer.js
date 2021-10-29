@@ -24,6 +24,7 @@ const Wrapper = styled.div`
 const TextContainer = styled.div`
   display: flex;
   white-space: pre-wrap;
+
   @media screen and (max-width: 600px) {
     margin-bottom: 1rem;
   }
@@ -38,12 +39,12 @@ export default function Footer({}) {
         <TextLink title={"Hemesh"} url={"https://github.com/hemeshvpatel"} />
       </TextContainer>
       <SocialIcons
-        github={"https://github.com/"}
-        linkedin={"https://linkedin.com"}
-        twitter={"https://twitter.com"}
-        medium={"https://medium.com"}
-        twitch={"https://twitch.com"}
-        tooltip={false}
+        github={"https://github.com/hemeshvpatel/"}
+        linkedin={"https://www.linkedin.com/in/hemeshvpatel/"}
+        twitter={"https://twitter.com/Hemesh_V_Patel"}
+        //medium={"https://medium.com"}
+        //twitch={"https://twitch.com"}
+        tooltip={true}
       />
     </Wrapper>
   );

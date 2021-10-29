@@ -25,10 +25,11 @@ const Wrapper = styled.div`
 `;
 
 const Image = styled.img`
-  width: 0rem;
-  height: 0rem;
-  object-fit: cover;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
   border-radius: 0.2rem;
+  margin-top: 1rem;
 
   @media screen and (min-width: 600px) {
     width: 100%;
@@ -109,9 +110,6 @@ const Button = styled.button`
     }
   `}
 `;
-
-//Tutorial Links:
-//https://www.youtube.com/watch?v=3_gakM-y7hE
 
 export default function ProjectCard({ data }) {
   const {

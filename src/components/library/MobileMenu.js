@@ -1,7 +1,6 @@
-import React, { useRef, useEffect } from "react";
+import React from "react";
 import styled, { css } from "styled-components";
 import { Link as LinkS } from "react-scroll"; // https://www.npmjs.com/package/react-scroll
-import ReactDom from "react-dom";
 
 export const StyledMenu = styled.nav`
   display: flex;
