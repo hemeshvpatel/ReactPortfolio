@@ -54,7 +54,7 @@ const Sections = styled.div`
 
 const ProfilePicture = styled.img`
   border-radius: 50% 50%;
-  width: 25vw;
+  width: 25svw;
   height: auto;
 
   @media screen and (max-width: 600px) {
