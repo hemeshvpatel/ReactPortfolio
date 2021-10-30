@@ -53,8 +53,8 @@ const Sections = styled.div`
 `;
 
 const ProfilePicture = styled.img`
-  border-radius: 50%50%;
-  width: 50%;
+  border-radius: 50% 50%;
+  width: 25vw;
   height: auto;
 
   @media screen and (max-width: 600px) {
