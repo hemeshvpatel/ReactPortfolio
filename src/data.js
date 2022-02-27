@@ -57,9 +57,9 @@ export const workExperience = [
     summary:
       "Built React class and functional components (Ex: widgets, admin menus, forms) with Redux and Hooks , improving performance, functionality, and navigation across site",
     bullets: [
-      "Collaborated with users, engineers, product management, and designers to translate business needs and build components in an Agile environment of 10 engineers in 2 week sprints",
+      "Collaborated with users, engineers, product management, and designers to translate business needs and build out new features",
       "Increased automated unit test coverage across core components on the platform from 5% to 25% by writing Cypress JS functional tests",
-      "Worked with Node.js, mongoose, and MongoDB to integrate and test for optimal data flow from dynamic front-end components",
+      "Worked with Node.js, Mongoose, and MongoDB to integrate and test for optimal data flow from dynamic front-end components",
       "Refactored dashboards and new user tutorial overlay to improve code readability and efficiency resulting in reduced front-end hours for upcoming roadmapped features",
     ],
   },
