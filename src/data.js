@@ -7,11 +7,12 @@ export const userData = {
   location: "Austin, TX",
 };
 
-export const roles = ["Software Engineer", "Front-end Developer"];
+export const roles = ["Software Engineer", "Front-end Engineer"];
 
 export const technologies = [
   "Javascript",
   "ReactJS",
+    "TypeScript",
   "Node",
   "HTML",
   "CSS",
@@ -19,24 +20,40 @@ export const technologies = [
 ];
 
 export const brandStatement =
-  "I'm a software engineer passionate about building meaningful digital experiences. Currently, I'm focused on building fin-tech products at Unhedged.";
+  "I'm a software engineer passionate about building meaningful digital experiences.";
 
 export const about = [
-  "Passionate about how things work and how technology can help solve problems. My career has led me through roles in finance, operations, and most recently software engineering. I love getting to write code and work on projects as much as I can, leveling up my JavaScript and ReactJS skills through projects.",
-  "Currently, I work as a Full Stack Software Engineer at Unhedged, a financial data & research platform with powerful content creation and collaboration tools, built on top of institutional-quality data.",
+  "Passionate about how things work and how technology can help solve problems. My career has led me through roles in finance, operations, and most recently software engineering. I love getting to write code and work on projects as much as I can, leveling up my JavaScript and ReactJS skills.",
+  "Currently, I work as a Front-end Engineer at Hotel Engine, the  world’s largest Lodging Performance Network, established to create a richer, more rewarding business travel experience by connecting a global network of businesses and lodging partners.",
   "When I’m not coding, you can find me reading articles from my favorite blogs (Engadget, Lifehacker) and watching car reviews on YouTube. Currently reading The Expanse series.",
 ];
 
 //Order from most recent to oldest
 export const workExperience = [
   {
+    company: "Hotel Engine",
+    companyUrl: "https://www.hotelengine.com/",
+    location: "Remote",
+    position: "Front-end Engineer",
+    startDate: "12/1/2021",
+    endDate: "Present",
+    textDate: "December 2021 - Present",
+    summary:
+        "Tech Stack: React, Styled Components, AntD, and TypeScript",
+    bullets: [
+        "Converting SaSS components to Styled Components using AntD UI library",
+        "Building features out designed in Figma",
+        "Reviewing PRs for React, React Native, and Express apps",
+    ],
+  },
+  {
     company: "Unhedged",
     companyUrl: "https://www.unhedged.com/",
     location: "Remote",
     position: "Full Stack Developer",
     startDate: "12/1/2020",
-    endDate: "Present",
-    textDate: "December 2020 - Present",
+    endDate: "12/1/2021",
+    textDate: "December 2020 - December 2021",
     summary:
       "Built React class and functional components (Ex: widgets, admin menus, forms) with Redux and Hooks , improving performance, functionality, and navigation across site",
     bullets: [
