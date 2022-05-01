@@ -124,7 +124,7 @@ export const projects = [
   {
     title: "React Portfolio",
     description:
-      "A resposive portfolio built with React and STyled Components (with a Star Wars theme)",
+      "A responsive portfolio built with React and Styled Components (with a Star Wars theme)",
     repositoryUrl: "https://github.com/hemeshvpatel/CSS-Color-Picker",
     hostedUrl: "https://hemesh-css-color-picker.netlify.app/",
     technologies: { ReactJS: true, Javascript: true, Netlify: true },
